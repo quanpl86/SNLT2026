@@ -121,10 +121,15 @@ function validateSchema(manifest, testPlan, mediaPlan) {
   if (!manifest || manifest.error) {
     errors.push("Thiếu hoặc lỗi tệp `LESSON_MANIFEST.json`");
   } else {
-    if (!manifest.lesson_id) errors.push("Thiếu thuộc tính `lesson_id` trong `LESSON_MANIFEST.json`");
+    if (!manifest.lesson && !manifest.lesson_id) errors.push("Thiếu thuộc tính `lesson` trong `LESSON_MANIFEST.json`");
     if (!manifest.lesson_title) errors.push("Thiếu thuộc tính `lesson_title` trong `LESSON_MANIFEST.json`");
-    if (!manifest.targets || !manifest.targets.PROJECT_BASIC) errors.push("Thiếu khai báo target `PROJECT_BASIC` trong `LESSON_MANIFEST.json`");
-    if (!manifest.targets || !manifest.targets.STUDENT_STARTER) errors.push("Thiếu khai báo target `STUDENT_STARTER` trong `LESSON_MANIFEST.json`");
+    if (!manifest.targets || !Array.isArray(manifest.targets)) {
+      errors.push("Thiếu mảng `targets` trong `LESSON_MANIFEST.json`");
+    } else {
+      const targetIds = manifest.targets.map(t => t.id);
+      if (!targetIds.includes('PROJECT_BASIC')) errors.push("Thiếu khai báo target `PROJECT_BASIC` trong `LESSON_MANIFEST.json`");
+      if (!targetIds.includes('STUDENT_STARTER')) errors.push("Thiếu khai báo target `STUDENT_STARTER` trong `LESSON_MANIFEST.json`");
+    }
   }
 
   if (!testPlan || testPlan.error) {
