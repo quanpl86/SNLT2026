@@ -1,0 +1,18 @@
+{
+  "program": "SNLT2026",
+  "program_title": "Sáng tạo & Lập trình 3D",
+  "schema_version": "1.0",
+  "modules": [
+    {
+      "id": "HP1",
+      "title": "Phiêu lưu Nền tảng 3D",
+      "lessons": [
+        {
+          "id": "B01",
+          "title": "Khám phá trò chơi 3D",
+          "manifest": "review_data/HP1/B01/LESSON_MANIFEST.json"
+        }
+      ]
+    }
+  ]
+}

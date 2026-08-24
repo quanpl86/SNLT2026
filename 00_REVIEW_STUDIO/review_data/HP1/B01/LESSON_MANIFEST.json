@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.2",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "hp": "HP1",
+  "hp_title": "Phiêu lưu Nền tảng 3D",
+  "lesson": "B01",
+  "lesson_title": "Khám phá trò chơi 3D",
+  "engine": "Godot 4.7.1 stable",
+  "renderer": "Compatibility",
+  "editor_ui": "English",
+  "test_plan": "review_data/HP1/B01/TEST_PLAN.json",
+  "media_plan": "review_data/HP1/B01/MEDIA_PLAN.json",
+  "targets": [
+    {
+      "id": "PROJECT_BASIC",
+      "name": "Project Basic Canonical",
+      "folder": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-PROJECT_BASIC",
+      "mode": "READ_ONLY",
+      "description": "Trạng thái mẫu chuẩn của Giáo viên / Hero Media"
+    },
+    {
+      "id": "STUDENT_STARTER",
+      "name": "Student Starter Canonical",
+      "folder": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER",
+      "mode": "READ_ONLY",
+      "description": "Trạng thái khởi đầu của Học sinh / Baseline & Before Media"
+    },
+    {
+      "id": "E2E_WORKING_COPY",
+      "name": "E2E Working Copy",
+      "folder": "B01_HUMAN_TEST_COPY",
+      "source_folder": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER",
+      "mode": "MODIFY_AND_SAVE",
+      "description": "Bản sao mô phỏng học sinh thao tác, Cmd+S lưu bài & kiểm tra Reopen Persistence"
+    }
+  ]
+}

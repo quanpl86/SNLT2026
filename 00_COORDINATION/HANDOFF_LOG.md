@@ -105,4 +105,18 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **YÊU CẦU**: Người dùng (Human) mở `SNLT2026-HP01-B01-STUDENT_STARTER` trên Godot 4.7.1 stable và thực hiện kiểm thử End-to-End 1:1 theo `01_DOCS/HUONG_DAN_THUC_HIEN_SAN_PHAM_STEP_BY_STEP.md`.
 - **NEXT_OWNER**: HUMAN
 - **NEXT_ACTION**: Execute T019 Student Starter End-to-End Human Test
-- **STATUS**: `READY_FOR_HUMAN_TEST`
+- **STATUS**: `DONE`
+
+---
+
+### HANDOFF-010 (SNLT REVIEW STUDIO OPERATIONALIZATION)
+- **FROM**: Antigravity
+- **TO**: Human / ChatGPT
+- **LESSON**: B01
+- **TASK**: REVIEW_STUDIO_OPERATIONALIZATION
+- **YÊU CẦU**: Khởi tạo SNLT Review Studio Web App (Port 5173), đồng bộ Schema 18 test + HDC-00, tích hợp nút Open Folder không side-effect, cách ly Smoke Mode & Retake protection.
+- **KẾT QUẢ**: Review Studio sẵn sàng 100% cho phiên Human Test B01 chính thức.
+- **NEXT_OWNER**: HUMAN
+- **NEXT_ACTION**: Run 8-step smoke test gate / Execute official 18-test Human Test suite in Review Studio
+- **STATUS**: `OFFICIAL_HUMAN_TEST_READY`
+

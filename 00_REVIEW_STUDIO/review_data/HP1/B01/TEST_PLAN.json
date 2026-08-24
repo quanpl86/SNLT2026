@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.2",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B01",
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Kiểm tra Môi trường & Hồ sơ Tài liệu Trực tuyến (Preflight Gate)",
+      "project_path": "SNLT2026-HP01/SNLT2026-HP01-B01",
+      "action_steps": [
+        "Mở ứng dụng Godot và xác nhận phiên bản hiển thị là 4.7.1 stable",
+        "Xác nhận Renderer của dự án cấu hình là Compatibility",
+        "Xác nhận giao diện Editor UI cài đặt tiếng Anh (English UI)",
+        "Kiểm tra 01_DOCS/HUONG_DAN_CAU_HINH_TRIEN_KHAI_DU_AN.md và HUONG_DAN_THUC_HIEN_SAN_PHAM_STEP_BY_STEP.md đã ghi nhận Godot 4.7.1 stable",
+        "Xác nhận tồn tại đủ 3 dự án: PROJECT_BASIC canonical, STUDENT_STARTER canonical, và B01_HUMAN_TEST_COPY"
+      ],
+      "expected_results": [
+        "Godot 4.7.1 stable + Compatibility + English UI",
+        "Cả 2 tài liệu hướng dẫn khớp hoàn toàn 1:1 với phiên bản Godot 4.7.1",
+        "Cả 3 dự án sẵn sàng mở"
+      ],
+      "media_ids": []
+    },
+
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Project Basic Canonical",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở phần mềm Godot 4.7.1 stable",
+        "Import/Open dự án PROJECT_BASIC/project.godot",
+        "Trong FileSystem đúp chuột mở scenes/main.tscn (KHÔNG sửa hay Cmd+S)",
+        "Quan sát Cây cảnh Scene Tree"
+      ],
+      "expected_results": [
+        "Project mở thành công, không có lỗi đỏ Blocker",
+        "Scene Tree có cấu trúc chính: Main -> Environment, Player, View -> Camera, World"
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "Player Canonical (Position 1.5, 0.05, 0 & Rotation 0°)",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Trong bảng Scene chọn Node Player",
+        "Mở bảng Inspector → mở nhóm Transform",
+        "Xem thuộc tính Position và Rotation"
+      ],
+      "expected_results": [
+        "Position X = 1.5, Y = 0.05, Z = 0",
+        "Rotation X = 0°, Y = 0°, Z = 0°"
+      ],
+      "media_ids": ["PB-M01"]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "View Canonical (Rotation Y = 25°)",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Trong bảng Scene chọn Node View",
+        "Mở bảng Inspector → mở nhóm Transform",
+        "Xem thuộc tính Rotation"
+      ],
+      "expected_results": [
+        "Rotation X = 0°, Y = 25°, Z = 0°"
+      ],
+      "media_ids": ["PB-M02"]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Gameplay + Hero Media",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Nhấn F5 chạy thử game",
+        "Chờ 2s, dùng phím W/A/S/D di chuyển nhân vật và phím Space để nhảy qua 1-2 platform",
+        "Di chuyển Player đến vị trí thấy rõ nhiều platform có chiều sâu 3D",
+        "Quay video gameplay theo kịch bản: đứng yên 2s -> W -> A -> S -> D -> Space -> thử 1-2 platform -> giữ 2-3s"
+      ],
+      "expected_results": [
+        "W/A/S/D và Space nhảy hoạt động tốt, không xuyên sàn",
+        "Camera bám theo Player mượt mà, góc View 25° nghiêng đẹp",
+        "Không có lỗi runtime blocker"
+      ],
+      "media_ids": ["PB-M03", "PB-V01"]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "Fall Reset (Tự động tải lại cảnh khi rơi)",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Run Project (F5)",
+        "Điều khiển Player nhảy rơi khỏi mép sàn platform xuống độ sâu Y < -8.0m",
+        "Không restart bằng tay, chờ cảnh tự reload"
+      ],
+      "expected_results": [
+        "Khi Player rơi Y < -8.0m, scene tự động reload đưa Player về lại điểm xuất phát",
+        "Có thể tiếp tục điều khiển bình thường sau reload"
+      ],
+      "media_ids": ["PB-V02"]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "Course / Đánh giá Độ khó Học sinh",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Thử di chuyển qua toàn bộ 5 sàn platform đến GoalPlatform",
+        "Đánh giá độ hợp lý của khoảng cách giữa các platform với độ tuổi 12-14"
+      ],
+      "expected_results": [
+        "Hành trình di chuyển hấp dẫn, độ khó vừa sức bài học B01 (~50 phút học sinh)",
+        "Optional chụp thêm Goal Hero nếu hoàn thành"
+      ],
+      "media_ids": ["PB-M04"]
+    },
+
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Student Starter Canonical",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở phần mềm Godot 4.7.1 stable",
+        "Import/Open STUDENT_STARTER/project.godot",
+        "Mở scenes/main.tscn (KHÔNG sửa hay Cmd+S)"
+      ],
+      "expected_results": [
+        "Project mở thành công, không có lỗi đỏ Blocker",
+        "Hiển thị đủ 5 khu vực làm việc: Scene, FileSystem, 3D Viewport, Inspector, tab main.tscn"
+      ],
+      "media_ids": ["SS-M01"]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "Cấu trúc Cây cảnh Scene Tree Baseline",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở rộng Node Main và Node View",
+        "Quan sát thứ tự và tên của các Node con"
+      ],
+      "expected_results": [
+        "Cấu trúc Cây cảnh: Main -> Environment, Player, View -> Camera, World"
+      ],
+      "media_ids": ["SS-M02"]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Sub-scene con Player trong FileSystem",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Trong FileSystem đúp chuột mở objects/player.tscn",
+        "Mở rộng root Node Player và quan sát các node hình học/collider con"
+      ],
+      "expected_results": [
+        "Mở đúng tab player.tscn, thấy root Player và các node con cấu tạo nhân vật"
+      ],
+      "media_ids": ["SS-M03"]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Player Baseline (Position X = 0)",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Quay lại tab main.tscn",
+        "Chọn Node Player → Inspector → Transform → Position"
+      ],
+      "expected_results": [
+        "Position X = 0, Y = 0.05, Z = 0 (Chưa được làm sẵn bài tập xuất phát)"
+      ],
+      "media_ids": ["SS-M04"]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "View Baseline (Rotation Y = 0°)",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Chọn Node View → Inspector → Transform → Rotation"
+      ],
+      "expected_results": [
+        "Rotation X = 0°, Y = 0°, Z = 0° (Góc nhìn thẳng trực diện chưa được xoay nghiêng)"
+      ],
+      "media_ids": ["SS-M05"]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Baseline Runtime (Góc nhìn ban đầu chưa sửa)",
+      "project_path": "SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Nhấn F5 chạy thử game",
+        "Quan sát vị trí nhân vật ở giữa sàn (X=0) và góc nhìn camera thẳng dọc sàn (Y=0°)",
+        "Thử di chuyển W/A/S/D và Space nhảy"
+      ],
+      "expected_results": [
+        "Player di chuyển bình thường ở góc nhìn baseline",
+        "Hình ảnh Before thể hiện rõ trạng thái ban đầu trước khi học sinh thực hành"
+      ],
+      "media_ids": ["SS-M06", "SS-V01"]
+    },
+
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Kiểm tra Working Copy Sạch (X=0, Y=0°)",
+      "project_path": "B01_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Mở dự án bản sao B01_HUMAN_TEST_COPY",
+        "Mở scenes/main.tscn",
+        "Xác nhận Player Position X = 0 và View Rotation Y = 0° trước khi bắt đầu bài thực hành"
+      ],
+      "expected_results": [
+        "Bản sao ở trạng thái sạch ban đầu X=0, Y=0°. Nếu đã bị chỉnh từ trước thì tạo lại copy mới từ Student Starter"
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "Đối chiếu Hướng dẫn Step-by-Step 1:1",
+      "project_path": "B01_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Mở song song tài liệu 01_DOCS/HUONG_DAN_THUC_HIEN_SAN_PHAM_STEP_BY_STEP.md",
+        "Đọc và thực hiện từng bước theo tài liệu hướng dẫn",
+        "Kiểm tra xem tên Node, panel, thuộc tính có hoàn toàn chính xác 1:1 không"
+      ],
+      "expected_results": [
+        "Hướng dẫn chính xác, bám sát từng cú click và tên Node thực tế trong Godot Editor"
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "Chỉnh sửa Player Position X = 1.5",
+      "project_path": "B01_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Chọn Node Main/Player",
+        "Inspector → Transform → Position X: nhập 1.5",
+        "Nhấn F5 chạy thử game và quan sát vị trí xuất phát mới"
+      ],
+      "expected_results": [
+        "Player dịch chuyển sang bên phải sàn xuất phát an toàn",
+        "Game vận hành bình thường ở vị trí mới"
+      ],
+      "media_ids": ["E2E-M01", "E2E-M02", "E2E-V01"]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "Chỉnh sửa View Rotation Y = 25°",
+      "project_path": "B01_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "F8 dừng game",
+        "Chọn Node Main/View",
+        "Inspector → Transform → Rotation Y: nhập 25",
+        "Nhấn F5 chạy game và di chuyển theo 2 hướng để kiểm tra camera"
+      ],
+      "expected_results": [
+        "Góc nhìn nghiêng 25° chéo 3D đẹp mắt, bao quát toàn bộ course",
+        "Camera bám theo nhân vật mượt mà, không bị xoay về 0°"
+      ],
+      "media_ids": ["E2E-M03", "E2E-M04", "E2E-V02"]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "Save Cmd+S -> Close -> Reopen Persistence",
+      "project_path": "B01_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Trong Godot Editor nhấn Cmd + S để lưu cảnh main.tscn",
+        "Đóng hoàn toàn phần mềm Godot",
+        "Mở lại Godot 4.7.1 stable -> Mở lại B01_HUMAN_TEST_COPY -> main.tscn",
+        "Kiểm tra thuộc tính Player Position X và View Rotation Y"
+      ],
+      "expected_results": [
+        "Player Position X vẫn giữ nguyên 1.5 sau khi mở lại",
+        "View Rotation Y vẫn giữ nguyên 25° sau khi mở lại",
+        "F5 chạy game thành công mượt mà"
+      ],
+      "media_ids": ["E2E-M05", "E2E-M06"]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Goal / Course Media",
+      "project_path": "B01_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Nhấn F5 chạy game",
+        "Điều khiển Player di chuyển đến GoalPlatform chạm cờ đích GoalFlag"
+      ],
+      "expected_results": [
+        "Hoàn thành chặng chơi 3D an toàn và hấp dẫn"
+      ],
+      "media_ids": ["E2E-M07"]
+    }
+  ]
+}

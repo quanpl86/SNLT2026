@@ -1,7 +1,7 @@
 # HP1 CURRENT STATE
 
 ACTIVE_LESSON: B01
-LESSON_STATUS: READY_FOR_HUMAN_TEST
+LESSON_STATUS: OFFICIAL_HUMAN_TEST_READY
 
 ENGINE:
 Godot 4.7.1 stable
@@ -21,14 +21,19 @@ STUDENT_STARTER:
 Derived & Static-Diff Verified
 Human End-to-End Test Ready (T019)
 
+REVIEW_STUDIO:
+Web App Running at http://localhost:5173
+Schema: 18 Canonical Tests + HDC-00 Gate (v1.2)
+Mode: SMOKE MODE / CANONICAL REAL TEST
+
 CURRENT_GATE:
-Student Starter End-to-End Human Test
+Review Studio 8-step Smoke Gate -> Official 18-Test Human Review
 
 CURRENT_OWNER:
 HUMAN
 
 NEXT_EXPECTED_ACTION:
-Execute T019 using Student Starter + Step-by-Step
+Complete 8-step Smoke Test gate / Switch to Canonical Mode & Run Official B01 Human Test
 
 NEXT_AGENT:
 HUMAN
@@ -45,4 +50,5 @@ ACTIVE_PR: #1
 REVIEW_TARGET: PR_HEAD
 
 LAST_HANDOFF:
-Antigravity → Human (T019: Student Starter End-to-End Human Test)
+Antigravity → Human (Review Studio Operationalized for B01 Official Human Test)
+
