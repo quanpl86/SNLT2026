@@ -21,5 +21,7 @@
 | **HP1-B01-T015** | Establish Branch `b01` & Workflow | ANTIGRAVITY | DONE | Branching rule | Branch `b01` pushed | `ed705ec` |
 | **HP1-B01-T016** | Establish Coordination Layer | ANTIGRAVITY | DONE | Coordination spec | `00_COORDINATION/` directory created | `52ba92b` |
 | **HP1-B01-T017** | PR #1 Review & Request Changes | CHATGPT | DONE | PR #1 | Review findings reported | PR #1 |
-| **HP1-B01-T018** | Fix Coordination Review Findings | ANTIGRAVITY | IN_PROGRESS | Review findings | Updated coordination & QA files | PR #1 |
-| **HP1-B01-T019** | Student Starter End-to-End Human Test | HUMAN | PENDING | STUDENT_STARTER | Human verification of baseline to target | PR #1 |
+| **HP1-B01-T018** | Fix Coordination Review Findings | ANTIGRAVITY | DONE | Review findings | Updated coordination & QA files | `edc7089` |
+| **HP1-B01-T020** | ChatGPT Re-Review PR #1 — Round 2 | CHATGPT | DONE | PR #1 (HEAD edc7089) | CHANGES_REQUESTED (7 points) | PR #1 |
+| **HP1-B01-T021** | Fix Round-2 Review Findings | ANTIGRAVITY | IN_PROGRESS | Round-2 findings | Source alignment & metadata cleanup | PR #1 |
+| **HP1-B01-T019** | Student Starter End-to-End Human Test | HUMAN | BLOCKED_BY_T021 | STUDENT_STARTER | Human verification of baseline to target | PR #1 |

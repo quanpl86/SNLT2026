@@ -7,7 +7,7 @@
 
 ## 1. Kết quả kiểm thử trải nghiệm thực tế (Human Test Log)
 
-- [x] **HV-01 (Smoke Test)**: Mở `SNLT2026-HP01-B01-PROJECT_BASIC` trên Godot 4.7.1 stable, hiển thị đúng 3D scene, nhân vật đứng trên platform và điều khiển mượt mà bằng phím `W/A/S/D` và nhảy `Space`. **(VERIFIED — Human tested)**
+- [x] **HV-01 (Smoke Test)**: Mở `SNLT2026-HP01-B01-PROJECT_BASIC` trên Godot 4.7.1 stable, hiển thị đúng 3D scene, nhân vật đứng trên platform và điều khiển được bằng phím `W/A/S/D` và nhảy `Space`. **(VERIFIED — Human tested)**
 - [x] **HV-02 (UI Standard)**: Giao diện Godot Editor sử dụng English UI, tương thích với quy chuẩn thuật ngữ Tiếng Việt kèm English UI label trong ngoặc. **(VERIFIED — Human tested)**
 - [ ] **HV-03 (Student Starter End-to-End)**: Học sinh mở `SNLT2026-HP01-B01-STUDENT_STARTER`, quan sát baseline (Player X = 0.0, View Y = 0°), thực hiện thay đổi Player Position X = 1.5 và View Rotation Y = 25°. **(PENDING / NEEDS_HUMAN_TEST)**
 - [ ] **HV-04 (Ergonomics & Platform Gap)**: Kiểm tra khoảng cách nhảy giữa 5 platform xem có độ khó phù hợp với học sinh 12–14 tuổi trong thời lượng 120 phút. **(PENDING / NEEDS_HUMAN_TEST)**

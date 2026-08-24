@@ -62,12 +62,7 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **TO**: Antigravity
 - **LESSON**: B01
 - **TASK**: HP1-B01-T017
-- **YÊU CẦU**:
-  1. Sửa `B01_CONTEXT.md` (chỉ giữ CIO01, CIO02; chỉnh K_PRIOR).
-  2. Sửa `HUMAN_VALIDATION.md` (đưa các mục chưa test về PENDING; không dùng 42.5° làm giá trị chuẩn).
-  3. Khôi phục canonical/baseline values và boundary confirmation trong `HANDOFF_REPORT.md`.
-  4. Đảm bảo mỗi task trên `TASK_BOARD.md` chỉ có 1 Owner; tách Human test Project Basic vs Student Starter.
-  5. Cập nhật `CURRENT_STATE.md` và `HANDOFF_LOG.md`.
+- **YÊU CẦU**: Sửa B01_CONTEXT, HUMAN_VALIDATION, HANDOFF_REPORT, TASK_BOARD, CURRENT_STATE, HANDOFF_LOG.
 - **STATUS**: `DONE`
 
 ---
@@ -77,7 +72,32 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **TO**: ChatGPT
 - **LESSON**: B01
 - **TASK**: HP1-B01-T018
-- **YÊU CẦU**: Review lại PR #1 sau khi Antigravity đã hoàn tất toàn bộ 7 yêu cầu sửa đổi từ ChatGPT.
+- **YÊU CẦU**: Review lại PR #1 sau khi Antigravity đã hoàn tất các yêu cầu sửa đổi.
+- **STATUS**: `DONE`
+
+---
+
+### HANDOFF-007 (PR #1 ROUND 2 REVIEW — CHANGES REQUESTED)
+- **FROM**: ChatGPT
+- **TO**: Antigravity
+- **LESSON**: B01
+- **TASK**: HP1-B01-T020
+- **YÊU CẦU**:
+  1. Đồng bộ nguyên văn CIO01 và CIO02 từ Bảng LO vào `CONTROL_RECORD.md` và `B01_CONTEXT.md`.
+  2. Thay runtime status Godot 4.6 cũ bằng các trạng thái thực tế Godot 4.7.1.
+  3. Bỏ current `HEAD_COMMIT`/`LAST_COMMIT` SHA khỏi tracked metadata files.
+  4. Sửa wording HV-01 trong `HUMAN_VALIDATION.md`.
+  5. Cập nhật `TASK_BOARD.md`, `CURRENT_STATE.md`, `OPEN_FINDINGS.md` và `HANDOFF_LOG.md`.
+- **STATUS**: `DONE`
+
+---
+
+### HANDOFF-008 (PR #1 ROUND 2 FIXES PUSHED — REQUEST FINAL RE-REVIEW)
+- **FROM**: Antigravity
+- **TO**: ChatGPT
+- **LESSON**: B01
+- **TASK**: HP1-B01-T021
+- **YÊU CẦU**: Review lại PR #1 sau khi Antigravity đã hoàn tất 100% 7 yêu cầu sửa đổi Round 2 từ ChatGPT.
 - **NEXT_OWNER**: CHATGPT
-- **NEXT_ACTION**: ChatGPT Re-Review PR #1
+- **NEXT_ACTION**: Final PR #1 coordination re-review
 - **STATUS**: `WAITING_CHATGPT_REVIEW`

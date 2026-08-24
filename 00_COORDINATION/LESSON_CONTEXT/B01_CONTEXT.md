@@ -7,8 +7,8 @@
 
 ## 1. Mục tiêu sư phạm lõi
 - **CIO**:
-  - `CIO01`: Phân tích cấu trúc Node–Scene của một project game 3D mẫu (K_NEW: K01, K02; K_PRIOR: —).
-  - `CIO02`: Điều chỉnh có chủ đích vị trí/hướng nhìn của thành phần 3D/camera (K_NEW: K09; K_PRIOR: K01, K02 đã hình thành ở phần trước của cùng B1).
+  - `CIO01`: Phân tích cấu trúc Node–Scene của game mẫu. (SIO: SIO01, ULO: ULO-01, ULO-04, K_NEW: K01, K02, K_PRIOR: —)
+  - `CIO02`: Điều chỉnh không gian/camera để tạo phiên bản quan sát được của màn chơi. (SIO: SIO01, ULO: ULO-01, K_NEW: K09, K_PRIOR: K01, K02 đã hình thành ở phần trước của cùng B1)
 - **K_NEW**:
   - `K01`: Kiến trúc Node – Scene – Scene Tree trong Godot 4.
   - `K02`: Transform 3D cơ bản (Position X, Rotation Y).
