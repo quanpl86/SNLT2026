@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://f5col0000001"]
 
-[ext_resource type="Script" uid="uid://c5colscript1" path="res://scripts/collectible.gd" id="1_col_script"]
-[ext_resource type="PackedScene" uid="uid://b5col0000001" path="res://assets/blockbench/B05_COLLECTIBLE_PLACEHOLDER_PROGRAM.glb" id="2_col_glb"]
+[ext_resource type="Script" path="res://scripts/collectible.gd" id="1_col_script"]
+[ext_resource type="PackedScene" path="res://assets/blockbench/B05_COLLECTIBLE_PLACEHOLDER_PROGRAM.glb" id="2_col_glb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_col"]
 radius = 0.6

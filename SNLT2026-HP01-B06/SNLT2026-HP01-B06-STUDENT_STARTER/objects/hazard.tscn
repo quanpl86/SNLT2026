@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6haz0000001"]
 
-[ext_resource type="Script" uid="uid://c6hazscript1" path="res://scripts/hazard.gd" id="1_hazard_script"]
-[ext_resource type="PackedScene" uid="uid://b6spikes1" path="res://assets/blockbench/B06_HAZARD_SPIKES_PROGRAM.glb" id="2_spikes_glb"]
+[ext_resource type="Script" path="res://scripts/hazard.gd" id="1_hazard_script"]
+[ext_resource type="PackedScene" path="res://assets/blockbench/B06_HAZARD_SPIKES_PROGRAM.glb" id="2_spikes_glb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_haz"]
 size = Vector3(1.6, 0.5, 1.6)

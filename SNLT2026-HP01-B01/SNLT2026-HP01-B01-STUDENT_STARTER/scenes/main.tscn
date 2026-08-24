@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://b1main0000001"]
 
-[ext_resource type="PackedScene" uid="uid://b1player0001" path="res://objects/player.tscn" id="1_player_scene"]
+[ext_resource type="PackedScene" path="res://objects/player.tscn" id="1_player_scene"]
 [ext_resource type="Script" path="res://scripts/view.gd" id="2_view_script"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]

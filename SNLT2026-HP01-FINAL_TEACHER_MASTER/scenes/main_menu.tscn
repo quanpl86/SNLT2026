@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://fmainmenu0001"]
 
-[ext_resource type="Script" uid="uid://cmainmenuscript1" path="res://scripts/main_menu.gd" id="1_menu_script"]
-[ext_resource type="Texture2D" uid="uid://ftitlebg1" path="res://assets/ui/HP1_FINAL_TITLE_BACKGROUND_PROGRAM.png" id="2_bg_tex"]
-[ext_resource type="Texture2D" uid="uid://fmenupanel1" path="res://assets/ui/HP1_FINAL_MENU_PANEL_PROGRAM.png" id="3_panel_tex"]
-[ext_resource type="Texture2D" uid="uid://fbutton1" path="res://assets/ui/HP1_FINAL_BUTTON_PROGRAM.png" id="4_btn_tex"]
-[ext_resource type="Texture2D" uid="uid://fhowtoplaypanel1" path="res://assets/ui/HP1_FINAL_HOW_TO_PLAY_PANEL_PROGRAM.png" id="5_htp_tex"]
-[ext_resource type="AudioStream" uid="uid://uiclick1" path="res://assets/audio/HP1_AUDIO_UI_CLICK_PROGRAM.wav" id="6_click_audio"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/HP1_FINAL_TITLE_BACKGROUND_PROGRAM.png" id="2_bg_tex"]
+[ext_resource type="Texture2D" path="res://assets/ui/HP1_FINAL_MENU_PANEL_PROGRAM.png" id="3_panel_tex"]
+[ext_resource type="Texture2D" path="res://assets/ui/HP1_FINAL_BUTTON_PROGRAM.png" id="4_btn_tex"]
+[ext_resource type="Texture2D" path="res://assets/ui/HP1_FINAL_HOW_TO_PLAY_PANEL_PROGRAM.png" id="5_htp_tex"]
+[ext_resource type="AudioStream" path="res://assets/audio/HP1_AUDIO_UI_CLICK_PROGRAM.wav" id="6_click_audio"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

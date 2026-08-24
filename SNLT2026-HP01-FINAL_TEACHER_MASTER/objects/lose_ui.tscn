@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://f8loseui0001"]
 
-[ext_resource type="Script" uid="uid://c8loseuiscript1" path="res://scripts/lose_ui.gd" id="1_lose_script"]
-[ext_resource type="Texture2D" uid="uid://flosepanel1" path="res://assets/ui/HP1_FINAL_LOSE_PANEL_PROGRAM.png" id="2_lose_panel"]
-[ext_resource type="Texture2D" uid="uid://fbutton1" path="res://assets/ui/HP1_FINAL_BUTTON_PROGRAM.png" id="3_btn_tex"]
-[ext_resource type="AudioStream" uid="uid://uiclick1" path="res://assets/audio/HP1_AUDIO_UI_CLICK_PROGRAM.wav" id="4_click_audio"]
+[ext_resource type="Script" path="res://scripts/lose_ui.gd" id="1_lose_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/HP1_FINAL_LOSE_PANEL_PROGRAM.png" id="2_lose_panel"]
+[ext_resource type="Texture2D" path="res://assets/ui/HP1_FINAL_BUTTON_PROGRAM.png" id="3_btn_tex"]
+[ext_resource type="AudioStream" path="res://assets/audio/HP1_AUDIO_UI_CLICK_PROGRAM.wav" id="4_click_audio"]
 
 [node name="LoseUI" type="Control"]
 visible = false

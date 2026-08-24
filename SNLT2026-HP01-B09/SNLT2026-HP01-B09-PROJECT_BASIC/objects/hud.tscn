@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7hud0000001"]
 
-[ext_resource type="Script" uid="uid://c7hudscript1" path="res://scripts/hud.gd" id="1_hud_script"]
-[ext_resource type="Texture2D" uid="uid://b7texpanel1" path="res://assets/ui/B07_HUD_PANEL_PROGRAM.png" id="2_panel_tex"]
-[ext_resource type="Texture2D" uid="uid://b7texcrystal1" path="res://assets/ui/B07_ICON_CRYSTAL_PROGRAM.png" id="3_crystal_tex"]
-[ext_resource type="Texture2D" uid="uid://b7texchk1" path="res://assets/ui/B07_ICON_CHECKPOINT_PROGRAM.png" id="4_chk_tex"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_hud_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/B07_HUD_PANEL_PROGRAM.png" id="2_panel_tex"]
+[ext_resource type="Texture2D" path="res://assets/ui/B07_ICON_CRYSTAL_PROGRAM.png" id="3_crystal_tex"]
+[ext_resource type="Texture2D" path="res://assets/ui/B07_ICON_CHECKPOINT_PROGRAM.png" id="4_chk_tex"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
