@@ -1,0 +1,230 @@
+[gd_scene format=3 uid="uid://fmainmenu0001"]
+
+[ext_resource type="Script" uid="uid://cmainmenuscript1" path="res://scripts/main_menu.gd" id="1_menu_script"]
+[ext_resource type="Texture2D" uid="uid://ftitlebg1" path="res://assets/ui/HP1_FINAL_TITLE_BACKGROUND_PROGRAM.png" id="2_bg_tex"]
+[ext_resource type="Texture2D" uid="uid://fmenupanel1" path="res://assets/ui/HP1_FINAL_MENU_PANEL_PROGRAM.png" id="3_panel_tex"]
+[ext_resource type="Texture2D" uid="uid://fbutton1" path="res://assets/ui/HP1_FINAL_BUTTON_PROGRAM.png" id="4_btn_tex"]
+[ext_resource type="Texture2D" uid="uid://fhowtoplaypanel1" path="res://assets/ui/HP1_FINAL_HOW_TO_PLAY_PANEL_PROGRAM.png" id="5_htp_tex"]
+[ext_resource type="AudioStream" uid="uid://uiclick1" path="res://assets/audio/HP1_AUDIO_UI_CLICK_PROGRAM.wav" id="6_click_audio"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg_tex")
+expand_mode = 1
+
+[node name="TitlePanel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -180.0
+offset_right = 240.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_panel_tex")
+expand_mode = 1
+
+[node name="TitleLabel" type="Label" parent="TitlePanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "PHIÊU LƯU TINH THỂ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="TitlePanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 95.0
+offset_right = 200.0
+offset_bottom = 125.0
+grow_horizontal = 2
+text = "Khám phá Đảo Tinh Thể Trên Mây 3D"
+horizontal_alignment = 1
+
+[node name="StartButton" type="TextureButton" parent="TitlePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -180.0
+offset_right = 160.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_btn_tex")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TitlePanel/StartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "Bắt đầu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HowToPlayButton" type="TextureButton" parent="TitlePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -95.0
+offset_right = 160.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_btn_tex")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TitlePanel/HowToPlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Cách chơi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HowToPlayOverlay" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="HowToPlayOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="Panel" type="TextureRect" parent="HowToPlayOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -210.0
+offset_right = 280.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_htp_tex")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="HowToPlayOverlay/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 25.0
+offset_right = 150.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+text = "HƯỚNG DẪN CÁCH CHƠI"
+horizontal_alignment = 1
+
+[node name="Instructions" type="Label" parent="HowToPlayOverlay/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = 80.0
+offset_right = 240.0
+offset_bottom = 320.0
+grow_horizontal = 2
+text = "• Phím W / A / S / D : Di chuyển nhà thám hiểm
+• Phím Space bar    : Nhảy qua vực sâu & bẫy
+• Tinh thể (Cyan)    : Thu thập đủ 5/5 tinh thể
+• Bẫy đinh (Hazard) : Tránh va chạm! Mất 1 mạng khi dẫm phải
+• Checkpoint (Cột)  : Chạm để lưu điểm hồi sinh trong lượt
+• Cổng đích (Goal)  : Mở cổng và hoàn thành màn khi đạt 5/5 tinh thể!"
+autowrap_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="HowToPlayOverlay/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -75.0
+offset_right = 100.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_btn_tex")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="HowToPlayOverlay/Panel/BackButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quay lại"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_click_audio")
+
+[connection signal="pressed" from="TitlePanel/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="TitlePanel/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
+[connection signal="pressed" from="HowToPlayOverlay/Panel/BackButton" to="." method="_on_back_button_pressed"]

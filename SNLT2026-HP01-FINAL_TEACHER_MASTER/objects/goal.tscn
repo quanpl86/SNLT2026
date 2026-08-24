@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://f8goal000001"]
+
+[ext_resource type="Script" uid="uid://c8goalscript1" path="res://scripts/goal.gd" id="1_goal_script"]
+[ext_resource type="PackedScene" uid="uid://b8portal1" path="res://assets/blockbench/B08_GOAL_PORTAL_PROGRAM.glb" id="2_portal_glb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_goal"]
+size = Vector3(2, 2.5, 2)
+
+[node name="Goal" type="Area3D"]
+script = ExtResource("1_goal_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("BoxShape3D_goal")
+
+[node name="ModelAnchor" type="Node3D" parent="."]
+
+[node name="B08_GOAL_PORTAL_PROGRAM" parent="ModelAnchor" instance=ExtResource("2_portal_glb")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

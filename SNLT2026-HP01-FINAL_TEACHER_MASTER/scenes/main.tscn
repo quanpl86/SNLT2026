@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://fmain0000001"]
+
+[ext_resource type="Script" uid="uid://b9mainscript1" path="res://scripts/main.gd" id="1_main_script"]
+[ext_resource type="PackedScene" uid="uid://f1player0001" path="res://objects/player.tscn" id="2_player_scene"]
+[ext_resource type="Script" uid="uid://cviewscript1" path="res://scripts/view.gd" id="3_view_script"]
+[ext_resource type="PackedScene" uid="uid://f5col0000001" path="res://objects/collectible.tscn" id="4_col_scene"]
+[ext_resource type="PackedScene" uid="uid://f6chk0000001" path="res://objects/checkpoint.tscn" id="5_chk_scene"]
+[ext_resource type="PackedScene" uid="uid://f6haz0000001" path="res://objects/hazard.tscn" id="6_haz_scene"]
+[ext_resource type="PackedScene" uid="uid://f8goal000001" path="res://objects/goal.tscn" id="7_goal_scene"]
+[ext_resource type="PackedScene" uid="uid://f7hud0000001" path="res://objects/hud.tscn" id="8_hud_scene"]
+[ext_resource type="PackedScene" uid="uid://f8winui00001" path="res://objects/win_ui.tscn" id="9_win_scene"]
+[ext_resource type="PackedScene" uid="uid://f8loseui0001" path="res://objects/lose_ui.tscn" id="10_lose_scene"]
+[ext_resource type="PackedScene" uid="uid://b4brick0001" path="res://assets/kenney_pjt004/brick.glb" id="11_brick_glb"]
+[ext_resource type="AudioStream" uid="uid://acollect1" path="res://assets/audio/HP1_AUDIO_COLLECT_PROGRAM.wav" id="12_audio_collect"]
+[ext_resource type="AudioStream" uid="uid://achk1" path="res://assets/audio/HP1_AUDIO_CHECKPOINT_PROGRAM.wav" id="13_audio_chk"]
+[ext_resource type="AudioStream" uid="uid://ahaz1" path="res://assets/audio/HP1_AUDIO_HAZARD_PROGRAM.wav" id="14_audio_haz"]
+[ext_resource type="AudioStream" uid="uid://awin1" path="res://assets/audio/HP1_AUDIO_WIN_PROGRAM.wav" id="15_audio_win"]
+[ext_resource type="AudioStream" uid="uid://alose1" path="res://assets/audio/HP1_AUDIO_LOSE_PROGRAM.wav" id="16_audio_lose"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
+sky_top_color = Color(0.18, 0.45, 0.75, 1)
+sky_horizon_color = Color(0.55, 0.75, 0.9, 1)
+ground_bottom_color = Color(0.12, 0.22, 0.35, 1)
+
+[sub_resource type="Sky" id="Sky_sky"]
+sky_material = SubResource("ProceduralSkyMaterial_sky")
+
+[sub_resource type="Environment" id="Environment_env"]
+background_mode = 2
+sky = SubResource("Sky_sky")
+ambient_light_color = Color(0.8, 0.85, 0.95, 1)
+ambient_light_energy = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_platform"]
+size = Vector3(10, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bridge"]
+size = Vector3(4, 1, 12)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_main_script")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_env")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 10, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_player_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+
+[node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target")]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 5, 8)
+script = ExtResource("3_view_script")
+target = NodePath("../Player")
+
+[node name="Camera3D" type="Camera3D" parent="View"]
+current = true
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Platforms" type="Node3D" parent="World"]
+
+[node name="PlatformStart" type="StaticBody3D" parent="World/Platforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Platforms/PlatformStart"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_platform")
+
+[node name="brick" parent="World/Platforms/PlatformStart" instance=ExtResource("11_brick_glb")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.5, 0)
+
+[node name="Bridge01" type="StaticBody3D" parent="World/Platforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Platforms/Bridge01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_bridge")
+
+[node name="brick" parent="World/Platforms/Bridge01" instance=ExtResource("11_brick_glb")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 12, 0, -0.5, 0)
+
+[node name="Platform02" type="StaticBody3D" parent="World/Platforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0, -20)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Platforms/Platform02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_platform")
+
+[node name="brick" parent="World/Platforms/Platform02" instance=ExtResource("11_brick_glb")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.5, 0)
+
+[node name="Platform03" type="StaticBody3D" parent="World/Platforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.8, -20)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Platforms/Platform03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_platform")
+
+[node name="brick" parent="World/Platforms/Platform03" instance=ExtResource("11_brick_glb")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.5, 0)
+
+[node name="Platform04" type="StaticBody3D" parent="World/Platforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.5, -35)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Platforms/Platform04"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_platform")
+
+[node name="brick" parent="World/Platforms/Platform04" instance=ExtResource("11_brick_glb")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.5, 0)
+
+[node name="Platform05" type="StaticBody3D" parent="World/Platforms"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, -35)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Platforms/Platform05"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_platform")
+
+[node name="brick" parent="World/Platforms/Platform05" instance=ExtResource("11_brick_glb")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.5, 0)
+
+[node name="Collectibles" type="Node3D" parent="World"]
+
+[node name="Collectible01" parent="World/Collectibles" instance=ExtResource("4_col_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, -4)
+
+[node name="Collectible02" parent="World/Collectibles" instance=ExtResource("4_col_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -18)
+
+[node name="Collectible03" parent="World/Collectibles" instance=ExtResource("4_col_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.2, -20)
+
+[node name="Collectible04" parent="World/Collectibles" instance=ExtResource("4_col_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.9, -35)
+
+[node name="Collectible05" parent="World/Collectibles" instance=ExtResource("4_col_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.65, -35)
+
+[node name="Checkpoints" type="Node3D" parent="World"]
+
+[node name="Checkpoint01" parent="World/Checkpoints" instance=ExtResource("5_chk_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0, -22)
+
+[node name="Hazards" type="Node3D" parent="World"]
+
+[node name="Hazard01" parent="World/Hazards" instance=ExtResource("6_haz_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -10)
+
+[node name="Hazard02" parent="World/Hazards" instance=ExtResource("6_haz_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.4, -20)
+
+[node name="Goal" parent="World" instance=ExtResource("7_goal_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, -38)
+
+[node name="HUDLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="HUDLayer" instance=ExtResource("8_hud_scene")]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="WinUI" parent="UILayer" instance=ExtResource("9_win_scene")]
+
+[node name="LoseUI" parent="UILayer" instance=ExtResource("10_lose_scene")]
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="CollectAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("12_audio_collect")
+
+[node name="CheckpointAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("13_audio_chk")
+
+[node name="HazardAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("14_audio_haz")
+
+[node name="WinAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("15_audio_win")
+
+[node name="LoseAudio" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("16_audio_lose")
+
+[connection signal="collected" from="World/Collectibles/Collectible01" to="." method="_on_collectible_collected"]
+[connection signal="collected" from="World/Collectibles/Collectible02" to="." method="_on_collectible_collected"]
+[connection signal="collected" from="World/Collectibles/Collectible03" to="." method="_on_collectible_collected"]
+[connection signal="collected" from="World/Collectibles/Collectible04" to="." method="_on_collectible_collected"]
+[connection signal="collected" from="World/Collectibles/Collectible05" to="." method="_on_collectible_collected"]
+[connection signal="activated" from="World/Checkpoints/Checkpoint01" to="." method="_on_checkpoint_activated"]
+[connection signal="player_hit" from="World/Hazards/Hazard01" to="." method="_on_hazard_player_hit"]
+[connection signal="player_hit" from="World/Hazards/Hazard02" to="." method="_on_hazard_player_hit"]
+[connection signal="goal_reached" from="World/Goal" to="." method="_on_goal_reached"]
+[connection signal="main_menu_requested" from="UILayer/WinUI" to="." method="_on_win_ui_main_menu_requested"]
+[connection signal="restart_requested" from="UILayer/WinUI" to="." method="_on_win_ui_restart_requested"]
+[connection signal="main_menu_requested" from="UILayer/LoseUI" to="." method="_on_lose_ui_main_menu_requested"]
+[connection signal="restart_requested" from="UILayer/LoseUI" to="." method="_on_lose_ui_restart_requested"]

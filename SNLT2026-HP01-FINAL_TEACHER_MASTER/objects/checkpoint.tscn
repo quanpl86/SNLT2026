@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://f6chk0000001"]
+
+[ext_resource type="Script" uid="uid://c6chkscript1" path="res://scripts/checkpoint.gd" id="1_chk_script"]
+[ext_resource type="PackedScene" uid="uid://b6beacon1" path="res://assets/blockbench/B06_CHECKPOINT_BEACON_PROGRAM.glb" id="2_beacon_glb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_chk"]
+size = Vector3(2, 2, 2)
+
+[node name="Checkpoint" type="Area3D"]
+script = ExtResource("1_chk_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_chk")
+
+[node name="ModelAnchor" type="Node3D" parent="."]
+
+[node name="B06_CHECKPOINT_BEACON_PROGRAM" parent="ModelAnchor" instance=ExtResource("2_beacon_glb")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

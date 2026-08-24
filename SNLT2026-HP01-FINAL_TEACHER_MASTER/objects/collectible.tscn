@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://f5col0000001"]
+
+[ext_resource type="Script" uid="uid://c5colscript1" path="res://scripts/collectible.gd" id="1_col_script"]
+[ext_resource type="PackedScene" uid="uid://b5col0000001" path="res://assets/blockbench/B05_COLLECTIBLE_PLACEHOLDER_PROGRAM.glb" id="2_col_glb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_col"]
+radius = 0.6
+
+[node name="Collectible" type="Area3D"]
+script = ExtResource("1_col_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("SphereShape3D_col")
+
+[node name="ModelAnchor" type="Node3D" parent="."]
+
+[node name="B05_COLLECTIBLE_PLACEHOLDER_PROGRAM" parent="ModelAnchor" instance=ExtResource("2_col_glb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

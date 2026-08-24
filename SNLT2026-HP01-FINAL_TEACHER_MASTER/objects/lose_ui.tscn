@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://f8loseui0001"]
+
+[ext_resource type="Script" uid="uid://c8loseuiscript1" path="res://scripts/lose_ui.gd" id="1_lose_script"]
+[ext_resource type="Texture2D" uid="uid://flosepanel1" path="res://assets/ui/HP1_FINAL_LOSE_PANEL_PROGRAM.png" id="2_lose_panel"]
+[ext_resource type="Texture2D" uid="uid://fbutton1" path="res://assets/ui/HP1_FINAL_BUTTON_PROGRAM.png" id="3_btn_tex"]
+[ext_resource type="AudioStream" uid="uid://uiclick1" path="res://assets/audio/HP1_AUDIO_UI_CLICK_PROGRAM.wav" id="4_click_audio"]
+
+[node name="LoseUI" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lose_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0, 0, 0.75)
+
+[node name="Panel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -160.0
+offset_right = 220.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lose_panel")
+expand_mode = 1
+
+[node name="TitleLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 35.0
+offset_right = 150.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "THẤT BẠI!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 90.0
+offset_right = 180.0
+offset_bottom = 120.0
+grow_horizontal = 2
+text = "Bạn đã hết 3 mạng sống. Hãy thử lại nào!"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -140.0
+offset_right = 160.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_btn_tex")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Panel/RestartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Chơi lại"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -70.0
+offset_right = 160.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_btn_tex")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Panel/MainMenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Về màn hình chính"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_click_audio")
+
+[connection signal="pressed" from="Panel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Panel/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

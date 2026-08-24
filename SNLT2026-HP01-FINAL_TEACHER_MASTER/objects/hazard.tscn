@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://f6haz0000001"]
+
+[ext_resource type="Script" uid="uid://c6hazscript1" path="res://scripts/hazard.gd" id="1_haz_script"]
+[ext_resource type="PackedScene" uid="uid://b6spikes1" path="res://assets/blockbench/B06_HAZARD_SPIKES_PROGRAM.glb" id="2_spikes_glb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_haz"]
+size = Vector3(1.5, 0.6, 1.5)
+
+[node name="Hazard" type="Area3D"]
+script = ExtResource("1_haz_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+shape = SubResource("BoxShape3D_haz")
+
+[node name="ModelAnchor" type="Node3D" parent="."]
+
+[node name="B06_HAZARD_SPIKES_PROGRAM" parent="ModelAnchor" instance=ExtResource("2_spikes_glb")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
