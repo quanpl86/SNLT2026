@@ -3,7 +3,7 @@
 > **Quy chuẩn giao diện**: Mọi thuật ngữ giao diện phần mềm sử dụng nhãn tiếng Anh chuẩn trên Godot (**English UI**), đi kèm tên giải thích tiếng Việt.
 
 ## 1. Yêu cầu môi trường
-- **Phần mềm**: Godot Engine version **4.6** (hoặc các phiên bản Godot 4.x tương thích).
+- **Phần mềm**: **Godot 4.7.1 stable**.
 - **Ngôn ngữ giao diện Editor**: Tiếng Anh (**English UI**).
 - **Bộ dựng hình (Renderer)**: **GL Compatibility** (`gl_compatibility`).
 - **Hệ điều hành**: Windows 10/11, macOS hoặc Linux.

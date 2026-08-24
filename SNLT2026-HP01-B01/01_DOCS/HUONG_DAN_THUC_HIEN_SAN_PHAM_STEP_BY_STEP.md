@@ -8,7 +8,7 @@ Chào mừng em đến với bài thực hành **Khám phá trò chơi 3D**! Dư
 
 ### BƯỚC 1 — Mở dự án khởi đầu (Student Starter)
 **VIỆC EM CẦN LÀM**:
-- Mở phần mềm Godot 4.6 (hoặc phiên bản Godot 4.x trên máy).
+- Mở phần mềm Godot 4.7.1 stable.
 - Tại Trình quản lý dự án (**Project Manager**), nhấn nút Nạp dự án (**Import**).
 - Nhấn Duyệt tệp (**Browse**) và chọn tới tệp:
   `SNLT2026-HP01-B01/SNLT2026-HP01-B01-STUDENT_STARTER/project.godot`

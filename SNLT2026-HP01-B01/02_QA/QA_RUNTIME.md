@@ -27,4 +27,4 @@ WEB_QA: NOT_TESTED
 ---
 
 ## 3. Ghi chú lịch sử môi trường (Historical Environment Log)
-- *Godot 4.6.x*: Môi trường mặc định HP1 ban đầu không tìm thấy CLI binary trên máy thử nghiệm (`GODOT_4_6_NOT_FOUND`). Toàn bộ dự án được chuyển sang pilot thực tế trên **Godot 4.7.1 stable** với kết quả 100% ổn định.
+- *Godot 4.6.x*: Môi trường mặc định HP1 ban đầu không tìm thấy CLI binary trên máy thử nghiệm (`GODOT_4_6_NOT_FOUND`). Các kiểm thử CLI và Project Basic Human Smoke Test đã thực hiện trên Godot 4.7.1 đều đạt; Student Starter Human E2E và Web QA vẫn chưa hoàn tất.

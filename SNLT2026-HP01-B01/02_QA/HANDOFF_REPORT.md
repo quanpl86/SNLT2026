@@ -21,7 +21,7 @@ PROJECT_BASIC_CANONICAL_VALUES: Player Position X = 1.5, View Rotation Y = 25°
 STUDENT_STARTER_BASELINE_VALUES: Player Position X = 0.0, View Rotation Y = 0.0°
 STUDENT_WORK_BOUNDARY_CONFIRMED: YES
 
-OPEN_FINDINGS: NONE (Finding 1..6 closed; Round 2 findings resolved)
+OPEN_FINDINGS: NONE (Finding 1..7 closed; pre-human test sync complete)
 FILES_CHANGED_AFTER_HUMAN_TEST: PROJECT_BASIC/scenes/main.tscn (Player transform rotation cleaned to 0°)
 
 GIT_BRANCH: b01

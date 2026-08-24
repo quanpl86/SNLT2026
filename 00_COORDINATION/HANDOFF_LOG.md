@@ -82,12 +82,7 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **TO**: Antigravity
 - **LESSON**: B01
 - **TASK**: HP1-B01-T020
-- **YÊU CẦU**:
-  1. Đồng bộ nguyên văn CIO01 và CIO02 từ Bảng LO vào `CONTROL_RECORD.md` và `B01_CONTEXT.md`.
-  2. Thay runtime status Godot 4.6 cũ bằng các trạng thái thực tế Godot 4.7.1.
-  3. Bỏ current `HEAD_COMMIT`/`LAST_COMMIT` SHA khỏi tracked metadata files.
-  4. Sửa wording HV-01 trong `HUMAN_VALIDATION.md`.
-  5. Cập nhật `TASK_BOARD.md`, `CURRENT_STATE.md`, `OPEN_FINDINGS.md` và `HANDOFF_LOG.md`.
+- **YÊU CẦU**: Đồng bộ CIO, thay runtime status Godot 4.6, bỏ hard-coded SHA, sửa wording HV-01.
 - **STATUS**: `DONE`
 
 ---
@@ -97,7 +92,17 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **TO**: ChatGPT
 - **LESSON**: B01
 - **TASK**: HP1-B01-T021
-- **YÊU CẦU**: Review lại PR #1 sau khi Antigravity đã hoàn tất 100% 7 yêu cầu sửa đổi Round 2 từ ChatGPT.
-- **NEXT_OWNER**: CHATGPT
-- **NEXT_ACTION**: Final PR #1 coordination re-review
-- **STATUS**: `WAITING_CHATGPT_REVIEW`
+- **YÊU CẦU**: Review lại PR #1 sau khi Antigravity đã xử lý xong 100% yêu cầu Round 2.
+- **STATUS**: `DONE`
+
+---
+
+### HANDOFF-009 (PRE-HUMAN-TEST SYNC COMPLETE — TRANSFERRED TO HUMAN)
+- **FROM**: Antigravity
+- **TO**: Human
+- **LESSON**: B01
+- **TASK**: HP1-B01-T019
+- **YÊU CẦU**: Người dùng (Human) mở `SNLT2026-HP01-B01-STUDENT_STARTER` trên Godot 4.7.1 stable và thực hiện kiểm thử End-to-End 1:1 theo `01_DOCS/HUONG_DAN_THUC_HIEN_SAN_PHAM_STEP_BY_STEP.md`.
+- **NEXT_OWNER**: HUMAN
+- **NEXT_ACTION**: Execute T019 Student Starter End-to-End Human Test
+- **STATUS**: `READY_FOR_HUMAN_TEST`
