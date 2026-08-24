@@ -23,21 +23,40 @@ Những tiêu chí cần con người (Human) xác nhận:
 
 ---
 
-## MÔ HÌNH PHỐI HỢP THỰC HIỆN TEST 3 BƯỚC (CANONICAL WORKFLOW RULE)
+## PHÂN ĐỊNH THẨM QUYỀN VÀ VAI TRÒ (CANONICAL TEST AUTHORITY)
 
-1. **Bước 1 — Antigravity Code & Local Test Phase**:
-   - Triển khai project Godot và chạy các bài test môi trường địa phương.
-   - Phản hồi lại kết quả test kèm theo:
-     - Báo cáo kết quả test ngắn gọn.
-     - Tệp / Nội dung Markdown chi tiết **Checklist các nội dung cần test**.
-     - **Hướng dẫn chi tiết từng bước cách test trên Godot** dành cho Human.
+```text
+CANONICAL HUMAN TEST AUTHORITY:
+CHATGPT     = test design / official checklist issuance (HUMAN_DOUBLE_CHECK_Bxx.md)
+HUMAN       = actual execution on real machine / final approval
+ANTIGRAVITY = implementation / local verification & draft test reporting
+```
 
-2. **Bước 2 — Human Double-Check & Validation Phase**:
-   - Người dùng (Human) double-check bằng cách thực hành test trực tiếp trên Godot theo checklist & hướng dẫn từ Antigravity.
-   - Người dùng cung cấp hình ảnh minh chứng screenshot, ghi chú kết quả/phản hồi trực tiếp vào file hoặc thông báo chat.
+---
 
-3. **Bước 3 — Post-Validation & Handoff Phase (Bởi Antigravity)**:
-   - Sau khi nhận được xác nhận **OK** từ người dùng:
-     - Antigravity cập nhật lại code, tài liệu `01_DOCS/`, báo cáo QA `02_QA/`, lưu minh chứng screenshot và cập nhật `00_COORDINATION/`.
-     - Thực hiện `git commit` và `git push` lên GitHub.
-     - Viết thông điệp/prompt chính thức gửi **ChatGPT** thông báo kết quả hoàn tất và sẵn sàng nhận task bài tiếp theo.
+## MÔ HÌNH PHỐI HỢP THỰC HIỆN TEST 9 BƯỚC (CANONICAL WORKFLOW RULE)
+
+1. **CHATGPT**: Phát hành spec + acceptance tests.
+2. **ANTIGRAVITY**: Code `PROJECT_BASIC` / `STUDENT_STARTER`, test thực tế trên local Godot.
+3. **ANTIGRAVITY → CHATGPT**: Gửi `LOCAL_TEST_REPORT` + actual results + errors/warnings + những gì chưa test được (có thể kèm `HUMAN_TEST_DRAFT` để tham khảo).
+4. **CHATGPT**: Review test coverage của Antigravity và phát hành `HUMAN_DOUBLE_CHECK_Bxx.md` chính thức cho HUMAN.
+5. **HUMAN**: Thực hiện các bài test trên máy thật + chụp screenshot + note kết quả PASS/FAIL.
+6. **CHATGPT**: Review Human evidence:
+   - Nếu `FAIL` → phát finding giao Antigravity sửa → regression test → Human retest.
+   - Nếu `PASS` → báo OK cho Human & Antigravity.
+7. **HUMAN**: Xác nhận **OK**.
+8. **ANTIGRAVITY**:
+   - Freeze functional state (không được thay đổi code chức năng).
+   - Cập nhật QA / report / state / evidence screenshots / coordination log.
+   - Commit + Push GitHub.
+   - Handoff cho ChatGPT.
+9. **CHATGPT**: Review commit/PR và phát hành task tiếp theo.
+
+---
+
+## NGUYÊN TẮC BẢO VỆ ĐÓNG VÒNG (POST-HUMAN-PASS CODE FREEZE)
+
+- Sau khi Human xác nhận **PASS / OK**, Antigravity được phép cập nhật tài liệu `.md`, QA report, screenshot minh chứng và metadata.
+- **NGHIÊM CẤM** tự tiện thay đổi mã nguồn chức năng (functional code) sau khi Human PASS.
+- Nếu bắt buộc phải thay đổi code chức năng sau khi đã PASS:
+  `CODE CHANGE → Antigravity local test → ChatGPT phát delta checklist → Human retest → PASS lại → mới commit/push.`
