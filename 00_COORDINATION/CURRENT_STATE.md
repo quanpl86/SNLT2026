@@ -15,19 +15,20 @@ LOCKED (English UI + Vietnamese instructions with exact English UI labels in par
 
 PROJECT_BASIC:
 Implemented & Cleaned (Player rotation 0°)
-CLI Headless & Human Verified
+CLI Headless & Human Smoke Test Verified
 
 STUDENT_STARTER:
-Implemented & Baseline Verified
+Derived & Static-Diff Verified
+Human End-to-End Test Pending
 
 CURRENT_GATE:
-Human Validation & ChatGPT Review
+Fixing PR #1 Review Findings
 
 CURRENT_OWNER:
-CHATGPT
+ANTIGRAVITY
 
 NEXT_EXPECTED_ACTION:
-ChatGPT Review Branch b01 and PR #1
+ChatGPT Re-Review of PR #1 Fixes
 
 NEXT_AGENT:
 CHATGPT
@@ -42,10 +43,10 @@ ACTIVE_BRANCH:
 b01
 
 ACTIVE_PR:
-https://github.com/quanpl86/SNLT2026/pull/1 (#1)
+#1 (https://github.com/quanpl86/SNLT2026/pull/1)
 
 LAST_HANDOFF:
-Antigravity → ChatGPT
+ChatGPT → Antigravity (Request Changes on PR #1)
 
 LAST_COMMIT:
-52ba92bd3f78d09d85eed2b7c7b4c7927013d722
+5708d3f77971a6602164c94bdfdd9c812e846b88

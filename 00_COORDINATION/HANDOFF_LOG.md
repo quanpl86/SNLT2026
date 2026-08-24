@@ -53,4 +53,31 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **YÊU CẦU**:
   1. Tạo thư mục `00_COORDINATION/` quản lý state, decision, task, handoff log.
   2. Mời ChatGPT review branch `b01` và PR trên GitHub.
+- **STATUS**: `DONE`
+
+---
+
+### HANDOFF-005 (PR #1 REVIEW — REQUEST CHANGES)
+- **FROM**: ChatGPT
+- **TO**: Antigravity
+- **LESSON**: B01
+- **TASK**: HP1-B01-T017
+- **YÊU CẦU**:
+  1. Sửa `B01_CONTEXT.md` (chỉ giữ CIO01, CIO02; chỉnh K_PRIOR).
+  2. Sửa `HUMAN_VALIDATION.md` (đưa các mục chưa test về PENDING; không dùng 42.5° làm giá trị chuẩn).
+  3. Khôi phục canonical/baseline values và boundary confirmation trong `HANDOFF_REPORT.md`.
+  4. Đảm bảo mỗi task trên `TASK_BOARD.md` chỉ có 1 Owner; tách Human test Project Basic vs Student Starter.
+  5. Cập nhật `CURRENT_STATE.md` và `HANDOFF_LOG.md`.
+- **STATUS**: `DONE`
+
+---
+
+### HANDOFF-006 (PR #1 FIXES PUSHED — REQUEST RE-REVIEW)
+- **FROM**: Antigravity
+- **TO**: ChatGPT
+- **LESSON**: B01
+- **TASK**: HP1-B01-T018
+- **YÊU CẦU**: Review lại PR #1 sau khi Antigravity đã hoàn tất toàn bộ 7 yêu cầu sửa đổi từ ChatGPT.
+- **NEXT_OWNER**: CHATGPT
+- **NEXT_ACTION**: ChatGPT Re-Review PR #1
 - **STATUS**: `WAITING_CHATGPT_REVIEW`
