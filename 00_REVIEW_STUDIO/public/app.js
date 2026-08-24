@@ -679,23 +679,51 @@ function createDropzone(mediaItem, testId) {
     preview.className = 'media-preview-box';
     const fileUrl = `/${existingUpload.relative_path}`;
 
+    const deleteBtn = document.createElement('button');
+    deleteBtn.style.padding = '4px 10px';
+    deleteBtn.style.fontSize = '11px';
+    deleteBtn.style.background = 'var(--accent-red-light)';
+    deleteBtn.style.color = 'var(--accent-red)';
+    deleteBtn.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+    deleteBtn.style.borderRadius = '6px';
+    deleteBtn.style.cursor = 'pointer';
+    deleteBtn.style.fontWeight = '700';
+    deleteBtn.innerHTML = `🗑️ XOÁ MINH CHỨNG`;
+
+    deleteBtn.onclick = async (e) => {
+      e.stopPropagation();
+      if (confirm(`Bạn có chắc chắn muốn xoá minh chứng [${mediaItem.canonical_filename}]?`)) {
+        await deleteMedia(mediaItem.media_id, testId);
+      }
+    };
+
     if (mediaItem.type === 'video') {
       preview.innerHTML = `
-        <video src="${fileUrl}" controls></video>
-        <div class="media-hash-info">
-          <span>SHA-256: ${existingUpload.sha256.substring(0, 16)}...</span>
-          <span>Kích thước: ${(existingUpload.size_bytes / 1024 / 1024).toFixed(2)} MB</span>
+        <video src="${fileUrl}" controls style="max-width:100%; border-radius:8px; margin-bottom:8px;"></video>
+        <div class="media-hash-info" style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <span>SHA-256: ${existingUpload.sha256.substring(0, 16)}...</span>
+            <span style="margin-left:12px;">Kích thước: ${(existingUpload.size_bytes / 1024 / 1024).toFixed(2)} MB</span>
+          </div>
         </div>
       `;
     } else {
       preview.innerHTML = `
-        <img src="${fileUrl}" />
-        <div class="media-hash-info">
-          <span>SHA-256: ${existingUpload.sha256.substring(0, 16)}...</span>
-          <span>Kích thước: ${(existingUpload.size_bytes / 1024).toFixed(1)} KB</span>
+        <img src="${fileUrl}" style="max-width:100%; max-height:360px; object-fit:contain; border-radius:8px; margin-bottom:8px; display:block;" />
+        <div class="media-hash-info" style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <span>SHA-256: ${existingUpload.sha256.substring(0, 16)}...</span>
+            <span style="margin-left:12px;">Kích thước: ${(existingUpload.size_bytes / 1024).toFixed(1)} KB</span>
+          </div>
         </div>
       `;
     }
+
+    const hashInfoDiv = preview.querySelector('.media-hash-info');
+    if (hashInfoDiv) {
+      hashInfoDiv.appendChild(deleteBtn);
+    }
+
     box.appendChild(preview);
   }
 
@@ -733,6 +761,30 @@ function createDropzone(mediaItem, testId) {
   return box;
 }
 
+async function deleteMedia(mediaId, testId) {
+  try {
+    const res = await fetch('/api/delete-media', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        hp: state.currentModule || 'HP1',
+        lesson: state.currentLesson,
+        media_id: mediaId,
+        is_smoke: state.smokeMode
+      })
+    });
+    const data = await res.json();
+    if (data.success) {
+      await loadResults();
+      renderTestCard(testId);
+    } else {
+      alert('Lỗi xoá file: ' + data.error);
+    }
+  } catch (e) {
+    alert('Lỗi kết nối xoá file: ' + e.message);
+  }
+}
+
 async function uploadFile(file, mediaItem, testId) {
   let isRetake = false;
   const existingUpload = state.results.media_uploads ? state.results.media_uploads[mediaItem.media_id] : null;
@@ -743,12 +795,10 @@ async function uploadFile(file, mediaItem, testId) {
     isRetake = true;
   }
 
-  const formData = new FormData();
-  formData.append('file', file);
-
   const res = await fetch('/api/upload-media', {
     method: 'POST',
     headers: {
+      'x-hp': state.currentModule || 'HP1',
       'x-lesson': state.currentLesson,
       'x-canonical-filename': encodeURIComponent(mediaItem.canonical_filename),
       'x-test-id': testId,
