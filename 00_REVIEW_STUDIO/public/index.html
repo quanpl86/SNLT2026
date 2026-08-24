@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNLT Review Studio — Official Human Test Suite</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- TOP NAVIGATION HEADER -->
+    <header class="navbar">
+      <div class="brand">
+        <div class="logo-badge">SNLT 3D</div>
+        <div class="brand-text">
+          <h1>Review Studio</h1>
+          <span class="subtext">Human Test & Learning Media Suite</span>
+        </div>
+      </div>
+
+      <div class="selectors">
+        <div class="selector-group">
+          <label>HỌC PHẦN</label>
+          <select id="module-select"></select>
+        </div>
+        <div class="selector-group">
+          <label>BÀI HỌC</label>
+          <select id="lesson-select"></select>
+        </div>
+      </div>
+
+      <div class="top-controls">
+        <button id="reload-data-btn" class="theme-toggle-btn" title="Quét lại thư mục dữ liệu review_data để cập nhật bài mới / học phần mới">
+          🔄 LÀM MỚI DỮ LIỆU
+        </button>
+
+        <div class="mode-toggle">
+          <button id="mode-test-btn" class="mode-btn active">🧪 TEST MODE</button>
+          <button id="mode-review-btn" class="mode-btn">👁️ REVIEW MODE</button>
+        </div>
+
+        <button id="theme-toggle-btn" class="theme-toggle-btn" title="Đổi giao diện Sáng / Tối">
+          ☀️ SÁNG
+        </button>
+      </div>
+
+      <div class="progress-badge">
+        <div class="progress-info">
+          <span id="overall-progress-text">0/18 PASS</span>
+          <span id="overall-percent">0%</span>
+        </div>
+        <div class="progress-bar-track">
+          <div id="overall-progress-bar" class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-layout">
+      <!-- SIDEBAR CHECKLIST NAVIGATION -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>DANH SÁCH BÀI TEST & TARGETS</h2>
+          <div class="target-filters" id="target-filters">
+            <!-- Dynamic Target Filter Tabs -->
+          </div>
+        </div>
+        <div class="test-list" id="test-list">
+          <!-- Dynamic Test Items Rendered Here -->
+        </div>
+      </aside>
+
+      <!-- TEST CARD / WORKSPACE AREA -->
+      <main class="content-area">
+        <div id="test-card-container">
+          <!-- Dynamic Test Card Rendered Here -->
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER STATUS BAR -->
+    <footer class="statusbar">
+      <div class="status-item">
+        <span class="status-label">ENGINE:</span>
+        <span id="engine-status" class="status-val">Godot 4.7.1 stable</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">RENDERER:</span>
+        <span id="renderer-status" class="status-val">Compatibility</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">MODE:</span>
+        <span id="smoke-status-indicator" class="status-val highlight-ready">🛡️ CANONICAL_REAL_TEST</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">FINDINGS:</span>
+        <span id="findings-count" class="status-val highlight-warn">0 Issues</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">TRẠNG THÁI:</span>
+        <span id="handoff-status" class="status-val highlight-ready">OFFICIAL_HUMAN_TEST_IN_PROGRESS</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

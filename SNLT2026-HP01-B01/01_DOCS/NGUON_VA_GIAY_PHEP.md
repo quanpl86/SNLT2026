@@ -3,7 +3,7 @@
 ## 1. Bản quyền & Nguồn dự án
 - **Hệ thống bài học**: Học phần 1 — Phiêu lưu Nền tảng 3D (SNLT2026-HP01).
 - **Tham chiếu hạ tầng**: PJT-004 — Kenney Starter Kit 3D Platformer (Mã nguồn chuyển thể theo MIT License, Asset đồ họa CC0).
-- **Mã nguồn Godot Engine**: Godot Engine 4.6 (Giấy phép MIT).
+- **Mã nguồn Godot Engine**: Godot Engine 4.7.1 stable (Giấy phép MIT).
 
 ## 2. Giấy phép sử dụng Asset
 - Toàn bộ mô hình 3D trong bài 01 được tạo từ các hình khối cơ bản (`PrimitiveMesh`: Capsule, Box, Cylinder, Prism) có sẵn trong Godot Engine.

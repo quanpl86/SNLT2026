@@ -16,6 +16,6 @@
   - `World` (Static Platforms, Coins, GoalFlag)
 
 ## Cách khởi chạy & kiểm thử
-- Mở dự án bằng **Godot 4.6** (Compatibility Renderer).
+- Mở dự án bằng **Godot 4.7.1 stable** (Compatibility Renderer).
 - Nhấn **F5** hoặc nút **Run Project** để khởi chạy `scenes/main.tscn`.
 - Phím điều khiển hạ tầng: `W/A/S/D` để di chuyển, `Space` để nhảy.

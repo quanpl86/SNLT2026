@@ -3,29 +3,32 @@
 ```text
 LESSON: SNLT2026-HP01-B01 — Khám phá trò chơi 3D
 VERSION: v1.0
-ENGINE_VERSION: Godot 4.7.1 stable
+ENGINE_CANDIDATE: Godot 4.7.1 stable
 RENDERER: Compatibility (gl_compatibility)
 
 PROJECT_BASIC_STATUS: PASS
 STUDENT_STARTER_STATUS: READY_FOR_HUMAN_TEST
 
 STATIC_QA: PASS (7/7 tests)
-RUNTIME_QA: NOT_RUN — GODOT_4_6_NOT_FOUND (Godot 4.7.1 CLI & Human Verified Exit Code 0)
-HUMAN_VALIDATION: PASS (Verified in English UI)
+GODOT_4_7_1_IMPORT_PARSE_QA: PASS
+GODOT_4_7_1_PROJECT_BASIC_HEADLESS_RUNTIME: PASS
+PROJECT_BASIC_HUMAN_SMOKE_TEST: PASS (Verified W/A/S/D movement & Space jump)
+STUDENT_STARTER_IMPORT_PARSE_QA: PASS
+STUDENT_STARTER_HUMAN_E2E: PENDING
 WEB_QA: NOT_TESTED
 
-OPEN_FINDINGS: NONE (Finding 1: NON_PROJECT_EDITOR_ERROR; Finding 2: PROJECT_ERROR_FIXED)
+PROJECT_BASIC_CANONICAL_VALUES: Player Position X = 1.5, View Rotation Y = 25°
+STUDENT_STARTER_BASELINE_VALUES: Player Position X = 0.0, View Rotation Y = 0.0°
+STUDENT_WORK_BOUNDARY_CONFIRMED: YES
+
+OPEN_FINDINGS: NONE (Finding 1..7 closed; pre-human test sync complete)
 FILES_CHANGED_AFTER_HUMAN_TEST: PROJECT_BASIC/scenes/main.tscn (Player transform rotation cleaned to 0°)
 
-PROJECT_BASIC_CANONICAL_VALUES:
-Player.Position = (1.5, 0.05, 0)
-View.Rotation = (0, 25, 0)
-
-STUDENT_STARTER_BASELINE_VALUES:
-Player.Position = (0, 0.05, 0)
-View.Rotation = (0, 0, 0)
-
-STUDENT_WORK_BOUNDARY_CONFIRMED: YES
+GIT_BRANCH: b01
+BASE_BRANCH: main
+ACTIVE_PR: #1
+REVIEW_TARGET: PR_HEAD
+REVIEW_STATUS: READY_FOR_CHATGPT_REVIEW
 
 RECOMMENDED_STATUS: READY_FOR_HUMAN_TEST
 ```
@@ -51,7 +54,7 @@ RECOMMENDED_STATUS: READY_FOR_HUMAN_TEST
 4. **Kiểm thử QA**:
    - Đạt 100% Static QA (ST-01 .. ST-07).
    - Kiểm thử thực tế bởi Con người và CLI trên Godot 4.7.1 thành công (0 Errors, 0 Warnings).
-   - Xử lý dứt điểm 2 finding: Finding 1 (`NON_PROJECT_EDITOR_ERROR`), Finding 2 (`PROJECT_ERROR_FIXED`).
+   - Xử lý dứt điểm các findings: Finding 1 (`NON_PROJECT_EDITOR_ERROR`), Finding 2 (`PROJECT_ERROR_FIXED`), Round 1 & Round 2 Coordination findings.
 
 ---
 
@@ -71,6 +74,6 @@ RECOMMENDED_STATUS: READY_FOR_HUMAN_TEST
 | `02_QA/QA_DIFF_STARTER_VS_MASTER.md` | ✅ | Báo cáo so sánh khác biệt Basic ↔ Starter |
 | `02_QA/HUMAN_VALIDATION.md` | ✅ | Báo cáo kiểm thử thực tế bởi Con người |
 | `02_QA/QA_GODOT_4_7_1_PILOT.md` | ✅ | Báo cáo thử nghiệm Pilot Godot 4.7.1 |
-| `02_QA/HANDOFF_REPORT.md` | ✅ | Tóm tắt bàn giao 10 câu tiêu chuẩn |
+| `02_QA/HANDOFF_REPORT.md` | ✅ | Tóm tắt bàn giao 10 câu tiêu chuẩn + Git Metadata |
 | `99_RELEASE/RELEASE_MANIFEST_B01.md` | ✅ | Manifest phiên bản bàn giao v1.0 |
 | `03_EVIDENCE_SCREENSHOTS/` | ✅ | Thư mục hình ảnh minh chứng |

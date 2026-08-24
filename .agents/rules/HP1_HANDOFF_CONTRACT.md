@@ -19,29 +19,64 @@ Không chứa:
 - cache/
 - temporary build files/
 
-Trong 02_QA/HANDOFF_REPORT.md phải chứa 10 câu báo cáo chuẩn:
+---
+
+## GIT WORKFLOW RULES
+
+- `main` = locked/released lesson state.
+- Mỗi bài đang phát triển dùng branch riêng: `b01`, `b02`, ..., `b12`.
+- Không push trực tiếp thay đổi triển khai bài mới vào `main`.
+- Mỗi gate quan trọng phải có commit riêng:
+  - `Bxx: project basic build`
+  - `Bxx: static qa pass`
+  - `Bxx: runtime qa pass`
+  - `Bxx: derive student starter`
+  - `Bxx: generate verified docs`
+  - `Bxx: human test fixes`
+  - `Bxx: ready for lock`
+- Trước khi merge vào `main` phải có:
+  - Project Basic QA PASS
+  - Student Starter QA PASS
+  - Human validation PASS
+  - ChatGPT review APPROVED
+  - READY_FOR_LOCK
+- Merge vào `main` chỉ sau khi người dùng phê duyệt.
+
+---
+
+## MẪU CẤU TRÚC HANDOFF_REPORT.md (BAO GỒM GIT METADATA)
+
+Trong `02_QA/HANDOFF_REPORT.md` phải chứa các câu báo cáo chuẩn:
 
 LESSON:
 VERSION:
 
-ENGINE_VERSION:
+ENGINE_CANDIDATE:
 RENDERER:
 
 PROJECT_BASIC_STATUS:
 STUDENT_STARTER_STATUS:
 
 STATIC_QA:
-RUNTIME_QA:
+GODOT_4_7_1_IMPORT_PARSE_QA:
+GODOT_4_7_1_PROJECT_BASIC_HEADLESS_RUNTIME:
+PROJECT_BASIC_HUMAN_SMOKE_TEST:
+STUDENT_STARTER_IMPORT_PARSE_QA:
+STUDENT_STARTER_HUMAN_E2E:
 WEB_QA:
-HUMAN_VALIDATION:
 
-CANONICAL_VALUES:
-STARTER_BASELINE_VALUES:
-
+PROJECT_BASIC_CANONICAL_VALUES:
+STUDENT_STARTER_BASELINE_VALUES:
 STUDENT_WORK_BOUNDARY_CONFIRMED:
 
 OPEN_FINDINGS:
 
 FILES_CHANGED_AFTER_HUMAN_TEST:
+
+GIT_BRANCH:
+BASE_BRANCH:
+ACTIVE_PR:
+REVIEW_TARGET: PR_HEAD
+REVIEW_STATUS:
 
 RECOMMENDED_STATUS:
