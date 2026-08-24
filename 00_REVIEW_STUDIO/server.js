@@ -247,7 +247,7 @@ const server = http.createServer((req, res) => {
       if (!currentData.media_uploads) currentData.media_uploads = {};
       const relPath = isSmoke
         ? `00_REVIEW_STUDIO/_smoke_test/${subFolder}/${finalFileName}`
-        : `03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/${subFolder}/${finalFileName}`;
+        : `SNLT2026-${normalizeHpFolder(hp)}-${lesson}/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/${subFolder}/${finalFileName}`;
 
       currentData.media_uploads[mediaId] = {
         canonical_filename: finalFileName,
@@ -274,6 +274,53 @@ const server = http.createServer((req, res) => {
         size_bytes: buffer.length,
         path: relPath
       }));
+    });
+    return;
+  }
+
+  // POST /api/delete-media
+  if (req.method === 'POST' && pathname === '/api/delete-media') {
+    let body = '';
+    req.on('data', chunk => body += chunk.toString());
+    req.on('end', () => {
+      try {
+        const payload = JSON.parse(body);
+        const hp = payload.hp || 'HP1';
+        const lesson = payload.lesson || 'B01';
+        const mediaId = payload.media_id;
+        const isSmoke = payload.is_smoke === true;
+
+        if (!mediaId) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Missing media_id' }));
+          return;
+        }
+
+        const resultsPath = isSmoke
+          ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
+          : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+
+        if (fs.existsSync(resultsPath)) {
+          let currentData = JSON.parse(fs.readFileSync(resultsPath, 'utf8'));
+          if (currentData.media_uploads && currentData.media_uploads[mediaId]) {
+            const uploadInfo = currentData.media_uploads[mediaId];
+            const fullFilePath = path.join(ROOT_DIR, uploadInfo.relative_path);
+
+            if (fs.existsSync(fullFilePath)) {
+              try { fs.unlinkSync(fullFilePath); } catch (e) {}
+            }
+
+            delete currentData.media_uploads[mediaId];
+            fs.writeFileSync(resultsPath, JSON.stringify(currentData, null, 2), 'utf8');
+          }
+        }
+
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ success: true, message: `Media ${mediaId} deleted successfully` }));
+      } catch (e) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: e.message }));
+      }
     });
     return;
   }
@@ -489,6 +536,16 @@ const server = http.createServer((req, res) => {
     const rawWorkspacePath = path.join(ROOT_DIR, reqPath);
     if (fs.existsSync(rawWorkspacePath) && fs.statSync(rawWorkspacePath).isFile()) {
       filePath = rawWorkspacePath;
+    } else if (reqPath.startsWith('/03_HUMAN_TEST_REVIEW/')) {
+      const fallbackB01 = path.join(ROOT_DIR, 'SNLT2026-HP01-B01', reqPath);
+      if (fs.existsSync(fallbackB01) && fs.statSync(fallbackB01).isFile()) {
+        filePath = fallbackB01;
+      } else {
+        const fallbackB02 = path.join(ROOT_DIR, 'SNLT2026-HP01-B02', reqPath);
+        if (fs.existsSync(fallbackB02) && fs.statSync(fallbackB02).isFile()) {
+          filePath = fallbackB02;
+        }
+      }
     }
   }
 
