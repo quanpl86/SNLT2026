@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B06",
+  "status": "CHATGPT_PACKAGE_CREATED_PENDING_ANTIGRAVITY_GODOT_VALIDATION",
+  "records": [
+    {
+      "file": "SNLT2026-HP01-B06/01_CURATED_ASSET_PACK/GLB_READY/B06_CHECKPOINT_BEACON_PROGRAM.glb",
+      "sha256": "84653c4157f0b4ac6d94faa97f648adfdd6b8fd0285449eff6e4463a8ba037a2",
+      "size_bytes": 6528
+    },
+    {
+      "file": "SNLT2026-HP01-B06/01_CURATED_ASSET_PACK/GLB_READY/B06_HAZARD_SPIKES_PROGRAM.glb",
+      "sha256": "f3916b7e528414cc336b911ae21a201addeade73a7428754e85580faecbc6d6a",
+      "size_bytes": 4332
+    },
+    {
+      "file": "SNLT2026-HP01-B06/01_CURATED_ASSET_PACK/LICENSES/PROGRAM_AUTHORED_ASSETS_LICENSE.txt",
+      "sha256": "c2e2aca56f57a7c7e2dbc8176e5a64a7b04d21e8eeac3d88da7749fd5c3268c6",
+      "size_bytes": 236
+    }
+  ]
+}

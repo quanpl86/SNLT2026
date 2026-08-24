@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B06",
+  "asset_strategy": "PROGRAM_PROVIDED_VISUALS_NO_STUDENT_ASSET_WORK",
+  "program_assets": [
+    {
+      "asset_id": "B06-AST-HAZARD-01",
+      "path": "01_CURATED_ASSET_PACK/GLB_READY/B06_HAZARD_SPIKES_PROGRAM.glb",
+      "owner": "PROGRAM",
+      "role": "Hazard visual child",
+      "student_editable": false,
+      "status": "GODOT_4_7_1_IMPORT_PENDING"
+    },
+    {
+      "asset_id": "B06-AST-CHECKPOINT-01",
+      "path": "01_CURATED_ASSET_PACK/GLB_READY/B06_CHECKPOINT_BEACON_PROGRAM.glb",
+      "owner": "PROGRAM",
+      "role": "Checkpoint visual child",
+      "student_editable": false,
+      "status": "GODOT_4_7_1_IMPORT_PENDING"
+    }
+  ],
+  "optional_external_reference": [
+    {
+      "source_id": "PJT-004",
+      "source_path": "models/flag.glb",
+      "frozen_commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "license": "CC0_BY_PJT004_README",
+      "role": "OPTIONAL_CHECKPOINT_VISUAL_REFERENCE_ONLY",
+      "status": "DO_NOT_INGEST_UNLESS_EXACT_FILE_DOWNLOADED_AND_SHA256_RECORDED"
+    }
+  ],
+  "blockbench_gallery": {
+    "status": "NOT_USED_IN_B06",
+    "reason": "B06 không mở asset pipeline; B05 đã học K14 nhưng B06 tập trung K12/K29."
+  }
+}

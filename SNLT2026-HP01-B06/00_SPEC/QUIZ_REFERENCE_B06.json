@@ -1,0 +1,20 @@
+{
+  "lesson": "B06",
+  "source": "18. Ngân hàng Câu hỏi HP1 — Bản hợp nhất sau rà soát — v1.1 — ĐÃ DUYỆT",
+  "sheet": "07_Bai_6",
+  "count": 10,
+  "duration_minutes": 30,
+  "question_ids": [
+    "HP1-B06-Q01",
+    "HP1-B06-Q02",
+    "HP1-B06-Q03",
+    "HP1-B06-Q04",
+    "HP1-B06-Q05",
+    "HP1-B06-Q06",
+    "HP1-B06-Q07",
+    "HP1-B06-Q08",
+    "HP1-B06-Q09",
+    "HP1-B06-Q10"
+  ],
+  "rule": "Chỉ dùng nguyên văn bản ĐÃ DUYỆT; package không chứa đáp án."
+}

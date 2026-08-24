@@ -1,0 +1,41 @@
+{
+  "lesson": "B06",
+  "records": [
+    {
+      "asset_id": "B06-AST-GLB-BEACON-01",
+      "source_type": "PROGRAM_AUTHORED_GLB",
+      "source_id": "GD-020",
+      "source_owner": "SNLT2026 Curriculum Team",
+      "source_url": "res://01_CURATED_ASSET_PACK/GLB_READY/B06_CHECKPOINT_BEACON_PROGRAM.glb",
+      "frozen_commit_or_version": "v1.0",
+      "source_path": "SNLT2026-HP01-B06/01_CURATED_ASSET_PACK/GLB_READY/B06_CHECKPOINT_BEACON_PROGRAM.glb",
+      "local_path": "assets/blockbench/B06_CHECKPOINT_BEACON_PROGRAM.glb",
+      "license": "CC-BY-4.0",
+      "license_evidence": "PROGRAM_AUTHORED_ASSETS_LICENSE.txt",
+      "sha256": "84653c4157f0b4ac6d94faa97f648adfdd6b8fd0285449eff6e4463a8ba037a2",
+      "program_modified": false,
+      "modification_notes": "Program checkpoint beacon visual asset",
+      "owner_class": "C",
+      "godot_4_7_1_import_test": "PASS",
+      "blockbench_open_export_test": "N/A"
+    },
+    {
+      "asset_id": "B06-AST-GLB-SPIKES-01",
+      "source_type": "PROGRAM_AUTHORED_GLB",
+      "source_id": "GD-019",
+      "source_owner": "SNLT2026 Curriculum Team",
+      "source_url": "res://01_CURATED_ASSET_PACK/GLB_READY/B06_HAZARD_SPIKES_PROGRAM.glb",
+      "frozen_commit_or_version": "v1.0",
+      "source_path": "SNLT2026-HP01-B06/01_CURATED_ASSET_PACK/GLB_READY/B06_HAZARD_SPIKES_PROGRAM.glb",
+      "local_path": "assets/blockbench/B06_HAZARD_SPIKES_PROGRAM.glb",
+      "license": "CC-BY-4.0",
+      "license_evidence": "PROGRAM_AUTHORED_ASSETS_LICENSE.txt",
+      "sha256": "f3916b7e528414cc336b911ae21a201addeade73a7428754e85580faecbc6d6a",
+      "program_modified": false,
+      "modification_notes": "Program hazard spikes visual asset",
+      "owner_class": "C",
+      "godot_4_7_1_import_test": "PASS",
+      "blockbench_open_export_test": "N/A"
+    }
+  ]
+}

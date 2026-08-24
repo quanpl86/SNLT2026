@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B06",
+  "test_count_excluding_gate": 18,
+  "execution_gate": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Preflight B06: state/reference + visual assets",
+      "project_path": "SNLT2026-HP01-B06",
+      "action_steps": [
+        "Xác nhận Godot 4.7.1 stable, Compatibility, English UI.",
+        "Xác nhận K_NEW chỉ K12,K29 và không mở HUD/win/restart.",
+        "Xác nhận hazard/checkpoint GLB là program-provided C, không phải nhiệm vụ asset của học sinh.",
+        "Xác nhận B01–B05 status không đổi khi B06 xuất hiện.",
+        "Xác nhận three targets B06 tồn tại sau implementation."
+      ],
+      "expected_results": [
+        "B06 độc lập, không side effect bài trước.",
+        "Asset visual không biến thành kiến thức mới.",
+        "Không có Human/Runtime PASS ở preflight."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Project Basic B06",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở main scene, checkpoint scene, hazard scene và level/main script.",
+        "Quan sát Scene Tree và Output."
+      ],
+      "expected_results": [
+        "Project mở không blocker.",
+        "Course B05 vẫn có collectible; thêm Hazard và Checkpoint.",
+        "Hazard/Checkpoint dùng Area3D và visual child."
+      ],
+      "media_ids": [
+        "PB-M01"
+      ]
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "State canonical: respawn_position",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Theo dấu start_position → respawn_position.",
+        "Theo dấu checkpoint activated → cập nhật respawn_position.",
+        "Theo dấu hazard failure → respawn_player()."
+      ],
+      "expected_results": [
+        "respawn_position khởi tạo từ vị trí an toàn đầu màn.",
+        "Checkpoint mới cập nhật đúng state.",
+        "Hazard dùng state hiện tại, không hard-code luôn về start."
+      ],
+      "media_ids": [
+        "PB-M02"
+      ]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "Node/Object reference canonical",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở Level/Main script.",
+        "Xác định @onready var player = $Player hoặc reference tương đương.",
+        "Theo dấu player.global_position = respawn_position.",
+        "Xác nhận Camera3D không bị dùng làm respawn target."
+      ],
+      "expected_results": [
+        "Reference trỏ đúng Player.",
+        "Respawn thay Player, không thay Camera/checkpoint/hazard.",
+        "K29 được thể hiện bằng Node/Object reference có tên rõ."
+      ],
+      "media_ids": [
+        "PB-M03"
+      ]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Runtime checkpoint → hazard → respawn",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "F5.",
+        "Đi qua Checkpoint01.",
+        "Đi tới hazard sau checkpoint.",
+        "Quan sát Player hồi sinh.",
+        "Lặp lại hazard một lần."
+      ],
+      "expected_results": [
+        "Checkpoint kích hoạt một lần và cập nhật respawn state.",
+        "Hazard đưa Player về checkpoint gần nhất.",
+        "Velocity được reset phù hợp để Player không tiếp tục bay/rơi sau respawn."
+      ],
+      "media_ids": [
+        "PB-M04",
+        "PB-V01"
+      ]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "State transition không phá collectible/course",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Thu một collectible trước checkpoint nếu có.",
+        "Kích hoạt checkpoint.",
+        "Chạm hazard và hồi sinh.",
+        "Tiếp tục movement/jump/course."
+      ],
+      "expected_results": [
+        "Movement/jump/collision B1–B4 vẫn hoạt động.",
+        "Collectible B5 không gây blocker.",
+        "Checkpoint/hazard không tạo HUD hoặc win state."
+      ],
+      "media_ids": [
+        "PB-V02"
+      ]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "Asset guardrail hazard/checkpoint",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Chọn Hazard root và Checkpoint root.",
+        "Xác nhận GLB nằm dưới visual child/anchor.",
+        "Kiểm tra Area3D/CollisionShape3D độc lập với mesh."
+      ],
+      "expected_results": [
+        "Gameplay detection không phụ thuộc mesh collision.",
+        "Program GLB chỉ là hình ảnh.",
+        "Scale visual không thay detection zone ngoài adjustment có báo cáo."
+      ],
+      "media_ids": [
+        "PB-M05"
+      ]
+    },
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Starter B06 với hai debug zones",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở project; không sửa.",
+        "Xác định StateHazard và ReferenceHazard/Task zones theo hướng dẫn."
+      ],
+      "expected_results": [
+        "Starter mở không blocker.",
+        "Hai learning gaps có thể test riêng, không che nhau.",
+        "Visual hazard/checkpoint đã gắn sẵn."
+      ],
+      "media_ids": [
+        "SS-M01"
+      ]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "State bug: checkpoint ghi last_checkpoint_position nhưng respawn dùng respawn_position",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Đọc callback checkpoint và respawn_player_state().",
+        "So sánh tên biến được cập nhật và biến được dùng khi respawn.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Starter tái hiện đúng kiểu lỗi hai state variables không đồng bộ.",
+        "Bug khớp K12 và có thể trace bằng code."
+      ],
+      "media_ids": [
+        "SS-M02"
+      ]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Reference bug: ReferenceHazard di chuyển Camera3D",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Đọc respawn_player_reference().",
+        "Xác định camera/player references.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Starter cố ý dùng camera.global_position = respawn_position trong task 2.",
+        "Player reference đúng vẫn tồn tại để học sinh có thể sửa bằng kiến thức K29."
+      ],
+      "media_ids": [
+        "SS-M03"
+      ]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Runtime baseline tái hiện StateHazard bug",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Kích hoạt checkpoint.",
+        "Chạm StateHazard.",
+        "Quan sát nơi Player hồi sinh."
+      ],
+      "expected_results": [
+        "Player vẫn về vị trí đầu thay vì checkpoint vì state mismatch.",
+        "Không crash."
+      ],
+      "media_ids": [
+        "SS-V01"
+      ]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "Runtime baseline tái hiện ReferenceHazard bug",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Từ điểm test an toàn, chạm ReferenceHazard.",
+        "Quan sát Player và camera."
+      ],
+      "expected_results": [
+        "Camera bị thay position hoặc phản ứng sai trong khi Player không được respawn đúng.",
+        "Bug đủ rõ để học sinh kiểm tra đúng object reference."
+      ],
+      "media_ids": [
+        "SS-V02"
+      ]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Evidence template B06",
+      "project_path": "SNLT2026-HP01-B06/SNLT2026-HP01-B06-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở HO_SO_MINH_CHUNG_B06.md.",
+        "Kiểm tra hai phần Code Trace: state và Node reference.",
+        "Kiểm tra không có đáp án quiz."
+      ],
+      "expected_results": [
+        "MC-ML có prediction, trace, change, runtime result, explanation.",
+        "MC-CN nếu thu chỉ là supporting evidence.",
+        "Không có đáp án Q01–Q10."
+      ],
+      "media_ids": [
+        "SS-M04"
+      ]
+    },
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Working Copy sạch B06",
+      "project_path": "B06_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Copy Student Starter → B06_HUMAN_TEST_COPY.",
+        "Xác nhận hai bug baseline còn nguyên."
+      ],
+      "expected_results": [
+        "Working Copy đúng Starter."
+      ],
+      "media_ids": [
+        "E2E-M01"
+      ]
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "ĐỌC–DỰ ĐOÁN state transition",
+      "project_path": "B06_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Tái hiện StateHazard bug.",
+        "Ghi Actual/Expected.",
+        "Trace checkpoint callback và respawn function.",
+        "Ghi prediction trước khi sửa."
+      ],
+      "expected_results": [
+        "Người kiểm thử xác định được state variable mismatch.",
+        "Có dự đoán trước thay đổi."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa K12 state và kiểm chứng",
+      "project_path": "B06_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Sửa để checkpoint cập nhật đúng respawn_position hoặc respawn dùng đúng state canonical.",
+        "F5: checkpoint → StateHazard.",
+        "Lặp lại một lần.",
+        "Giải thích state trước/sau checkpoint."
+      ],
+      "expected_results": [
+        "Player hồi sinh tại checkpoint gần nhất.",
+        "State giữ đúng qua lần hazard tiếp theo.",
+        "Giải thích được chuyển trạng thái."
+      ],
+      "media_ids": [
+        "E2E-M02",
+        "E2E-V01"
+      ]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "ĐỌC–DỰ ĐOÁN Node/Object reference",
+      "project_path": "B06_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Tái hiện ReferenceHazard bug.",
+        "Trace camera/player refs.",
+        "Ghi object nào đang bị thay đổi sai và object đúng phải là gì."
+      ],
+      "expected_results": [
+        "Xác định đúng Camera3D đang bị dùng sai.",
+        "Dự đoán thay reference sang Player."
+      ],
+      "media_ids": [
+        "E2E-M03"
+      ]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa K29 reference và runtime regression",
+      "project_path": "B06_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Sửa respawn target thành player.",
+        "F5: ReferenceHazard.",
+        "Sau đó checkpoint → StateHazard → movement/jump."
+      ],
+      "expected_results": [
+        "Player được respawn; camera không bị di chuyển sai.",
+        "State fix trước đó vẫn đúng.",
+        "Không phá movement/jump/collision."
+      ],
+      "media_ids": [
+        "E2E-M04",
+        "E2E-V02"
+      ]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Lưu/mở lại + hồ sơ B06",
+      "project_path": "B06_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Cmd+S, đóng Godot, mở lại.",
+        "Test checkpoint + cả hai hazard paths.",
+        "Hoàn thiện HO_SO_MINH_CHUNG_B06.md."
+      ],
+      "expected_results": [
+        "Fix persist.",
+        "MC-ML cá nhân đủ cho CIO11/CIO12.",
+        "Nếu có video runtime thì ghi là supporting MC-CN, không thay code trace/explanation.",
+        "Không tự động suy ra HUMAN_PASS."
+      ],
+      "media_ids": [
+        "E2E-M05",
+        "E2E-V03"
+      ]
+    }
+  ]
+}

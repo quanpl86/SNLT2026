@@ -1,0 +1,1 @@
+B06_HAZARD_SPIKES_PROGRAM.glb và B06_CHECKPOINT_BEACON_PROGRAM.glb được tạo trong dự án SNLT để chương trình cung cấp sẵn cho B06. Ownership C: không dùng bản thân asset làm minh chứng năng lực cá nhân.

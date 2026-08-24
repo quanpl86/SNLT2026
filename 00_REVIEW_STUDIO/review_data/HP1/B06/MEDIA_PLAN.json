@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B06",
+  "planned_media_count": 21,
+  "capture_gate": "DO_NOT_CAPTURE_REAL_HUMAN_EVIDENCE_UNTIL_ANTIGRAVITY_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "raw_policy": "RAW immutable; QA evidence và learning-media approval tách biệt.",
+  "media_items": [
+    {
+      "media_id": "PB-M01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_PB_M01_Hero_Hazard_Checkpoint_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hero B06.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "LESSON_COVER"
+      ],
+      "must_show": [
+        "Game/viewport",
+        "checkpoint beacon",
+        "hazard spikes",
+        "Player/course continuity"
+      ]
+    },
+    {
+      "media_id": "PB-M02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_PB_M02_State_Code_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "K12 state trace.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "respawn_position",
+        "checkpoint callback",
+        "hazard/respawn function"
+      ]
+    },
+    {
+      "media_id": "PB-M03",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_PB_M03_Player_Reference_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "K29 Node reference.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "@onready player = $Player hoặc equivalent",
+        "player.global_position = respawn_position"
+      ]
+    },
+    {
+      "media_id": "PB-M04",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_PB_M04_Checkpoint_Activated_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Checkpoint state visual.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Player/checkpoint",
+        "activated visual if available"
+      ]
+    },
+    {
+      "media_id": "PB-V01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B06_PB_V01_Checkpoint_Respawn_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Canonical state runtime.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20–30s: chạy qua checkpoint → chạm hazard → respawn tại checkpoint → lặp ngắn."
+    },
+    {
+      "media_id": "PB-V02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B06_PB_V02_B05_Regression_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Regression B05+B06.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "15–20s: movement/jump → collect item → checkpoint → hazard → tiếp tục."
+    },
+    {
+      "media_id": "PB-M05",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_PB_M05_Visual_Detection_Layers_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Visual ≠ detection zone.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "Area3D root",
+        "CollisionShape3D",
+        "Visual child with program GLB"
+      ]
+    },
+    {
+      "media_id": "SS-M01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_SS_M01_Starter_Two_Tasks_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Starter overview.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "Starter scene",
+        "StateHazard",
+        "ReferenceHazard",
+        "Checkpoint"
+      ]
+    },
+    {
+      "media_id": "SS-M02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_SS_M02_State_Mismatch_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before state bug.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "last_checkpoint_position",
+        "respawn_position",
+        "mismatch"
+      ]
+    },
+    {
+      "media_id": "SS-M03",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_SS_M03_Wrong_Camera_Reference_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before reference bug.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "camera.global_position = respawn_position",
+        "player reference visible"
+      ]
+    },
+    {
+      "media_id": "SS-V01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B06_SS_V01_State_Bug_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Baseline K12 bug.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "checkpoint → StateHazard → Player về start."
+    },
+    {
+      "media_id": "SS-V02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B06_SS_V02_Reference_Bug_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Baseline K29 bug.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "ReferenceHazard → camera reaction sai / Player không respawn đúng."
+    },
+    {
+      "media_id": "SS-M04",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_SS_M04_Evidence_Template_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Evidence template.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "State trace section",
+        "Node reference trace section",
+        "prediction/change/result/explanation"
+      ]
+    },
+    {
+      "media_id": "E2E-M01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_E2E_M01_Clean_Copy_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "E2E baseline.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Working copy baseline",
+        "two bugs identifiable"
+      ]
+    },
+    {
+      "media_id": "E2E-M02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_E2E_M02_State_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After K12 fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "single canonical respawn_position flow",
+        "checkpoint update and respawn use same state"
+      ]
+    },
+    {
+      "media_id": "E2E-V01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B06_E2E_V01_State_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "K12 runtime evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "checkpoint → StateHazard → respawn checkpoint → repeat."
+    },
+    {
+      "media_id": "E2E-M03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_E2E_M03_Reference_Before_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "K29 prediction context.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "wrong camera reference code",
+        "correct player ref nearby"
+      ]
+    },
+    {
+      "media_id": "E2E-M04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_E2E_M04_Player_Reference_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After K29 fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "player.global_position = respawn_position"
+      ]
+    },
+    {
+      "media_id": "E2E-V02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B06_E2E_V02_Reference_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "K29 runtime evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "ReferenceHazard → Player respawn đúng → camera stable → movement regression."
+    },
+    {
+      "media_id": "E2E-M05",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B06_E2E_M05_Reopen_Code_RAW.png",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Persistence.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "After reopen",
+        "state fix",
+        "player reference fix"
+      ]
+    },
+    {
+      "media_id": "E2E-V03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B06_E2E_V03_Reopen_Full_Flow_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B06/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Full persistence runtime.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "Sau reopen: checkpoint → StateHazard → ReferenceHazard → movement."
+    }
+  ],
+  "generated_visuals": [
+    {
+      "visual_id": "B06-GV01",
+      "title": "State flow: Start → Checkpoint mới → Hazard → Respawn",
+      "type": "state_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B06-GV02",
+      "title": "Một biến state canonical: respawn_position",
+      "type": "data_flow",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B06-GV03",
+      "title": "Node reference: Level → Player, không phải Camera",
+      "type": "scene_tree_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B06-GV04",
+      "title": "Area3D Hazard/Checkpoint: visual child khác detection zone",
+      "type": "layer_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B06-GV05",
+      "title": "Debug workflow B06: tái hiện → trace state/ref → sửa → chạy lại",
+      "type": "debug_process",
+      "owner": "CHATGPT"
+    }
+  ]
+}
