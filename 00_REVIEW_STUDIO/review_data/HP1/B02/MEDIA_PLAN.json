@@ -1,0 +1,506 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B02",
+  "capture_gate": "DO_NOT_CAPTURE_REAL_HUMAN_EVIDENCE_UNTIL_ANTIGRAVITY_LOCAL_TEST_REPORT_AND_CHATGPT_REVIEW",
+  "raw_policy": "RAW evidence không crop/annotate/overwrite. Chỉ copy sang 04_MEDIA_APPROVED sau ChatGPT review + Human OK.",
+  "media_items": [
+    {
+      "media_id": "PB-M01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_PB_M01_Player_Code_Canonical_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Mã chuẩn minh họa K03–K04 và ranh giới B02/B3.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "Tab scripts/player.gd",
+        "Vùng B02 được đánh dấu",
+        "speed = 6.0",
+        "func get_move_speed()",
+        "Một phần comment Ownership C"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "PB-M02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_PB_M02_InputMap_Canonical_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa action có tên và mapping phím vật lý.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Project Settings",
+        "Input Map",
+        "action move_right",
+        "phím D được gắn",
+        "thấy tên các action di chuyển"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "PB-M03",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_PB_M03_Hero_Movement_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hero image sản phẩm B02 — nhân vật điều khiển được.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "LESSON_COVER"
+      ],
+      "must_show": [
+        "Cửa sổ game sạch",
+        "Player ở vị trí dễ quan sát chuyển động",
+        "thấy đủ bối cảnh platform 3D"
+      ],
+      "must_not_show": [
+        "Bảng lỗi/debug che game"
+      ]
+    },
+    {
+      "media_id": "PB-V01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B02_PB_V01_Canonical_Movement_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng bốn hướng hoạt động ở bản đích.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20–25s: đứng yên 2s → W 2s → S 2s → A 2s → D 2s → di chuyển kết hợp ngắn → giữ frame cuối 2–3s."
+    },
+    {
+      "media_id": "PB-M04",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_PB_M04_Ownership_Boundary_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa ranh giới 'phải hiểu/chỉnh sửa' và 'cung cấp sẵn'.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "player.gd có nhãn vùng B02",
+        "nhãn Ownership C cho Vector3/physics/jump"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "PB-V02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B02_PB_V02_Infrastructure_Regression_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "QA regression hạ tầng B01, không phải minh chứng năng lực B02.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "10–15s: di chuyển → thử Space một lần → nếu phù hợp, rơi khỏi sàn để xác nhận fall-reset; dùng cho QA, không dùng làm minh chứng B02."
+    },
+    {
+      "media_id": "SS-M01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_SS_M01_Project_Open_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa mở Student Starter B02.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "Scene panel",
+        "FileSystem",
+        "3D Viewport",
+        "Inspector",
+        "tab main.tscn hoặc player.gd"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "SS-M02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_SS_M02_Speed_Baseline_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before image cho nhiệm vụ tuning speed.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "player.gd",
+        "speed = 4.0",
+        "func get_move_speed()"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "SS-M03",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_SS_M03_InputMap_Baseline_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before image cho lỗi mapping có chủ đích.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "Input Map",
+        "move_right",
+        "không có event phím D",
+        "các action khác hiện rõ khi có thể"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "SS-M04",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B02_SS_M04_Baseline_Runtime_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Khung baseline để ghép trước/sau; bản thân ảnh tĩnh không chứng minh D không hoạt động.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "Cửa sổ game baseline",
+        "Player và platform"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "SS-V01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B02_SS_V01_Baseline_Input_Gap_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng baseline InputMap thiếu mapping D.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "15–20s: đứng yên 2s → W → A → S (mỗi phím 1–2s) → D 2s → giữ frame; D phải không tạo chuyển động sang phải."
+    },
+    {
+      "media_id": "SS-M05",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_SS_M05_Evidence_Template_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa cách ghi minh chứng cá nhân.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "HO_SO_MINH_CHUNG_B02.md",
+        "ô dự đoán",
+        "ô kết quả chạy",
+        "ô giải thích/ra quyết định"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_E2E_M01_Speed_4_Before_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Mốc trước khi chỉnh speed.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "player.gd",
+        "speed = 4.0"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_E2E_M02_Speed_6_After_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Mốc sau khi chỉnh speed.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "player.gd",
+        "speed = 6.0",
+        "func get_move_speed()"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-V01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B02_E2E_V01_Speed_Tuning_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng Editor → runtime sau tuning speed.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "15–20s: cho thấy Editor speed=6.0 khoảng 2s → F5 → giữ cùng một phím di chuyển 3–4s → giữ frame cuối."
+    },
+    {
+      "media_id": "E2E-M03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_E2E_M03_InputMap_MoveRight_D_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Mốc cấu hình action move_right sau chỉnh sửa.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Project Settings",
+        "Input Map",
+        "action move_right",
+        "event D"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_E2E_M04_Runtime_Control_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Kết quả runtime sau khi nối D → move_right.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "Cửa sổ game",
+        "Player ở vị trí sau khi điều khiển sang phải",
+        "bối cảnh platform"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-V02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B02_E2E_V02_InputMap_Right_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng cấu hình InputMap → hành vi runtime.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20–25s: InputMap move_right có D 2s → F5 → D 2–3s → W/A/S ngắn để regression → giữ frame cuối."
+    },
+    {
+      "media_id": "E2E-M05",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_E2E_M05_Reopen_Speed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh chứng persistence của code sau lưu/mở lại.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Sau reopen",
+        "player.gd",
+        "speed = 6.0"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M06",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B02_E2E_M06_Reopen_InputMap_RAW.png",
+      "save_dir": "SNLT2026-HP01-B02/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh chứng persistence của InputMap sau lưu/mở lại.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Sau reopen",
+        "Input Map",
+        "move_right",
+        "event D"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Thông báo hệ thống không liên quan"
+      ]
+    }
+  ],
+  "generated_visuals": [
+    {
+      "visual_id": "B02-GV01",
+      "title": "Biến: tên → giá trị → tác động lên hành vi",
+      "type": "diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ]
+    },
+    {
+      "visual_id": "B02-GV02",
+      "title": "Luồng gọi hàm get_move_speed()",
+      "type": "diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ]
+    },
+    {
+      "visual_id": "B02-GV03",
+      "title": "Phím vật lý → InputMap action → mã đọc action → hành vi",
+      "type": "diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "GV_LESSON_PLAN"
+      ]
+    },
+    {
+      "visual_id": "B02-GV04",
+      "title": "Before/After speed 4.0 → 6.0 và InputMap chưa/có D",
+      "type": "composite",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ]
+    },
+    {
+      "visual_id": "B02-GV05",
+      "title": "Ownership A/B/C của B02",
+      "type": "diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_LESSON_PLAN"
+      ]
+    }
+  ]
+}

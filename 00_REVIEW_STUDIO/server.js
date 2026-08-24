@@ -48,6 +48,15 @@ function deleteFolderRecursive(dirPath) {
   }
 }
 
+function normalizeHpFolder(hp) {
+  if (!hp) return 'HP01';
+  if (hp === 'HP1') return 'HP01';
+  if (hp === 'HP2') return 'HP02';
+  if (hp === 'HP3') return 'HP03';
+  if (hp === 'HP4') return 'HP04';
+  return hp;
+}
+
 function buildDynamicIndex() {
   const dataDir = path.join(STUDIO_DIR, 'review_data');
   const modules = [];
@@ -178,7 +187,7 @@ const server = http.createServer((req, res) => {
 
     const resultsPath = isSmoke
       ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
-      : path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+      : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
 
     if (fs.existsSync(resultsPath)) {
       res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
@@ -205,7 +214,7 @@ const server = http.createServer((req, res) => {
 
     let targetDir = isSmoke
       ? path.join(SMOKE_DIR, subFolder)
-      : path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`, '03_HUMAN_TEST_REVIEW', '03_EVIDENCE_RAW', subFolder);
+      : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '03_EVIDENCE_RAW', subFolder);
 
     ensureDir(targetDir);
 
@@ -233,7 +242,7 @@ const server = http.createServer((req, res) => {
 
       const resultsPath = isSmoke
         ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
-        : path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+        : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
 
       ensureDir(path.dirname(resultsPath));
 
@@ -291,7 +300,7 @@ const server = http.createServer((req, res) => {
 
         const resultsPath = isSmoke
           ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
-          : path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+          : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
 
         ensureDir(path.dirname(resultsPath));
 
@@ -383,7 +392,7 @@ const server = http.createServer((req, res) => {
         const isSmoke = payload.is_smoke === true;
         const forceOverwrite = payload.overwrite === true;
 
-        const sourceDir = path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`, `SNLT2026-${hp}-${lesson}-STUDENT_STARTER`);
+        const sourceDir = path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}-STUDENT_STARTER`);
         const destDir = isSmoke
           ? path.join(SMOKE_DIR, 'E2E_WORKING_COPY')
           : path.join(process.env.HOME || '/Users/mac', 'Desktop', `${lesson}_HUMAN_TEST_COPY`);
@@ -408,7 +417,7 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({
           success: true,
-          source: `SNLT2026-${hp}-${lesson}/SNLT2026-${hp}-${lesson}-STUDENT_STARTER`,
+          source: `SNLT2026-${normalizeHpFolder(hp)}-${lesson}/SNLT2026-${normalizeHpFolder(hp)}-${lesson}-STUDENT_STARTER`,
           destination: destDir,
           is_smoke: isSmoke,
           created_at: new Date().toISOString()
@@ -436,15 +445,15 @@ const server = http.createServer((req, res) => {
         let absPath = '';
 
         if (targetId === 'PROJECT_BASIC') {
-          absPath = path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`, `SNLT2026-${hp}-${lesson}-PROJECT_BASIC`);
+          absPath = path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}-PROJECT_BASIC`);
         } else if (targetId === 'STUDENT_STARTER') {
-          absPath = path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`, `SNLT2026-${hp}-${lesson}-STUDENT_STARTER`);
+          absPath = path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}-STUDENT_STARTER`);
         } else if (targetId === 'E2E_WORKING_COPY') {
           absPath = isSmoke
             ? path.join(SMOKE_DIR, 'E2E_WORKING_COPY')
             : path.join(process.env.HOME || '/Users/mac', 'Desktop', `${lesson}_HUMAN_TEST_COPY`);
         } else if (targetId === 'GLOBAL_PREFLIGHT') {
-          absPath = path.join(ROOT_DIR, `SNLT2026-${hp}-${lesson}`);
+          absPath = path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`);
         } else {
           res.writeHead(400, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ error: `Invalid target_id: ${targetId}` }));

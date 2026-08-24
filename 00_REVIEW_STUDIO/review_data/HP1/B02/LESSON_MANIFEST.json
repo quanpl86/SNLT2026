@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "hp": "HP1",
+  "hp_title": "Phiêu lưu Nền tảng 3D",
+  "lesson": "B02",
+  "lesson_title": "Điều khiển nhà thám hiểm",
+  "lesson_flow_status": "PARALLEL_FLOW_TEST_WAITING_FOR_ANTIGRAVITY_IMPLEMENTATION",
+  "parallel_flow_test_exception": true,
+  "b01_status_policy": "DO_NOT_CHANGE_B01_STATUS",
+  "engine": "Godot 4.7.1 stable",
+  "renderer": "Compatibility",
+  "editor_ui": "English",
+  "test_plan": "review_data/HP1/B02/TEST_PLAN.json",
+  "media_plan": "review_data/HP1/B02/MEDIA_PLAN.json",
+  "product": "Player tuning + Nhân vật có thể điều khiển",
+  "curriculum": {
+    "cio": [
+      {
+        "id": "HP1-CIO03",
+        "text": "Sử dụng biến và hàm để điều chỉnh thuộc tính chuyển động.",
+        "sio": [
+          "HP1-SIO02"
+        ],
+        "ulo": [
+          "ULO-03"
+        ],
+        "k_new": [
+          "K03",
+          "K04"
+        ],
+        "k_prior": [
+          "K01",
+          "K02",
+          "K09"
+        ]
+      },
+      {
+        "id": "HP1-CIO04",
+        "text": "Kết nối Input action với hành vi điều khiển nhân vật.",
+        "sio": [
+          "HP1-SIO02"
+        ],
+        "ulo": [
+          "ULO-03",
+          "ULO-04"
+        ],
+        "k_new": [
+          "K05"
+        ],
+        "k_prior": [
+          "K03",
+          "K04"
+        ]
+      }
+    ],
+    "lesson_minutes": 120,
+    "timebox": [
+      {
+        "block": "Gắn kết",
+        "minutes": 5
+      },
+      {
+        "block": "Khám phá",
+        "minutes": 10
+      },
+      {
+        "block": "Giải thích",
+        "minutes": 15
+      },
+      {
+        "block": "Vận dụng",
+        "minutes": 55
+      },
+      {
+        "block": "Quiz ôn tập",
+        "minutes": 30,
+        "questions": 10
+      },
+      {
+        "block": "Chốt",
+        "minutes": 5
+      }
+    ],
+    "evidence": [
+      "MC-ML",
+      "MC-CN"
+    ],
+    "gate": "Cổng minh chứng CIO",
+    "approved_question_slots": [
+      "HP1-B02-Q01",
+      "HP1-B02-Q02",
+      "HP1-B02-Q03",
+      "HP1-B02-Q04",
+      "HP1-B02-Q05",
+      "HP1-B02-Q06",
+      "HP1-B02-Q07",
+      "HP1-B02-Q08",
+      "HP1-B02-Q09",
+      "HP1-B02-Q10"
+    ],
+    "blockbench": false
+  },
+  "execution_gate": {
+    "review_studio_visibility": "READY_FOR_FLOW_TEST_AFTER_SYNC",
+    "human_execution": "BLOCKED_UNTIL_ANTIGRAVITY_LOCAL_TEST_REPORT_AND_CHATGPT_REVIEW",
+    "runtime_pass": "NOT_CLAIMED",
+    "web_pass": "NOT_APPLICABLE_TO_B02_AS_LESSON_GATE"
+  },
+  "targets": [
+    {
+      "id": "PROJECT_BASIC",
+      "name": "Project Basic Canonical",
+      "folder": "SNLT2026-HP01-B02/SNLT2026-HP01-B02-PROJECT_BASIC",
+      "mode": "READ_ONLY",
+      "description": "Bản đích chuẩn B02: speed tham chiếu 6.0; InputMap đầy đủ W/A/S/D; hạ tầng vật lý B3 vẫn là Ownership C."
+    },
+    {
+      "id": "STUDENT_STARTER",
+      "name": "Student Starter Canonical",
+      "folder": "SNLT2026-HP01-B02/SNLT2026-HP01-B02-STUDENT_STARTER",
+      "mode": "READ_ONLY",
+      "description": "Baseline B02: speed 4.0; action move_right tồn tại nhưng chưa gắn phím D; học sinh phải dự đoán–chỉnh–chạy–giải thích."
+    },
+    {
+      "id": "E2E_WORKING_COPY",
+      "name": "E2E Working Copy",
+      "folder": "B02_HUMAN_TEST_COPY",
+      "source_folder": "SNLT2026-HP01-B02/SNLT2026-HP01-B02-STUDENT_STARTER",
+      "mode": "MODIFY_AND_SAVE",
+      "description": "Bản sao mô phỏng đường đi thực của học sinh: chỉnh speed, sửa InputMap, chạy kiểm chứng, Cmd+S, đóng/mở lại."
+    }
+  ]
+}
