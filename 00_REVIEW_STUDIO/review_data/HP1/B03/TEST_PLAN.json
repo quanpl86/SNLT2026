@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B03",
+  "execution_gate": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "preparation_purpose": "Chuẩn bị toàn bộ project/schema cho AI Agent trước khi triển khai chi tiết; đồng thời kiểm tra Review Studio multi-lesson auto-discovery.",
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Preflight B03: môi trường, schema, dependency và ranh giới kiến thức",
+      "project_path": "SNLT2026-HP01-B03",
+      "action_steps": [
+        "Xác nhận Godot 4.7.1 stable, Renderer Compatibility, Editor UI English.",
+        "Xác nhận B01/B02 không bị đổi trạng thái chỉ vì B03 được thêm vào Review Studio.",
+        "Xác nhận Review Studio tải được Manifest/Test Plan/Media Plan B03 và không trộn result/media với bài khác.",
+        "Xác nhận ba target B03 tồn tại sau khi Antigravity triển khai.",
+        "Xác nhận tài liệu B03 ghi đúng nguồn PJT-004, PJT-003, PJT-010, GD-004, GD-007, GD-008; không có Blockbench."
+      ],
+      "expected_results": [
+        "B03 xuất hiện độc lập trong HP1.",
+        "Không có side effect trạng thái B01/B02.",
+        "Không tuyên bố Runtime/Human PASS ở preflight."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Project Basic B03 Canonical",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở project.godot bằng Godot 4.7.1 stable.",
+        "Mở scenes/main.tscn và scripts/player.gd; không sửa hay Cmd+S.",
+        "Quan sát Scene Tree, course platforms và Output."
+      ],
+      "expected_results": [
+        "Project mở không có lỗi đỏ blocker.",
+        "Scene chính chứa Player, View/Camera, World và đường thử thách 3D.",
+        "Controller có vùng B03 được đánh dấu rõ."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "Vector3 movement Canonical",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở scripts/player.gd.",
+        "Xác định input_dir, direction Vector3 và các thành phần x/y/z.",
+        "Theo dấu direction.x/direction.z tới velocity.x/velocity.z."
+      ],
+      "expected_results": [
+        "Movement direction là Vector3 có y=0 cho chuyển động ngang.",
+        "velocity.x và velocity.z đều lấy dữ liệu từ direction tương ứng và speed.",
+        "Mã không dịch chuyển Player bằng cách thay position tùy ý để bỏ qua physics."
+      ],
+      "media_ids": [
+        "PB-M01"
+      ]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "CharacterBody3D physics + collision Canonical",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Xác nhận Player là CharacterBody3D.",
+        "Trong _physics_process(), theo dấu gravity khi không ở sàn, velocity và move_and_slide().",
+        "F5 rồi di chuyển va vào cạnh/bề mặt course."
+      ],
+      "expected_results": [
+        "Gravity tác động lên velocity.y khi trên không.",
+        "move_and_slide() thực hiện chuyển động/collision theo CharacterBody3D.",
+        "Player đứng trên platform và không xuyên sàn trong đường thử chuẩn."
+      ],
+      "media_ids": [
+        "PB-M02"
+      ]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Điều kiện nhảy hợp lệ Canonical",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở vùng jump trong player.gd.",
+        "Xác nhận action jump dùng is_action_just_pressed().",
+        "Xác nhận điều kiện mặt sàn is_on_floor() được kết hợp trước khi đặt velocity.y.",
+        "F5 và thử nhấn Space nhiều lần khi đang ở trên không."
+      ],
+      "expected_results": [
+        "Cú nhảy chỉ bắt đầu khi vừa nhấn jump và Player đang ở sàn.",
+        "Không thể bắt đầu cú nhảy cơ bản mới giữa không trung bằng cách nhấn Space lặp lại.",
+        "velocity.y được gravity cập nhật khi Player ở trên không."
+      ],
+      "media_ids": [
+        "PB-M03"
+      ]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "Runtime Canonical: movement + jump qua course",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "F5.",
+        "Dùng W/A/S/D để lấy đà và Space để vượt ít nhất 3 platform.",
+        "Quan sát các pha rời sàn, rơi và tiếp đất.",
+        "Nếu phù hợp, hoàn thành tới platform đích."
+      ],
+      "expected_results": [
+        "Bốn hướng hoạt động.",
+        "Nhảy, gravity, tiếp đất và collision phối hợp ổn định.",
+        "Đường thử thách thể hiện rõ nhu cầu dùng movement + jump."
+      ],
+      "media_ids": [
+        "PB-M04",
+        "PB-V01"
+      ]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "Course feasibility + regression nền B02",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Thử hoàn thành course ít nhất 2 lượt nếu lượt đầu thất bại do thao tác.",
+        "Kiểm tra speed/InputMap từ B02 vẫn hoạt động.",
+        "Kiểm tra camera/fall-reset nếu project kế thừa chúng.",
+        "Ghi nhận platform nào quá gần/quá xa/quá cao."
+      ],
+      "expected_results": [
+        "Course có thể hoàn thành bằng cơ chế cơ bản, không cần double jump.",
+        "Độ khó sơ bộ phù hợp đối tượng 12–14 tuổi nhưng vẫn cần Human judgement.",
+        "Không phá functionality nền đã có."
+      ],
+      "media_ids": [
+        "PB-V02"
+      ],
+      "notes": "Course feel/age-fit là Human-only judgement; local runtime của Antigravity không thay Human PASS."
+    },
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Student Starter B03 Canonical",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở Student Starter project.godot.",
+        "Mở scenes/main.tscn và scripts/player.gd; không sửa hay Cmd+S."
+      ],
+      "expected_results": [
+        "Project mở không có blocker.",
+        "Hai learning gaps B03 chưa bị làm sẵn.",
+        "Course và InputMap nền vẫn có để chẩn đoán."
+      ],
+      "media_ids": [
+        "SS-M01"
+      ]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "Learning gap 1: velocity.z chưa dùng direction.z",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Đọc vùng Vector3 movement.",
+        "Xác định direction có x/z nhưng velocity.z đang bị giữ 0 hoặc TODO theo spec.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Code cho thấy rõ khoảng trống có chủ đích ở trục z.",
+        "velocity.x vẫn hoạt động để baseline không hoàn toàn chết.",
+        "Khoảng trống có thể sửa bằng thay đổi nhỏ do học sinh sở hữu."
+      ],
+      "media_ids": [
+        "SS-M02"
+      ]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Learning gap 2: jump chưa kiểm tra is_on_floor()",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Đọc vùng jump.",
+        "Xác nhận mã Starter chỉ kiểm tra action jump trước khi đặt velocity.y.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Starter thiếu điều kiện mặt sàn có chủ đích.",
+        "Không có đoạn mã khác ngăn air-jump và làm mất hiện tượng cần chẩn đoán."
+      ],
+      "media_ids": [
+        "SS-M03"
+      ]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Baseline runtime: trục z chưa hoạt động đúng",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Thử A/D và W/S riêng biệt.",
+        "Quan sát vị trí Player; không sửa project."
+      ],
+      "expected_results": [
+        "A/D tạo chuyển động theo trục ngang đã có.",
+        "W/S không tạo thành phần chuyển động z đúng do gap có chủ đích.",
+        "Không crash và collision nền vẫn chạy."
+      ],
+      "media_ids": [
+        "SS-V01"
+      ]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "Baseline runtime: air-jump tái hiện được",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Nhấn Space để nhảy.",
+        "Khi Player đang trên không, nhấn Space lại 1–2 lần.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Có thể tái kích hoạt vận tốc nhảy giữa không trung do thiếu is_on_floor().",
+        "Hiện tượng đủ rõ để dùng cho DỰ ĐOÁN → CHỈNH → CHẠY."
+      ],
+      "media_ids": [
+        "SS-V02"
+      ]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Ranh giới nhiệm vụ, tài liệu và hồ sơ minh chứng",
+      "project_path": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở 01_DOCS/HUONG_DAN_THUC_HIEN_SAN_PHAM_STEP_BY_STEP.md.",
+        "Mở evidence/HO_SO_MINH_CHUNG_B03.md.",
+        "Đối chiếu tên Node, file, action, hàm và vùng mã với project.",
+        "Kiểm tra tài liệu không lộ đáp án quiz."
+      ],
+      "expected_results": [
+        "Luồng mã là ĐỌC → DỰ ĐOÁN → CHỈNH SỬA → CHẠY → GIẢI THÍCH.",
+        "Hồ sơ có prediction, thay đổi, runtime result, explanation cho Vector3/physics và jump condition.",
+        "Không yêu cầu chép nguyên controller.",
+        "Không có đáp án quiz."
+      ],
+      "media_ids": [
+        "SS-M04"
+      ]
+    },
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Working Copy sạch B03",
+      "project_path": "B03_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Copy Student Starter canonical → B03_HUMAN_TEST_COPY.",
+        "Mở copy.",
+        "Xác nhận velocity.z gap và jump thiếu is_on_floor() vẫn còn."
+      ],
+      "expected_results": [
+        "Working Copy đúng baseline Starter.",
+        "Nếu đã bị chỉnh trước đó, tạo lại từ Student Starter."
+      ],
+      "media_ids": [
+        "E2E-M01"
+      ]
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "Đi Step-by-Step 1:1 trên Godot 4.7.1 English UI",
+      "project_path": "B03_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Mở song song HUONG_DAN_THUC_HIEN_SAN_PHAM_STEP_BY_STEP.md.",
+        "Thực hiện từng bước đúng thứ tự.",
+        "Ghi lại tên UI/Node/path không khớp hoặc bước phải đoán."
+      ],
+      "expected_results": [
+        "Hướng dẫn có thể theo 1:1.",
+        "Thuật ngữ instruction tiếng Việt + exact English UI label khi cần.",
+        "Không cần kiến thức B04+ để hoàn thành."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "DỰ ĐOÁN + sửa Vector3/velocity trục z",
+      "project_path": "B03_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Đọc input_dir → direction Vector3 → velocity.",
+        "Ghi dự đoán vì sao W/S chưa hoạt động.",
+        "Sửa đúng learning gap để velocity.z sử dụng direction.z * speed.",
+        "Không sửa vùng ngoài phạm vi nếu không cần."
+      ],
+      "expected_results": [
+        "Có prediction trước khi run.",
+        "Thay đổi là nhỏ, có chủ đích và đúng K06/K07.",
+        "Mã parse được, không lỗi cú pháp."
+      ],
+      "media_ids": [
+        "E2E-M01",
+        "E2E-M02"
+      ]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "CHẠY + giải thích Vector3, velocity và collision",
+      "project_path": "B03_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "F5 sau khi sửa movement.",
+        "Thử W/A/S/D.",
+        "Đi/va vào ít nhất một platform rồi dừng.",
+        "Ghi giải thích: direction.x/z ảnh hưởng velocity ra sao; move_and_slide() tham gia thế nào."
+      ],
+      "expected_results": [
+        "W/A/S/D đều hoạt động.",
+        "Player phản hồi collision, không xuyên sàn trong test chuẩn.",
+        "Giải thích được phần mã mình thay đổi; không chỉ ghi 'chạy được'."
+      ],
+      "media_ids": [
+        "E2E-V01"
+      ]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "DỰ ĐOÁN + sửa điều kiện jump hợp lệ",
+      "project_path": "B03_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Tái hiện air-jump trước sửa nếu cần.",
+        "Ghi dự đoán tác dụng của is_on_floor().",
+        "Sửa điều kiện thành vừa nhấn jump VÀ đang ở sàn.",
+        "F5; thử nhấn Space lặp lại trên không; thử lại sau khi tiếp đất."
+      ],
+      "expected_results": [
+        "Không bắt đầu cú nhảy mới giữa không trung.",
+        "Sau khi tiếp đất có thể nhảy lại.",
+        "Học sinh giải thích được Boolean AND và vai trò is_on_floor()."
+      ],
+      "media_ids": [
+        "E2E-M03",
+        "E2E-M04",
+        "E2E-V02"
+      ]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Lưu, mở lại, chạy course và hoàn tất minh chứng",
+      "project_path": "B03_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Cmd+S.",
+        "Đóng Godot hoàn toàn rồi mở lại B03_HUMAN_TEST_COPY.",
+        "Xác nhận movement fix và jump condition còn tồn tại.",
+        "F5 và hoàn thành/đi qua phần đại diện của course.",
+        "Hoàn thiện evidence/HO_SO_MINH_CHUNG_B03.md."
+      ],
+      "expected_results": [
+        "Thay đổi persist sau reopen.",
+        "Movement/jump/collision vẫn đúng.",
+        "Hồ sơ đủ prediction → change → runtime → explanation cho CIO05/CIO06.",
+        "Đủ để ChatGPT/Human review; không tự động suy ra HUMAN_PASS."
+      ],
+      "media_ids": [
+        "E2E-M05",
+        "E2E-M06"
+      ]
+    }
+  ]
+}

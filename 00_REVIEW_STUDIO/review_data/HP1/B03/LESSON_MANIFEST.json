@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "hp": "HP1",
+  "hp_title": "Phiêu lưu Nền tảng 3D",
+  "lesson": "B03",
+  "lesson_title": "Nhảy qua thử thách",
+  "lesson_flow_status": "PARALLEL_AGENT_PREPARATION_WAITING_FOR_ANTIGRAVITY_IMPLEMENTATION",
+  "parallel_preparation_exception": true,
+  "prior_lesson_status_policy": "DO_NOT_CHANGE_B01_OR_B02_STATUS_AS_SIDE_EFFECT",
+  "engine": "Godot 4.7.1 stable",
+  "renderer": "Compatibility",
+  "editor_ui": "English",
+  "test_plan": "review_data/HP1/B03/TEST_PLAN.json",
+  "media_plan": "review_data/HP1/B03/MEDIA_PLAN.json",
+  "product": "Movement + jump + Đường thử thách 3D",
+  "curriculum": {
+    "cio": [
+      {
+        "id": "HP1-CIO05",
+        "text": "Sử dụng Vector3 và vật lý nhân vật để điều khiển chuyển động/nhảy.",
+        "sio": [
+          "HP1-SIO02"
+        ],
+        "ulo": [
+          "ULO-03",
+          "ULO-04"
+        ],
+        "k_new": [
+          "K06",
+          "K07"
+        ],
+        "k_prior": [
+          "K03",
+          "K04",
+          "K05"
+        ]
+      },
+      {
+        "id": "HP1-CIO06",
+        "text": "Dùng điều kiện để kiểm soát hành vi nhảy hợp lệ.",
+        "sio": [
+          "HP1-SIO02"
+        ],
+        "ulo": [
+          "ULO-03"
+        ],
+        "k_new": [
+          "K08"
+        ],
+        "k_prior": [
+          "K06",
+          "K07"
+        ]
+      }
+    ],
+    "lesson_minutes": 120,
+    "timebox": [
+      {
+        "block": "Gắn kết",
+        "minutes": 5
+      },
+      {
+        "block": "Khám phá",
+        "minutes": 10
+      },
+      {
+        "block": "Giải thích",
+        "minutes": 15
+      },
+      {
+        "block": "Vận dụng",
+        "minutes": 55
+      },
+      {
+        "block": "Quiz ôn tập",
+        "minutes": 30,
+        "questions": 10
+      },
+      {
+        "block": "Chốt",
+        "minutes": 5
+      }
+    ],
+    "evidence_overall": [
+      "MC-ML",
+      "MC-CN"
+    ],
+    "evidence_by_cio": {
+      "HP1-CIO05": [
+        "MC-ML",
+        "MC-CN"
+      ],
+      "HP1-CIO06": [
+        "MC-ML"
+      ]
+    },
+    "gate": "Cổng minh chứng CIO",
+    "approved_question_slots": [
+      "HP1-B03-Q01",
+      "HP1-B03-Q02",
+      "HP1-B03-Q03",
+      "HP1-B03-Q04",
+      "HP1-B03-Q05",
+      "HP1-B03-Q06",
+      "HP1-B03-Q07",
+      "HP1-B03-Q08",
+      "HP1-B03-Q09",
+      "HP1-B03-Q10"
+    ],
+    "blockbench": false
+  },
+  "technical_sources": [
+    "PJT-004",
+    "PJT-003",
+    "PJT-010",
+    "GD-004",
+    "GD-007",
+    "GD-008"
+  ],
+  "execution_gate": {
+    "review_studio_visibility": "READY_FOR_DISCOVERY_TEST_AFTER_SYNC",
+    "human_execution": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+    "runtime_pass": "NOT_CLAIMED",
+    "web_pass": "NOT_APPLICABLE_AS_B03_GATE"
+  },
+  "dependencies": {
+    "B01": "CURRENT_STATUS_UNCHANGED",
+    "B02": "CANDIDATE_DEPENDENCY_UNTIL_B02_IMPLEMENTATION_IS_LOCKED",
+    "release_rule": "B03 must resync final B02 dependency before B03 can be locked/released."
+  },
+  "targets": [
+    {
+      "id": "PROJECT_BASIC",
+      "name": "Project Basic Canonical",
+      "folder": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-PROJECT_BASIC",
+      "mode": "READ_ONLY",
+      "description": "Bản đích chuẩn B03: Vector3 movement đầy đủ, CharacterBody3D physics/collision, gravity, jump hợp lệ với is_on_floor(), đường thử thách 3D chơi được."
+    },
+    {
+      "id": "STUDENT_STARTER",
+      "name": "Student Starter Canonical",
+      "folder": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER",
+      "mode": "READ_ONLY",
+      "description": "Baseline B03 có hai learning gaps có chủ đích: thành phần velocity.z chưa áp dụng direction.z; jump chưa kiểm tra is_on_floor()."
+    },
+    {
+      "id": "E2E_WORKING_COPY",
+      "name": "E2E Working Copy",
+      "folder": "B03_HUMAN_TEST_COPY",
+      "source_folder": "SNLT2026-HP01-B03/SNLT2026-HP01-B03-STUDENT_STARTER",
+      "mode": "MODIFY_AND_SAVE",
+      "description": "Bản sao mô phỏng đường đi học sinh: chẩn đoán movement gap, sửa Vector3/velocity, kiểm chứng collision/physics, sửa điều kiện jump, chạy course, lưu/mở lại."
+    }
+  ]
+}

@@ -57,6 +57,14 @@ function normalizeHpFolder(hp) {
   return hp;
 }
 
+function getResultsPath(hp, lesson, isSmoke) {
+  if (isSmoke) {
+    const hpFolder = normalizeHpFolder(hp);
+    return path.join(SMOKE_DIR, 'RESULTS', `${hpFolder}_${lesson}_HUMAN_TEST_RESULT.json`);
+  }
+  return path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+}
+
 function buildDynamicIndex() {
   const dataDir = path.join(STUDIO_DIR, 'review_data');
   const modules = [];
@@ -185,9 +193,7 @@ const server = http.createServer((req, res) => {
     const lesson = parsedUrl.searchParams.get('lesson') || 'B01';
     const isSmoke = parsedUrl.searchParams.get('smoke') === 'true';
 
-    const resultsPath = isSmoke
-      ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
-      : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+    const resultsPath = getResultsPath(hp, lesson, isSmoke);
 
     if (fs.existsSync(resultsPath)) {
       res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
@@ -221,6 +227,12 @@ const server = http.createServer((req, res) => {
     let finalFileName = canonicalName;
     let targetFilePath = path.join(targetDir, finalFileName);
 
+    if (fs.existsSync(targetFilePath) && !isRetake) {
+      res.writeHead(409, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ error: `Minh chứng RAW ${canonicalName} đã tồn tại! Vui lòng chọn Retake để lưu thành bản chụp mới.` }));
+      return;
+    }
+
     if (fs.existsSync(targetFilePath) && isRetake) {
       const ext = path.extname(canonicalName);
       const base = path.basename(canonicalName, ext);
@@ -240,9 +252,7 @@ const server = http.createServer((req, res) => {
 
       const sha256 = crypto.createHash('sha256').update(buffer).digest('hex');
 
-      const resultsPath = isSmoke
-        ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
-        : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+      const resultsPath = getResultsPath(hp, lesson, isSmoke);
 
       ensureDir(path.dirname(resultsPath));
 
@@ -305,9 +315,7 @@ const server = http.createServer((req, res) => {
           return;
         }
 
-        const resultsPath = isSmoke
-          ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
-          : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+        const resultsPath = getResultsPath(hp, lesson, isSmoke);
 
         if (fs.existsSync(resultsPath)) {
           let currentData = JSON.parse(fs.readFileSync(resultsPath, 'utf8'));
@@ -345,9 +353,7 @@ const server = http.createServer((req, res) => {
         const lesson = payload.lesson || 'B01';
         const isSmoke = payload.is_smoke === true;
 
-        const resultsPath = isSmoke
-          ? path.join(SMOKE_DIR, 'RESULTS', 'HUMAN_TEST_RESULT.json')
-          : path.join(ROOT_DIR, `SNLT2026-${normalizeHpFolder(hp)}-${lesson}`, '03_HUMAN_TEST_REVIEW', '02_HUMAN_NOTES', 'HUMAN_TEST_RESULT.json');
+        const resultsPath = getResultsPath(hp, lesson, isSmoke);
 
         ensureDir(path.dirname(resultsPath));
 

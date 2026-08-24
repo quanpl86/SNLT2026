@@ -1,0 +1,499 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B03",
+  "capture_gate": "DO_NOT_CAPTURE_REAL_HUMAN_EVIDENCE_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "raw_policy": "RAW evidence không crop/annotate/overwrite. Chỉ copy sang 04_MEDIA_APPROVED sau ChatGPT review + Human OK.",
+  "media_items": [
+    {
+      "media_id": "PB-M01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_PB_M01_Vector3_Movement_Canonical_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa K06: Vector3 từ input tới vận tốc ngang.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "scripts/player.gd",
+        "direction Vector3",
+        "thành phần x/z",
+        "velocity.x",
+        "velocity.z"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "PB-M02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_PB_M02_CharacterBody3D_Physics_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa K07: CharacterBody3D + physics/collision.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Player CharacterBody3D hoặc Scene Tree tương ứng",
+        "gravity/velocity",
+        "move_and_slide()"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "PB-M03",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_PB_M03_Jump_Condition_Canonical_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa K08 trong jump hợp lệ.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "jump action",
+        "is_action_just_pressed",
+        "is_on_floor()",
+        "velocity.y = jump_speed"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "PB-M04",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_PB_M04_Hero_Challenge_Course_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hero image sản phẩm B03 — Đường thử thách 3D.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "LESSON_COVER"
+      ],
+      "must_show": [
+        "Cửa sổ game sạch",
+        "Player trên/giữa đường thử thách",
+        "nhiều platform có thay đổi vị trí/độ cao",
+        "chiều sâu 3D rõ"
+      ],
+      "must_not_show": [
+        "Bảng lỗi/debug che game"
+      ]
+    },
+    {
+      "media_id": "PB-V01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B03_PB_V01_Canonical_Movement_Jump_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng movement + jump canonical trên máy thật.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20–30s: đứng yên 2s → W/A/S/D ngắn → chạy lấy đà → Space qua 2–3 platform → giữ frame cuối 2–3s."
+    },
+    {
+      "media_id": "PB-V02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B03_PB_V02_Course_Feasibility_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng course feasibility; Human vẫn quyết định age-fit.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "Quay một lượt thử course đại diện; nếu fail do thao tác, quay lượt thứ hai. Dùng cho QA/age-fit review."
+    },
+    {
+      "media_id": "SS-M01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_SS_M01_Project_Open_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Mở Student Starter B03.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "Scene",
+        "FileSystem",
+        "3D Viewport",
+        "Inspector",
+        "project B03"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "SS-M02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_SS_M02_VectorZ_Gap_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before image learning gap Vector3/velocity.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "player.gd",
+        "direction có z",
+        "velocity.z gap/TODO hoặc =0",
+        "vùng B03 được đánh dấu"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "SS-M03",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_SS_M03_Jump_NoFloorCheck_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before image learning gap điều kiện jump.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "player.gd",
+        "jump action",
+        "thiếu is_on_floor()"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "SS-V01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B03_SS_V01_MovementZ_Gap_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng baseline movement gap.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "15–20s: A/D → W/S → giữ frame. Thể hiện A/D phản hồi còn W/S chưa có movement z đúng."
+    },
+    {
+      "media_id": "SS-V02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B03_SS_V02_AirJump_Bug_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng baseline jump-condition gap.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "15–20s: Space → khi trên không nhấn Space lại 1–2 lần → giữ frame; phải thấy air-jump bug."
+    },
+    {
+      "media_id": "SS-M04",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_SS_M04_Evidence_Template_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh họa hồ sơ minh chứng cá nhân B03.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "HO_SO_MINH_CHUNG_B03.md",
+        "ô Dự đoán",
+        "ô Thay đổi",
+        "ô Kết quả chạy",
+        "ô Giải thích"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_E2E_M01_VectorZ_Before_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before cho sửa movement z.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "player.gd",
+        "velocity.z gap trước sửa"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_E2E_M02_VectorZ_After_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After cho sửa movement z.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "player.gd",
+        "velocity.z = direction.z * speed hoặc cấu trúc tương đương đúng spec"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-V01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B03_E2E_V01_Movement_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng sửa Vector3/velocity → runtime/collision.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20s: Editor after fix 2s → F5 → W/A/S/D → va/đứng trên platform → giữ frame."
+    },
+    {
+      "media_id": "E2E-M03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_E2E_M03_Jump_Before_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before jump condition.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "jump condition trước sửa",
+        "thiếu is_on_floor()"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_E2E_M04_Jump_After_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After jump condition.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "jump condition sau sửa",
+        "is_action_just_pressed",
+        "is_on_floor()",
+        "and"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-V02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B03_E2E_V02_Jump_Condition_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Minh chứng điều kiện nhảy hợp lệ.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20–25s: điều kiện sau sửa 2s → F5 → jump → nhấn Space trên không không tái jump → tiếp đất → jump lại."
+    },
+    {
+      "media_id": "E2E-M05",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B03_E2E_M05_Reopen_Code_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Persistence code sau lưu/mở lại.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Sau reopen",
+        "movement z fix còn tồn tại",
+        "jump is_on_floor() còn tồn tại"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    },
+    {
+      "media_id": "E2E-M06",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B03_E2E_M06_Goal_Course_RAW.png",
+      "save_dir": "SNLT2026-HP01-B03/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Kết quả course sau hoàn thiện B03.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Player ở platform đích hoặc vị trí hoàn thành phần đại diện course",
+        "khung game sạch"
+      ],
+      "must_not_show": [
+        "Thông tin cá nhân",
+        "Desktop/Finder",
+        "Cửa sổ không liên quan"
+      ]
+    }
+  ],
+  "generated_visuals": [
+    {
+      "visual_id": "B03-GV01",
+      "title": "Vector3: trục X/Y/Z và hướng chuyển động 3D",
+      "type": "diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ]
+    },
+    {
+      "visual_id": "B03-GV02",
+      "title": "Input → direction Vector3 → velocity → move_and_slide()",
+      "type": "process_diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "GV_LESSON_PLAN"
+      ]
+    },
+    {
+      "visual_id": "B03-GV03",
+      "title": "Chu trình nhảy: ở sàn → velocity.y dương → trên không/gravity → tiếp đất",
+      "type": "state_process_diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ]
+    },
+    {
+      "visual_id": "B03-GV04",
+      "title": "Điều kiện Boolean: jump vừa nhấn AND is_on_floor()",
+      "type": "logic_diagram",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ]
+    },
+    {
+      "visual_id": "B03-GV05",
+      "title": "Before/After: movement z gap + air-jump bug → bản sửa",
+      "type": "composite",
+      "owner": "CHATGPT",
+      "capture_by_human": false,
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "GV_LESSON_PLAN"
+      ]
+    }
+  ]
+}
