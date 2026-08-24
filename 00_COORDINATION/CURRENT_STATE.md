@@ -1,14 +1,14 @@
 # HP1 CURRENT STATE
 
-ACTIVE_LESSON: B01
-LESSON_STATUS: READY_FOR_REVIEW_STUDIO_SMOKE_TEST
+## Current Active Branch
+`hp1-final-target`
 
-ENGINE:
-Godot 4.7.1 stable
-STATUS: ENGINE_CANDIDATE
-
-RENDERER:
-Compatibility (gl_compatibility)
+## Status Summary
+- **B01**: `READY_FOR_REVIEW_STUDIO_SMOKE_TEST` (Preserved)
+- **B02 - B09**: `LOCAL_TEST_PASS_WAITING_FOR_CHATGPT_REVIEW` (Preserved)
+- **HP1 Final Product Target**: `LOCAL_TEST_PASS_WAITING_FOR_CHATGPT_REVIEW` (Teacher Master Reference Target established)
+- **Engine Baseline**: Godot 4.7.1 stable (Compatibility)
+- **Web Export**: HTML5 Web compatibility build verified (HTTP 200 OK on port 8090)
 
 LANGUAGE_STANDARD:
 LOCKED (English UI + Vietnamese instructions with exact English UI labels in parentheses)
