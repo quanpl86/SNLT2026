@@ -1,0 +1,9 @@
+# B04 CONTEXT — AGENT PREPARATION
+
+LESSON: B04 — Ôn tập — Thử thách Nền tảng 3D
+MODE: USER_AUTHORIZED_PARALLEL_AGENT_PREPARATION
+K_NEW: 0
+VISUAL_REFRESH: PREINTEGRATED_BY_PROGRAM
+PRIOR_LESSON_POLICY: DO_NOT_CHANGE_B01_B02_B03_STATUS
+
+B04 is a checkpoint: 15' review + 45' 25-question approved quiz + 60' product completion/debugging.

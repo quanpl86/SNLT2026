@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "hp": "HP1",
+  "hp_title": "Phiêu lưu Nền tảng 3D",
+  "lesson": "B04",
+  "lesson_title": "Ôn tập — Thử thách Nền tảng 3D",
+  "lesson_type": "CHECKPOINT_REVIEW",
+  "new_core_knowledge": 0,
+  "product": "Sản phẩm chơi được số 1 — Thử thách Nền tảng 3D",
+  "engine": "Godot 4.7.1 stable",
+  "renderer": "Compatibility",
+  "editor_ui": "English",
+  "prior_lesson_status_policy": "DO_NOT_CHANGE_B01_B02_B03_STATUS_AS_SIDE_EFFECT",
+  "curriculum": {
+    "cio": [
+      {
+        "id": "HP1-CIO07",
+        "text": "Tích hợp điều khiển, nhảy, va chạm và màn chơi thành thử thách hoàn chỉnh.",
+        "sio": [
+          "HP1-SIO01",
+          "HP1-SIO02"
+        ],
+        "ulo": [
+          "ULO-01",
+          "ULO-04"
+        ],
+        "k_new": [],
+        "k_prior": [
+          "K01",
+          "K05",
+          "K06",
+          "K07",
+          "K08",
+          "K09"
+        ]
+      },
+      {
+        "id": "HP1-CIO08",
+        "text": "Phát hiện và sửa lỗi làm cản trở việc hoàn thành màn chơi.",
+        "sio": [
+          "HP1-SIO05"
+        ],
+        "ulo": [
+          "ULO-05"
+        ],
+        "k_new": [],
+        "k_prior": [
+          "K05",
+          "K06",
+          "K07",
+          "K08",
+          "K09"
+        ]
+      }
+    ],
+    "evidence_required_by_assessment": {
+      "HP1-CIO07": [
+        "MC-CN"
+      ],
+      "HP1-CIO08": [
+        "MC-KT"
+      ]
+    },
+    "supporting_evidence_from_lo": {
+      "HP1-CIO08": [
+        "MC-CN",
+        "MC-GT"
+      ]
+    },
+    "gate": "Cổng nguyên mẫu",
+    "lesson_minutes": 120,
+    "timebox": [
+      {
+        "block": "Ôn tập nhanh B1–B3",
+        "minutes": 15
+      },
+      {
+        "block": "Quiz checkpoint",
+        "minutes": 45,
+        "questions": 25
+      },
+      {
+        "block": "Hoàn thiện sản phẩm + sửa lỗi + nộp minh chứng",
+        "minutes": 60
+      }
+    ],
+    "approved_question_ids": [
+      "HP1-B04-Q01",
+      "HP1-B04-Q02",
+      "HP1-B04-Q03",
+      "HP1-B04-Q04",
+      "HP1-B04-Q05",
+      "HP1-B04-Q06",
+      "HP1-B04-Q07",
+      "HP1-B04-Q08",
+      "HP1-B04-Q09",
+      "HP1-B04-Q10",
+      "HP1-B04-Q11",
+      "HP1-B04-Q12",
+      "HP1-B04-Q13",
+      "HP1-B04-Q14",
+      "HP1-B04-Q15",
+      "HP1-B04-Q16",
+      "HP1-B04-Q17",
+      "HP1-B04-Q18",
+      "HP1-B04-Q19",
+      "HP1-B04-Q20",
+      "HP1-B04-Q21",
+      "HP1-B04-Q22",
+      "HP1-B04-Q23",
+      "HP1-B04-Q24",
+      "HP1-B04-Q25"
+    ],
+    "blockbench": false
+  },
+  "visual_refresh": {
+    "student_asset_workflow_taught": false,
+    "mode": "PREINTEGRATED_BY_PROGRAM",
+    "purpose": "Làm mới hình ảnh nhưng giữ nguyên Scene/Node/root physics/collider/transform/mechanics từ B1–B3.",
+    "default_source": "PJT-004 bundled CC0 assets",
+    "frozen_commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+    "selected_files": [
+      "models/character.glb",
+      "models/brick.glb"
+    ]
+  },
+  "targets": [
+    {
+      "id": "PROJECT_BASIC",
+      "name": "Project Basic Canonical",
+      "folder": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-PROJECT_BASIC",
+      "mode": "READ_ONLY",
+      "description": "Bản đích tích hợp B1–B3, visual refresh đã gắn sẵn, không có bug checkpoint."
+    },
+    {
+      "id": "STUDENT_STARTER",
+      "name": "Student Starter Canonical",
+      "folder": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER",
+      "mode": "READ_ONLY",
+      "description": "Cùng visual refresh; chứa đúng 2 lỗi ôn tập có chủ đích: mapping move_right thiếu D và CollisionShape3D của ChallengePlatform03 bị disabled."
+    },
+    {
+      "id": "E2E_WORKING_COPY",
+      "name": "E2E Working Copy",
+      "folder": "B04_HUMAN_TEST_COPY",
+      "source_folder": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER",
+      "mode": "MODIFY_AND_SAVE",
+      "description": "Mô phỏng học sinh ôn tập, chẩn đoán, sửa 2 lỗi quen thuộc, chạy hoàn chỉnh, lưu/mở lại và nộp minh chứng."
+    }
+  ],
+  "execution_gate": {
+    "human_execution": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+    "runtime_pass": "NOT_CLAIMED"
+  }
+}

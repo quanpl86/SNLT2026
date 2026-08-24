@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B04",
+  "planned_media_count": 22,
+  "capture_gate": "DO_NOT_CAPTURE_REAL_HUMAN_EVIDENCE_UNTIL_ANTIGRAVITY_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "raw_policy": "RAW immutable; retake versioning; learning-media approval separate from QA evidence.",
+  "media_items": [
+    {
+      "media_id": "PB-M01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_PB_M01_Hero_Visual_Refresh_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hero B04: diện mạo mới, cơ chế cũ.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "LESSON_COVER"
+      ],
+      "must_show": [
+        "Game/viewport có character mới + platform brick",
+        "bố cục course quen thuộc"
+      ]
+    },
+    {
+      "media_id": "PB-M02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_PB_M02_Player_Visual_Guardrail_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Chứng minh visual swap không thay physics root.",
+      "reuse_targets": [
+        "GV_LESSON_PLAN",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Player CharacterBody3D root",
+        "CollisionShape3D",
+        "Visual child/character model"
+      ]
+    },
+    {
+      "media_id": "PB-M03",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_PB_M03_Platform_Visual_Guardrail_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Phân biệt visual với collider.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "StaticBody3D/CollisionShape3D",
+        "brick visual child"
+      ]
+    },
+    {
+      "media_id": "PB-M04",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_PB_M04_Integrated_Gameplay_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Minh chứng tích hợp chức năng.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Game window",
+        "Player giữa course",
+        "nhiều platform"
+      ]
+    },
+    {
+      "media_id": "PB-V01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B04_PB_V01_Integrated_Gameplay_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Runtime integrated gameplay.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20–30s: W/A/S/D → Space → 2–3 platform → giữ frame cuối."
+    },
+    {
+      "media_id": "PB-V02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B04_PB_V02_Full_Course_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "MC-CN candidate cho vòng chức năng.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Một lượt từ đầu tới đích; nếu fail do thao tác có thể quay lượt thứ hai."
+    },
+    {
+      "media_id": "PB-M05",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B04_PB_M05_No_New_Knowledge_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "QA ranh giới checkpoint.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Tài liệu/vùng project cho thấy asset đã gắn sẵn"
+      ]
+    },
+    {
+      "media_id": "SS-M01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_SS_M01_Starter_Visual_Refresh_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Before state B04.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "Starter có character/platform visual mới"
+      ]
+    },
+    {
+      "media_id": "SS-M02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_SS_M02_BugA_InputMap_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Bug Ticket A before.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "Input Map",
+        "move_right",
+        "thiếu D"
+      ]
+    },
+    {
+      "media_id": "SS-M03",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_SS_M03_BugB_Collision_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Bug Ticket B before.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "ChallengePlatform03",
+        "CollisionShape3D",
+        "Disabled=true"
+      ]
+    },
+    {
+      "media_id": "SS-V01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B04_SS_V01_Baseline_Bugs_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Baseline bug evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Tái hiện D không đi → tới platform lỗi → rơi/xuyên → dừng."
+    },
+    {
+      "media_id": "SS-M04",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_SS_M04_BugTicket_Template_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hồ sơ MC-KT.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "Bug Ticket Actual/Expected/Hypothesis/Fix/Test/Explanation"
+      ]
+    },
+    {
+      "media_id": "SS-M05",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-06",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B04_SS_M05_Asset_Note_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Giảm cảm giác xuất hiện kiến thức mới.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "Ghi chú asset đã được chương trình gắn sẵn",
+        "không yêu cầu import"
+      ]
+    },
+    {
+      "media_id": "E2E-M01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_E2E_M01_Clean_Copy_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Baseline E2E.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Working Copy",
+        "2 bug baseline identifiable"
+      ]
+    },
+    {
+      "media_id": "E2E-M02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_E2E_M02_InputMap_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After Bug A fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "move_right",
+        "D event"
+      ]
+    },
+    {
+      "media_id": "E2E-V01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B04_E2E_V01_Input_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Bug A fix runtime.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "Input Map fixed 2s → F5 → W/A/S/D/Space regression."
+    },
+    {
+      "media_id": "E2E-M03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_E2E_M03_Collision_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After Bug B fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "ChallengePlatform03 CollisionShape3D",
+        "Disabled=false"
+      ]
+    },
+    {
+      "media_id": "E2E-V02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B04_E2E_V02_Collision_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Bug B fix runtime.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "Editor fixed 2s → F5 → jump/land on ChallengePlatform03."
+    },
+    {
+      "media_id": "E2E-M04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_E2E_M04_Full_Challenge_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Checkpoint completion hero.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Player ở cuối/đích course",
+        "visual refresh rõ"
+      ]
+    },
+    {
+      "media_id": "E2E-V03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B04_E2E_V03_Full_Challenge_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "MC-CN completion evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Chơi từ đầu tới đích sau fix; không dùng cơ chế ngoài B1–B3."
+    },
+    {
+      "media_id": "E2E-M05",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_E2E_M05_Reopen_Input_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Persistence Bug A.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Sau reopen move_right có D"
+      ]
+    },
+    {
+      "media_id": "E2E-M06",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B04_E2E_M06_Reopen_Collision_RAW.png",
+      "save_dir": "SNLT2026-HP01-B04/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Persistence Bug B.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Sau reopen collision enabled"
+      ]
+    }
+  ],
+  "generated_visuals": [
+    {
+      "visual_id": "B04-GV01",
+      "title": "B1→B2→B3→B4: từ quan sát đến prototype",
+      "type": "progression_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B04-GV02",
+      "title": "Visual ≠ Collision: lớp hình ảnh và lớp vật lý",
+      "type": "layer_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B04-GV03",
+      "title": "Bug Ticket: Tái hiện → Giả thuyết → Sửa → Chạy lại → Giải thích",
+      "type": "debug_process",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B04-GV04",
+      "title": "Before/After visual refresh — cơ chế giữ nguyên",
+      "type": "comparison",
+      "owner": "CHATGPT"
+    }
+  ]
+}

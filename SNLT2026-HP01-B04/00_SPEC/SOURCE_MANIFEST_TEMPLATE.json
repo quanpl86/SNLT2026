@@ -1,0 +1,25 @@
+{
+  "lesson": "B04",
+  "assets": [
+    {
+      "asset_id": "",
+      "source_id": "",
+      "source_owner": "",
+      "source_url": "",
+      "frozen_commit_or_version": "",
+      "source_path": "",
+      "destination_path": "",
+      "license": "",
+      "license_evidence": "",
+      "sha256": "",
+      "modified_by_program": false,
+      "modification_notes": "",
+      "used_in": [
+        "PROJECT_BASIC",
+        "STUDENT_STARTER"
+      ],
+      "student_editable": false,
+      "runtime_verified_godot_4_7_1": false
+    }
+  ]
+}

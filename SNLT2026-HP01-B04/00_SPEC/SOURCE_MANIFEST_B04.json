@@ -1,0 +1,45 @@
+{
+  "lesson": "B04",
+  "assets": [
+    {
+      "asset_id": "B04-AST-CHAR-01",
+      "source_id": "PJT-004",
+      "source_owner": "KenneyNL",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-3D-Platformer",
+      "frozen_commit_or_version": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "source_path": "models/character.glb",
+      "destination_path": "assets/kenney_pjt004/character.glb",
+      "license": "CC0-1.0",
+      "license_evidence": "README.md in frozen commit confirms 3D assets are CC0 Public Domain",
+      "sha256": "7112f6a08400914f9da546f3e6029e947cc9eab2b4a6da5eb99776111289efb1",
+      "modified_by_program": false,
+      "modification_notes": "Unmodified original binary from frozen commit",
+      "used_in": [
+        "PROJECT_BASIC",
+        "STUDENT_STARTER"
+      ],
+      "student_editable": false,
+      "runtime_verified_godot_4_7_1": true
+    },
+    {
+      "asset_id": "B04-AST-BRICK-01",
+      "source_id": "PJT-004",
+      "source_owner": "KenneyNL",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-3D-Platformer",
+      "frozen_commit_or_version": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "source_path": "models/brick.glb",
+      "destination_path": "assets/kenney_pjt004/brick.glb",
+      "license": "CC0-1.0",
+      "license_evidence": "README.md in frozen commit confirms 3D assets are CC0 Public Domain",
+      "sha256": "c9011dd30254c7a5dfdb29c61c22b6b3b4ad82186a096b90b824ab0b8dd58db8",
+      "modified_by_program": false,
+      "modification_notes": "Unmodified original binary from frozen commit",
+      "used_in": [
+        "PROJECT_BASIC",
+        "STUDENT_STARTER"
+      ],
+      "student_editable": false,
+      "runtime_verified_godot_4_7_1": true
+    }
+  ]
+}

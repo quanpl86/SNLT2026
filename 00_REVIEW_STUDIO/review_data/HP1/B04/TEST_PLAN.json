@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B04",
+  "test_count_excluding_gate": 18,
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Preflight B04: checkpoint, dependency và visual refresh",
+      "project_path": "SNLT2026-HP01-B04",
+      "action_steps": [
+        "Xác nhận Godot 4.7.1 stable + Compatibility + English UI.",
+        "Xác nhận B04 có K_NEW=0 và tài liệu không dạy asset import/Blockbench.",
+        "Xác nhận B01/B02/B03 không bị đổi trạng thái chỉ vì thêm B04.",
+        "Xác nhận asset refresh lấy từ PJT-004 frozen commit và SOURCE_MANIFEST ghi license.",
+        "Xác nhận ba target B04 tồn tại sau implementation."
+      ],
+      "expected_results": [
+        "B04 là checkpoint B1–B3, không mở kiến thức lõi mới.",
+        "Asset mới đã được chương trình gắn sẵn; học sinh không phải học quy trình import.",
+        "Không có side effect trạng thái bài trước."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Project Basic B04 — diện mạo mới, cơ chế cũ",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở project.godot, scenes/main.tscn và chạy F5.",
+        "Quan sát Player, platform visuals và Scene Tree."
+      ],
+      "expected_results": [
+        "Project mở không blocker.",
+        "Character/brick visual mới xuất hiện.",
+        "Root Player/physics/collider/camera/world vẫn theo construct B1–B3."
+      ],
+      "media_ids": [
+        "PB-M01"
+      ]
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "Kiểm tra guardrail thay visual Player",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Chọn Player root và các node con Visual/CollisionShape3D.",
+        "Đối chiếu transform/collision với baseline B03.",
+        "Kiểm tra character.glb chỉ đóng vai trò visual child."
+      ],
+      "expected_results": [
+        "CharacterBody3D root không bị thay bằng imported scene root.",
+        "CollisionShape3D và vị trí gameplay không đổi có ý nghĩa.",
+        "Không có script mới bắt buộc chỉ để dùng character asset."
+      ],
+      "media_ids": [
+        "PB-M02"
+      ]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "Kiểm tra guardrail visual platform",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Chọn StartPlatform và ChallengePlatform03.",
+        "Kiểm tra StaticBody3D/CollisionShape3D và visual brick child.",
+        "So sánh collider/transform với course logic B03."
+      ],
+      "expected_results": [
+        "Brick/model chỉ làm lớp hiển thị.",
+        "Collider quyết định gameplay vẫn là collider do chương trình kiểm soát.",
+        "Khoảng cách/độ cao course không đổi ngoài tolerance kỹ thuật cần thiết."
+      ],
+      "media_ids": [
+        "PB-M03"
+      ]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Runtime tích hợp movement + jump + collision + course",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "F5; thử W/A/S/D, Space.",
+        "Đi qua ít nhất 3 platform và va/chạm/tiếp đất.",
+        "Tiếp tục tới đích nếu có thể."
+      ],
+      "expected_results": [
+        "Input, movement, jump và collision hoạt động liên tục.",
+        "Visual refresh không làm thay feel/collider ngoài sai số hiển thị.",
+        "Không có blocker."
+      ],
+      "media_ids": [
+        "PB-M04",
+        "PB-V01"
+      ]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "Hoàn thành vòng chức năng checkpoint",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Chơi từ điểm đầu đến platform đích.",
+        "Không dùng double jump/cheat/new mechanic.",
+        "Ghi số lần thử và blocker nếu có."
+      ],
+      "expected_results": [
+        "Course hoàn thành bằng kiến thức B1–B3.",
+        "CIO07 có thể thu MC-CN từ vòng chức năng hoàn chỉnh."
+      ],
+      "media_ids": [
+        "PB-V02"
+      ]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "Kiểm tra không mở kiến thức mới",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Đối chiếu code/docs/Scene Tree với danh sách K01,K05–K09.",
+        "Tìm Area3D/Signal/Blockbench/HUD/checkpoint hoặc yêu cầu import asset trong nhiệm vụ HS."
+      ],
+      "expected_results": [
+        "Không có nội dung B5+ trở thành nhiệm vụ học sinh.",
+        "Asset import chỉ nằm trong tài liệu kỹ thuật GV/Antigravity.",
+        "B04 vẫn là ôn tập B1–B3."
+      ],
+      "media_ids": [
+        "PB-M05"
+      ]
+    },
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Student Starter B04 với visual refresh đã gắn sẵn",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở project; không sửa.",
+        "Quan sát visual mới và Scene Tree."
+      ],
+      "expected_results": [
+        "Visual refresh giống Project Basic về phong cách.",
+        "Học sinh không cần import asset.",
+        "Starter chứa lỗi ôn tập có chủ đích nhưng vẫn mở/chạy."
+      ],
+      "media_ids": [
+        "SS-M01"
+      ]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "Bug Ticket A — move_right thiếu phím D",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở Project Settings > Input Map.",
+        "Kiểm tra move_right và các action khác.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "move_right tồn tại nhưng thiếu event D.",
+        "W/A/S và jump mapping vẫn giữ để lỗi khoanh vùng được.",
+        "Đây là K05 đã học ở B02."
+      ],
+      "media_ids": [
+        "SS-M02"
+      ]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Bug Ticket B — ChallengePlatform03 mất collision",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Chọn ChallengePlatform03/CollisionShape3D.",
+        "Xem thuộc tính Disabled trong Inspector.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "CollisionShape3D của đúng platform bị disabled có chủ đích.",
+        "Visual platform vẫn nhìn bình thường nên cần phân tích collision.",
+        "Đây là K07 đã học ở B03."
+      ],
+      "media_ids": [
+        "SS-M03"
+      ]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Baseline runtime tái hiện hai lỗi",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Thử D tại khu vực an toàn.",
+        "Đi tới ChallengePlatform03 và thử đứng/tiếp đất.",
+        "Dừng game."
+      ],
+      "expected_results": [
+        "D không tạo move_right.",
+        "Player không được platform lỗi đỡ như bản canonical.",
+        "Hai lỗi tái hiện ổn định và không cần kiến thức mới để hiểu."
+      ],
+      "media_ids": [
+        "SS-V01"
+      ]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "Phiếu Bug Ticket + bằng chứng",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở evidence/HO_SO_MINH_CHUNG_B04.md.",
+        "Kiểm tra hai Bug Ticket có Actual/Expected/Hypothesis/Fix/Test result/Explanation."
+      ],
+      "expected_results": [
+        "Template hỗ trợ MC-KT cá nhân cho CIO08.",
+        "Không có lời giải điền sẵn.",
+        "Không có đáp án quiz."
+      ],
+      "media_ids": [
+        "SS-M04"
+      ]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Hướng dẫn HS chỉ ôn kiến thức cũ",
+      "project_path": "SNLT2026-HP01-B04/SNLT2026-HP01-B04-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Đọc Step-by-Step và ghi chú Asset Refresh.",
+        "Kiểm tra hướng dẫn không yêu cầu mở/import GLB hay Blockbench."
+      ],
+      "expected_results": [
+        "Học sinh chỉ đọc/kiểm tra/sửa InputMap + collision + chạy lại.",
+        "Visual mới được giới thiệu là lớp giao diện chương trình cung cấp.",
+        "Không tạo cảm giác phải học asset pipeline ở checkpoint."
+      ],
+      "media_ids": [
+        "SS-M05"
+      ]
+    },
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Working Copy sạch",
+      "project_path": "B04_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Copy Student Starter → B04_HUMAN_TEST_COPY.",
+        "Xác nhận D mapping thiếu và ChallengePlatform03 collision disabled."
+      ],
+      "expected_results": [
+        "Working Copy đúng baseline Starter và giữ visual refresh."
+      ],
+      "media_ids": [
+        "E2E-M01"
+      ]
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "Ôn nhanh và chẩn đoán trước khi sửa",
+      "project_path": "B04_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Chơi baseline để tái hiện lỗi.",
+        "Ghi Actual/Expected cho cả hai Bug Ticket.",
+        "Ghi hypothesis trước khi chỉnh."
+      ],
+      "expected_results": [
+        "Có bằng chứng chẩn đoán trước sửa.",
+        "Không sửa mò trước khi tái hiện lỗi."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa Bug A — InputMap move_right",
+      "project_path": "B04_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Project Settings > Input Map > move_right.",
+        "Thêm D.",
+        "F5 và regression W/A/S/D + Space.",
+        "Ghi kết quả."
+      ],
+      "expected_results": [
+        "D hoạt động; W/A/S/Space không bị phá.",
+        "Giải thích được action ↔ key mapping."
+      ],
+      "media_ids": [
+        "E2E-M02",
+        "E2E-V01"
+      ]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa Bug B — CollisionShape3D",
+      "project_path": "B04_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Chọn ChallengePlatform03/CollisionShape3D.",
+        "Bật lại collision (Disabled=false).",
+        "F5 và tiếp đất/đứng trên platform.",
+        "Ghi kết quả."
+      ],
+      "expected_results": [
+        "Platform đỡ Player như canonical.",
+        "Không sửa visual asset để chữa lỗi collision.",
+        "Giải thích được visual khác collision."
+      ],
+      "media_ids": [
+        "E2E-M03",
+        "E2E-V02"
+      ]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "Hoàn thành Thử thách Nền tảng 3D",
+      "project_path": "B04_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "F5 sau cả hai fix.",
+        "Chơi từ đầu đến đích bằng movement + single jump.",
+        "Ghi MC-CN và phần đóng góp cá nhân."
+      ],
+      "expected_results": [
+        "Vòng chức năng hoàn chỉnh không blocker.",
+        "Có MC-CN cho CIO07 và Bug Ticket cho CIO08."
+      ],
+      "media_ids": [
+        "E2E-M04",
+        "E2E-V03"
+      ]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Lưu/mở lại và hoàn tất checkpoint",
+      "project_path": "B04_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Cmd+S, đóng Godot, mở lại.",
+        "Xác nhận D mapping + collision fix persist.",
+        "F5 regression ngắn.",
+        "Hoàn tất HO_SO_MINH_CHUNG_B04.md."
+      ],
+      "expected_results": [
+        "Fix persist.",
+        "Hồ sơ có chẩn đoán/sửa/kiểm chứng cá nhân.",
+        "Không tự động suy ra HUMAN_PASS."
+      ],
+      "media_ids": [
+        "E2E-M05",
+        "E2E-M06"
+      ]
+    }
+  ]
+}
