@@ -40,6 +40,26 @@
       ],
       "student_editable": false,
       "runtime_verified_godot_4_7_1": true
+    },
+    {
+      "asset_id": "B04-AST-TEX-01",
+      "source_id": "PJT-004",
+      "source_owner": "KenneyNL",
+      "source_url": "https://github.com/KenneyNL/Starter-Kit-3D-Platformer",
+      "frozen_commit_or_version": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "source_path": "models/Textures/colormap.png",
+      "destination_path": "assets/kenney_pjt004/Textures/colormap.png",
+      "license": "CC0-1.0",
+      "license_evidence": "README.md in frozen commit confirms 3D assets/textures are CC0 Public Domain",
+      "sha256": "106cf02e0d6dccded6d9f90c2ae6a51eb94c6301645fea159e834c44ed4708a3",
+      "modified_by_program": false,
+      "modification_notes": "Unmodified original texture binary from frozen commit",
+      "used_in": [
+        "PROJECT_BASIC",
+        "STUDENT_STARTER"
+      ],
+      "student_editable": false,
+      "runtime_verified_godot_4_7_1": true
     }
   ]
 }
