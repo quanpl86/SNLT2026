@@ -115,8 +115,19 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **LESSON**: B01
 - **TASK**: REVIEW_STUDIO_OPERATIONALIZATION
 - **YÊU CẦU**: Khởi tạo SNLT Review Studio Web App (Port 5173), đồng bộ Schema 18 test + HDC-00, tích hợp nút Open Folder không side-effect, cách ly Smoke Mode & Retake protection.
-- **KẾT QUẢ**: Review Studio sẵn sàng 100% cho phiên Human Test B01 chính thức.
+- **KẾT QUẢ**: Review Studio sẵn sàng cho phiên Smoke Test.
+- **STATUS**: `DONE`
+
+---
+
+### HANDOFF-011 (STATUS CORRECTION & SMOKE GATE ALIGNMENT)
+- **FROM**: ChatGPT / Antigravity
+- **TO**: Human
+- **LESSON**: B01
+- **TASK**: REVIEW_STUDIO_SMOKE_GATE
+- **YÊU CẦU**: Đồng bộ chính xác trạng thái координация `LESSON_STATUS: READY_FOR_REVIEW_STUDIO_SMOKE_TEST`. Thực hiện 8 bước Smoke Test trên UI trước khi cấp `REVIEW_STUDIO_SMOKE_PASS`.
 - **NEXT_OWNER**: HUMAN
-- **NEXT_ACTION**: Run 8-step smoke test gate / Execute official 18-test Human Test suite in Review Studio
-- **STATUS**: `OFFICIAL_HUMAN_TEST_READY`
+- **NEXT_ACTION**: Complete Review Studio smoke gate. Only after REVIEW_STUDIO_SMOKE_PASS: switch to REAL HUMAN TEST and execute B01 official suite.
+- **STATUS**: `READY_FOR_REVIEW_STUDIO_SMOKE_TEST`
+
 

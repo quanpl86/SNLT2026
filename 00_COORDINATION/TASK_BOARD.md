@@ -27,5 +27,5 @@
 | **HP1-B01-T022** | Final ChatGPT Pre-Human-Test Review | CHATGPT | DONE | PR #1 (HEAD fdf15fe) | APPROVED_WITH_MINOR_SYNC | PR #1 |
 | **HP1-B01-T019** | Student Starter End-to-End Human Test | HUMAN | DONE | STUDENT_STARTER | Execute T019 using Student Starter + Step-by-Step | PR #1 |
 | **HP1-B01-T023** | SNLT Review Studio Operationalization | ANTIGRAVITY | DONE | v1.2 Checklist & Media Spec | `00_REVIEW_STUDIO/` Web App running at `http://localhost:5173` | Local |
-| **HP1-B01-T024** | Official 18-Test Human Test Execution | HUMAN | IN_PROGRESS | Review Studio | Canonical evidence upload & result logging | Pending |
+| **HP1-B01-T024** | Official 18-Test Human Test Execution | HUMAN | READY (BLOCKED_BY_REVIEW_STUDIO_SMOKE_GATE) | Review Studio | Canonical evidence upload & result logging | Pending |
 
