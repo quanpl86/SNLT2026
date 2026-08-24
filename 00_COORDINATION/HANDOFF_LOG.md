@@ -125,7 +125,7 @@ Nhật ký bàn giao công việc giữa ChatGPT, Antigravity và Human.
 - **TO**: Human
 - **LESSON**: B01
 - **TASK**: REVIEW_STUDIO_SMOKE_GATE
-- **YÊU CẦU**: Đồng bộ chính xác trạng thái координация `LESSON_STATUS: READY_FOR_REVIEW_STUDIO_SMOKE_TEST`. Thực hiện 8 bước Smoke Test trên UI trước khi cấp `REVIEW_STUDIO_SMOKE_PASS`.
+- **YÊU CẦU**: Đồng bộ chính xác trạng thái điều phối `LESSON_STATUS: READY_FOR_REVIEW_STUDIO_SMOKE_TEST`. Thực hiện 8 bước Smoke Test trên UI trước khi cấp `REVIEW_STUDIO_SMOKE_PASS`.
 - **NEXT_OWNER**: HUMAN
 - **NEXT_ACTION**: Complete Review Studio smoke gate. Only after REVIEW_STUDIO_SMOKE_PASS: switch to REAL HUMAN TEST and execute B01 official suite.
 - **STATUS**: `READY_FOR_REVIEW_STUDIO_SMOKE_TEST`
