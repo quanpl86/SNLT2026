@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "product": "HP1_FINAL",
+  "character": {
+    "preferred_source": {
+      "source_id": "PJT-004",
+      "repo": "KenneyNL/Starter-Kit-3D-Platformer",
+      "frozen_commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "model_path": "models/character.glb",
+      "git_blob_sha": "49ea3291f2a4fcd4ad4c667c49ecb5e09576d944",
+      "wrapper_scene": "objects/character.tscn",
+      "reference_script": "scripts/player.gd"
+    },
+    "required_animation_names": [
+      "idle",
+      "walk",
+      "jump"
+    ],
+    "mapping": [
+      {
+        "condition": "is_on_floor() and horizontal_speed <= threshold",
+        "animation": "idle"
+      },
+      {
+        "condition": "is_on_floor() and horizontal_speed > threshold",
+        "animation": "walk"
+      },
+      {
+        "condition": "not is_on_floor()",
+        "animation": "jump"
+      }
+    ],
+    "guardrails": [
+      "Keep CharacterBody3D/collider/controller from HP1 project.",
+      "Use imported animated model as visual child only.",
+      "Do not import Kenney double-jump logic.",
+      "AnimationPlayer logic is polish C, not new LO."
+    ]
+  },
+  "collectible": {
+    "motion": [
+      "rotate_y_loop",
+      "bob_y_loop"
+    ],
+    "ownership": "C"
+  },
+  "checkpoint": {
+    "motion": [
+      "inactive_soft_pulse",
+      "active_glow_pulse"
+    ],
+    "ownership": "C"
+  },
+  "goal": {
+    "motion": [
+      "portal_rotate_or_pulse",
+      "ready_state_emphasis"
+    ],
+    "ownership": "C"
+  },
+  "ui": {
+    "motion": [
+      "menu_fade",
+      "result_panel_scale_fade"
+    ],
+    "ownership": "C"
+  }
+}

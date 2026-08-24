@@ -1,0 +1,14 @@
+extends Control
+
+@onready var crystal_label: Label = %CrystalLabel
+@onready var lives_label: Label = %LivesLabel
+@onready var checkpoint_label: Label = %CheckpointLabel
+
+func update_crystals(value: int, target: int) -> void:
+    crystal_label.text = "%d/%d" % [value, target]
+
+func update_lives(value: int) -> void:
+    lives_label.text = "x%d" % value
+
+func update_checkpoint(active: bool) -> void:
+    checkpoint_label.text = "Đã kích hoạt" if active else "Chưa kích hoạt"

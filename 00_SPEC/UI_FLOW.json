@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "product": "HP1_FINAL",
+  "screens": [
+    {
+      "id": "MENU",
+      "entry": true,
+      "elements": [
+        "Title",
+        "StartButton",
+        "HowToPlayButton"
+      ],
+      "actions": {
+        "StartButton": "GAME",
+        "HowToPlayButton": "HOW_TO_PLAY"
+      }
+    },
+    {
+      "id": "HOW_TO_PLAY",
+      "elements": [
+        "WASD",
+        "Space",
+        "Collect",
+        "Hazard",
+        "Checkpoint",
+        "Goal",
+        "BackButton"
+      ],
+      "actions": {
+        "BackButton": "MENU"
+      }
+    },
+    {
+      "id": "GAME",
+      "elements": [
+        "3D gameplay",
+        "HUD"
+      ],
+      "transitions": {
+        "lives<=0": "LOSE",
+        "goal && crystals>=target": "WIN"
+      }
+    },
+    {
+      "id": "WIN",
+      "elements": [
+        "WinPanel",
+        "RestartButton",
+        "MainMenuButton"
+      ],
+      "actions": {
+        "RestartButton": "GAME_NEW_RUN",
+        "MainMenuButton": "MENU"
+      }
+    },
+    {
+      "id": "LOSE",
+      "elements": [
+        "LosePanel",
+        "RestartButton",
+        "MainMenuButton"
+      ],
+      "actions": {
+        "RestartButton": "GAME_NEW_RUN",
+        "MainMenuButton": "MENU"
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "product": "HP1_FINAL",
+  "program_assets": [
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_TITLE_BACKGROUND_PROGRAM.png",
+      "role": "Start screen background",
+      "ownership": "C"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_MENU_PANEL_PROGRAM.png",
+      "role": "Menu panel",
+      "ownership": "C"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_HOW_TO_PLAY_PANEL_PROGRAM.png",
+      "role": "How-to-play panel",
+      "ownership": "C"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_LOSE_PANEL_PROGRAM.png",
+      "role": "Lose panel",
+      "ownership": "C"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_ICON_LIFE_PROGRAM.png",
+      "role": "Lives HUD icon",
+      "ownership": "C"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_BUTTON_PROGRAM.png",
+      "role": "Button skin",
+      "ownership": "C"
+    }
+  ],
+  "reused_assets": [
+    "B06_HAZARD_SPIKES_PROGRAM.glb",
+    "B06_CHECKPOINT_BEACON_PROGRAM.glb",
+    "B07_ICON_CRYSTAL_PROGRAM.png",
+    "B07_ICON_CHECKPOINT_PROGRAM.png",
+    "B07_ICON_CHECKPOINT_INACTIVE_PROGRAM.png",
+    "B07_HUD_PANEL_PROGRAM.png",
+    "B08_GOAL_PORTAL_PROGRAM.glb",
+    "B08_WIN_PANEL_PROGRAM.png",
+    "B08_ICON_RESTART_PROGRAM.png",
+    "B08_ICON_GOAL_LOCKED_PROGRAM.png",
+    "B08_ICON_GOAL_READY_PROGRAM.png"
+  ],
+  "blockbench_files": [
+    "B05_COLLECTIBLE_BLANK.bbmodel",
+    "B05_COLLECTIBLE_REFERENCE.bbmodel"
+  ],
+  "external_required_or_preferred": [
+    {
+      "source_id": "PJT-004",
+      "path": "models/character.glb",
+      "frozen_commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "git_blob_sha": "49ea3291f2a4fcd4ad4c667c49ecb5e09576d944",
+      "license": "CC0 per PJT-004 README",
+      "purpose": "Animated Player visual"
+    },
+    {
+      "source_id": "PJT-004",
+      "path": "models/brick.glb",
+      "frozen_commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "git_blob_sha": "ab5426b00eb289ab827f3a16042c3ec3e5864250",
+      "license": "CC0 per PJT-004 README",
+      "purpose": "Optional platform visual continuity"
+    }
+  ],
+  "student_release_asset": {
+    "required": true,
+    "source": "Student's own B05/B10 Blockbench work",
+    "must_have": [
+      ".bbmodel",
+      ".glb",
+      "Godot instance",
+      "runtime role",
+      "evidence"
+    ],
+    "rule": "Program/reference/fallback assets cannot replace personal MC-3D."
+  }
+}

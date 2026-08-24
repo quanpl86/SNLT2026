@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "product": "HP1_FINAL",
+  "A_student_created": [
+    "Final design decisions/GDD evidence",
+    "At least one meaningful Blockbench asset and its .bbmodel/.glb",
+    "Personal test log / defect evidence",
+    "Explanations and showcase artifacts"
+  ],
+  "B_student_modified": [
+    "Layout/level placement",
+    "selected gameplay parameters/rules using learned knowledge",
+    "code sections legitimately modified during HP1",
+    "HUD/content integration where assigned"
+  ],
+  "C_program_provided": [
+    "Start screen framework",
+    "program UI skins/icons/backgrounds",
+    "character animation adapter/reference implementation",
+    "VFX/audio fallback",
+    "hazard/checkpoint/goal art fallback",
+    "Web helper infrastructure"
+  ],
+  "critical_rule": "C-owned polish can improve presentation but cannot substitute for CIO/ULO evidence."
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "product": "HP1_FINAL",
+  "features": [
+    {
+      "id": "F01",
+      "feature": "Start screen",
+      "required": true,
+      "origin": "Human extension",
+      "ownership_default": "C"
+    },
+    {
+      "id": "F02",
+      "feature": "Movement/Input",
+      "required": true,
+      "origin": "Curriculum",
+      "knowledge": [
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ]
+    },
+    {
+      "id": "F03",
+      "feature": "Jump/gravity/collision",
+      "required": true,
+      "origin": "Curriculum",
+      "knowledge": [
+        "K07",
+        "K08"
+      ]
+    },
+    {
+      "id": "F04",
+      "feature": "Camera",
+      "required": true,
+      "origin": "Curriculum",
+      "knowledge": [
+        "K09"
+      ]
+    },
+    {
+      "id": "F05",
+      "feature": "Collectible",
+      "required": true,
+      "origin": "Curriculum",
+      "knowledge": [
+        "K10",
+        "K11",
+        "K14"
+      ]
+    },
+    {
+      "id": "F06",
+      "feature": "Hazard + checkpoint + respawn",
+      "required": true,
+      "origin": "Curriculum",
+      "knowledge": [
+        "K10",
+        "K11",
+        "K12",
+        "K29"
+      ]
+    },
+    {
+      "id": "F07",
+      "feature": "HUD runtime",
+      "required": true,
+      "origin": "Curriculum",
+      "knowledge": [
+        "K13"
+      ]
+    },
+    {
+      "id": "F08",
+      "feature": "Win + restart",
+      "required": true,
+      "origin": "Curriculum",
+      "knowledge": [
+        "K11",
+        "K12",
+        "K13"
+      ]
+    },
+    {
+      "id": "F09",
+      "feature": "Lose state / lives",
+      "required": true,
+      "origin": "HP1 final product requirement/Human request",
+      "knowledge": [
+        "K12",
+        "K13"
+      ]
+    },
+    {
+      "id": "F10",
+      "feature": "Character animation idle/walk/jump",
+      "required": true,
+      "origin": "Human polish extension; supported by PJT-004",
+      "ownership_default": "C"
+    },
+    {
+      "id": "F11",
+      "feature": "Collect/checkpoint/goal animation/VFX",
+      "required": true,
+      "origin": "Curriculum feedback/VFX + Human polish",
+      "ownership_default": "C"
+    },
+    {
+      "id": "F12",
+      "feature": "Audio feedback",
+      "required": true,
+      "origin": "Curriculum feedback/VFX/Audio",
+      "ownership_default": "C"
+    },
+    {
+      "id": "F13",
+      "feature": "Student Blockbench asset",
+      "required": true,
+      "origin": "Curriculum/Release Gate",
+      "knowledge": [
+        "K14"
+      ],
+      "ownership_default": "A/B"
+    },
+    {
+      "id": "F14",
+      "feature": "Web final",
+      "required": true,
+      "origin": "Curriculum/Release Gate",
+      "knowledge": [
+        "K27"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "product": "HP1_FINAL",
+  "program_audio": [
+    "HP1_AUDIO_UI_CLICK_PROGRAM.wav",
+    "HP1_AUDIO_JUMP_PROGRAM.wav",
+    "HP1_AUDIO_COLLECT_PROGRAM.wav",
+    "HP1_AUDIO_CHECKPOINT_PROGRAM.wav",
+    "HP1_AUDIO_HAZARD_PROGRAM.wav",
+    "HP1_AUDIO_WIN_PROGRAM.wav",
+    "HP1_AUDIO_LOSE_PROGRAM.wav"
+  ],
+  "vfx": [
+    {
+      "event": "collect",
+      "effect": "small cyan burst + quick scale/fade"
+    },
+    {
+      "event": "checkpoint",
+      "effect": "cyan/gold pulse burst"
+    },
+    {
+      "event": "hazard",
+      "effect": "short red flash / safe camera shake optional"
+    },
+    {
+      "event": "win",
+      "effect": "portal glow + light confetti/burst"
+    },
+    {
+      "event": "lose",
+      "effect": "short desaturation/fade before overlay"
+    }
+  ],
+  "guardrails": [
+    "VFX must not obscure traversal.",
+    "Camera shake, if used, must be subtle and Human-reviewed.",
+    "Audio must have reasonable relative volume."
+  ]
+}

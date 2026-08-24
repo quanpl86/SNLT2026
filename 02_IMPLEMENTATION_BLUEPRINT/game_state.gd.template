@@ -1,0 +1,54 @@
+extends Node3D
+
+@export var target_crystals: int = 5
+@export var max_lives: int = 3
+
+@onready var player: CharacterBody3D = $Player
+@onready var hud: Control = %HUD
+@onready var win_overlay: Control = %WinOverlay
+@onready var lose_overlay: Control = %LoseOverlay
+
+var crystal_count: int = 0
+var lives: int
+var respawn_position: Vector3
+var checkpoint_active: bool = false
+var is_finished: bool = false
+var is_lost: bool = false
+
+func _ready() -> void:
+    lives = max_lives
+    respawn_position = player.global_position
+    hud.update_crystals(crystal_count, target_crystals)
+    hud.update_lives(lives)
+    hud.update_checkpoint(false)
+
+func register_collectible(value: int) -> void:
+    crystal_count += value
+    hud.update_crystals(crystal_count, target_crystals)
+
+func register_checkpoint(position: Vector3) -> void:
+    respawn_position = position
+    checkpoint_active = true
+    hud.update_checkpoint(true)
+
+func register_failure() -> void:
+    if is_finished or is_lost:
+        return
+    lives -= 1
+    hud.update_lives(lives)
+    if lives <= 0:
+        is_lost = true
+        lose_overlay.visible = true
+        return
+    player.global_position = respawn_position
+    player.velocity = Vector3.ZERO
+
+func try_finish() -> void:
+    if is_finished or is_lost:
+        return
+    if crystal_count >= target_crystals:
+        is_finished = true
+        win_overlay.visible = true
+
+func restart_game() -> void:
+    get_tree().reload_current_scene()

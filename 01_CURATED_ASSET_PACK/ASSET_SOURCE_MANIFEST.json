@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "product": "HP1_FINAL",
+  "package_status": "CANONICAL_TARGET_PENDING_ANTIGRAVITY_GODOT_AND_WEB_VALIDATION",
+  "local_records": [
+    {
+      "path": "01_CURATED_ASSET_PACK/AUDIO/HP1_AUDIO_CHECKPOINT_PROGRAM.wav",
+      "sha256": "4c06ca26b95e2e94787fcedf44eafadfffb9627b93083719115fd00a64c25383",
+      "size_bytes": 30032,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/AUDIO/HP1_AUDIO_COLLECT_PROGRAM.wav",
+      "sha256": "d2a950f1d2fe00e1cea513bd083402026895d7cfd236055e437654956a0affe6",
+      "size_bytes": 21212,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/AUDIO/HP1_AUDIO_HAZARD_PROGRAM.wav",
+      "sha256": "fc2d541651bc0a26d87bbd6e35526c03d80b3af26ac22fc75e999e70797d560b",
+      "size_bytes": 26504,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/AUDIO/HP1_AUDIO_JUMP_PROGRAM.wav",
+      "sha256": "a6a5dcb181692401741f5ef59069988660aa61d8fe2ae7983e562bd89d9f80e3",
+      "size_bytes": 14156,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/AUDIO/HP1_AUDIO_LOSE_PROGRAM.wav",
+      "sha256": "4207520cd82d4621508214e0ef9bc8d63641ca45513cc2650fe2fb7a671a3e6c",
+      "size_bytes": 52964,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/AUDIO/HP1_AUDIO_UI_CLICK_PROGRAM.wav",
+      "sha256": "87b20f94a19aaf345ca9194f7a86220855b003e012cecd005b9a1c266521eb31",
+      "size_bytes": 7100,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/AUDIO/HP1_AUDIO_WIN_PROGRAM.wav",
+      "sha256": "ce82f36ee22c03f57ac62832d0e0ac74a084757f30ef2458d8cac3eb89512666",
+      "size_bytes": 51200,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/BLOCKBENCH/B05_COLLECTIBLE_BLANK.bbmodel",
+      "sha256": "84dd392d291c883de46079cf3b60cf353951d9d14964026ea88ee64e0059977d",
+      "size_bytes": 451,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/BLOCKBENCH/B05_COLLECTIBLE_REFERENCE.bbmodel",
+      "sha256": "c70a8c4e18f6c7544a878900f493c0141c772cedb44fbdfdb35587ccf5083526",
+      "size_bytes": 4898,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/LICENSES/PROGRAM_AUTHORED_FINAL_ASSETS_LICENSE.txt",
+      "sha256": "49261b3b00a7a61c61c0ec2f9bea7fac5a4f5088db94e6ba1c1a075c8ca0dff3",
+      "size_bytes": 360,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B05_COLLECTIBLE_PLACEHOLDER_PROGRAM.glb",
+      "sha256": "fb61f412e4c29632581f1675cdca1d1a7d36c3f279b6878f58d0e677f43f3e7f",
+      "size_bytes": 1284,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B06_CHECKPOINT_BEACON_PROGRAM.glb",
+      "sha256": "84653c4157f0b4ac6d94faa97f648adfdd6b8fd0285449eff6e4463a8ba037a2",
+      "size_bytes": 6528,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B06_HAZARD_SPIKES_PROGRAM.glb",
+      "sha256": "f3916b7e528414cc336b911ae21a201addeade73a7428754e85580faecbc6d6a",
+      "size_bytes": 4332,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B07_HUD_PANEL_PROGRAM.png",
+      "sha256": "4ddd662578d85fb55c7bc1098bcf458e40f46bb97ef49dff572b67957e51eaec",
+      "size_bytes": 536,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B07_ICON_CHECKPOINT_INACTIVE_PROGRAM.png",
+      "sha256": "53d81a9ab0f181fdcb692f31b4e8882db8fd8f7611ffe9c38e73738d67ec18b3",
+      "size_bytes": 396,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B07_ICON_CHECKPOINT_PROGRAM.png",
+      "sha256": "4032a4858dd36531202df96e78ab975f628bcd3d814daa3a7dc74d92cf3c27cc",
+      "size_bytes": 492,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B07_ICON_CRYSTAL_PROGRAM.png",
+      "sha256": "064d85cc62d1e1fe909031e990ca97996c824ce032249b67be03e1bf16ab7749",
+      "size_bytes": 449,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B08_GOAL_PORTAL_PROGRAM.glb",
+      "sha256": "aeb462a2baddd8935075392e1f5fb1aabb4d42ce946ea700bd2109e65e7842eb",
+      "size_bytes": 5016,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B08_ICON_GOAL_LOCKED_PROGRAM.png",
+      "sha256": "35443c7ba14646970e2edc0efa1ee761539059222349fece977e89f568c11354",
+      "size_bytes": 601,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B08_ICON_GOAL_READY_PROGRAM.png",
+      "sha256": "9f326637279d5d30a04f0df202c23dea99a158d038042c45652fb461c0673f5e",
+      "size_bytes": 884,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B08_ICON_RESTART_PROGRAM.png",
+      "sha256": "67284e83666b3c53b6ea0e8814a97f368b5a0b5e6cbfb4ef3326d322ac284284",
+      "size_bytes": 761,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/REUSED_FROM_B05_B08/B08_WIN_PANEL_PROGRAM.png",
+      "sha256": "863faea0927dd2bb0a7207ed5348ad4c2782caab98d9e1c8ec14ddeb86cca0a1",
+      "size_bytes": 3078,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_BUTTON_PROGRAM.png",
+      "sha256": "db3f8bc9e06be4e701edb53e022f559c2a7075bef5e421be189093ff002be333",
+      "size_bytes": 1092,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_HOW_TO_PLAY_PANEL_PROGRAM.png",
+      "sha256": "5a164787dc8e1177565e5ebf3d7405e1668d207cee309807f4d168d72b623dc9",
+      "size_bytes": 4256,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_ICON_LIFE_PROGRAM.png",
+      "sha256": "c1032727dcbc5df737bebc0766555d02c4f9243e5c88fd4e5b90a7b37076861d",
+      "size_bytes": 677,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_LOSE_PANEL_PROGRAM.png",
+      "sha256": "1ae1c9240f98b2a2f4f85f57e5f9107b95581063657bd6ba15e02347d1d712b0",
+      "size_bytes": 2545,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_MENU_PANEL_PROGRAM.png",
+      "sha256": "3fa7b709b936383bf242358169fdfef638612887d9e6545861fe0692c9710444",
+      "size_bytes": 3463,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    },
+    {
+      "path": "01_CURATED_ASSET_PACK/UI/HP1_FINAL_TITLE_BACKGROUND_PROGRAM.png",
+      "sha256": "9322a26e6c19f47d22a50347e99a4cc6c94d9a50008a1e4d76b23a7c609b796b",
+      "size_bytes": 57254,
+      "provenance": "PROGRAM_OR_PRIOR_HP1_PACKAGE"
+    }
+  ],
+  "external_required": [
+    {
+      "source_id": "PJT-004",
+      "repo": "KenneyNL/Starter-Kit-3D-Platformer",
+      "frozen_commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "path": "models/character.glb",
+      "git_blob_sha": "49ea3291f2a4fcd4ad4c667c49ecb5e09576d944",
+      "license": "CC0",
+      "status": "DOWNLOAD_AND_SHA256_PENDING_ANTIGRAVITY"
+    }
+  ]
+}

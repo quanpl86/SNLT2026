@@ -1,0 +1,1 @@
+Các UI PNG và WAV mang tiền tố HP1_FINAL/HP1_AUDIO trong package này được chương trình tạo để dùng trong HP1. Ownership C. Các asset tái sử dụng từ B05–B08 giữ provenance của package gốc. Kenney PJT-004 animated character không được nhúng binary ở v1.0; Antigravity phải tải exact frozen source và ghi SHA-256.
