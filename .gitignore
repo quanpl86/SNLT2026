@@ -1,0 +1,14 @@
+# Godot 4 Cache & Import artifacts
+.godot/
+*.import
+
+# System files
+.DS_Store
+*.tmp
+thumbs.db
+
+# Handoff ZIP archives (stored on Google Drive / Release artifacts)
+*.zip
+
+# Build outputs & cache
+*.log

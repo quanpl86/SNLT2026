@@ -1,0 +1,16 @@
+# STUDENT_WORK_BOUNDARY — Bxx
+
+## Học sinh PHẢI tự làm
+- ...
+
+## Học sinh ĐƯỢC tinh chỉnh
+- ...
+
+## Chương trình CUNG CẤP SẴN
+- ...
+
+## Evidence không được làm sẵn trong Starter
+- ...
+
+## File/Scene/Node bị cấm chứa lời giải hoàn chỉnh
+- ...

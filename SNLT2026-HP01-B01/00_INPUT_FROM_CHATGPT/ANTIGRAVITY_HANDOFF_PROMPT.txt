@@ -1,0 +1,43 @@
+Đọc toàn bộ thư mục:
+SNLT2026-HP01-B01/00_INPUT_FROM_CHATGPT/
+
+Xác nhận trước khi làm:
+1. MANIFEST có `STATUS: READY_FOR_IMPLEMENTATION`.
+2. Đã đọc CONTROL_RECORD, PRODUCT_SPEC, KNOWLEDGE_APPLICATION, STUDENT_WORK_BOUNDARY, TECHNICAL_SPEC, ACCEPTANCE_TESTS, ASSET_SOURCE_LICENSE, GUIDE_AUTHORING_SPEC.
+3. Không có mâu thuẫn lõi cần block.
+
+Sau đó triển khai theo thứ tự bắt buộc:
+
+PHASE 1 — PROJECT_BASIC
+- Xây `SNLT2026-HP01-B01-PROJECT_BASIC` đúng technical/product spec.
+- Không tự đổi tên Node/file contract.
+- Chạy QA tĩnh.
+- Nếu có Godot 4.6 executable, chạy Runtime tests và ghi kết quả thật.
+- Không ghi Runtime PASS nếu chưa chạy thật.
+
+PHASE 2 — STUDENT_STARTER
+- Chỉ sau khi Project Basic ổn định, copy/derive thành `SNLT2026-HP01-B01-STUDENT_STARTER`.
+- Trả Player Position và View Rotation về baseline.
+- Xóa/để trống evidence đáp án.
+- Không làm hỏng hạ tầng.
+
+PHASE 3 — DIFF QA
+- So sánh hai project.
+- Ghi `02_QA/QA_DIFF_STARTER_VS_MASTER.md`.
+- Xác nhận khác biệt chỉ là phần cho phép theo input.
+
+PHASE 4 — DOCUMENTATION
+- Viết tài liệu tương tác, cấu hình triển khai và hướng dẫn step-by-step từ project THẬT đã ổn định.
+- Highlight `[K_NEW]`, `[K_PRIOR]`, `[HẠ TẦNG CUNG CẤP SẴN]`, `[MINH CHỨNG]`.
+- Mọi tên Node/property/value phải khớp project.
+
+PHASE 5 — RELEASE QA
+- Hoàn tất `02_QA/QA_STATIC.md`, `QA_RUNTIME.md`, `QA_DIFF_STARTER_VS_MASTER.md`, `HUMAN_VALIDATION.md`.
+- Nếu runtime chưa chạy: trạng thái phải nói rõ `CHƯA KIỂM THỬ THỰC TẾ`.
+- Không mở Web export ở B1.
+
+Trước khi sửa file, hãy trả về một kế hoạch triển khai ngắn gồm:
+- file sẽ tạo/sửa;
+- test dự kiến;
+- rủi ro hoặc điểm cần xác nhận.
+Sau đó mới bắt đầu code.
