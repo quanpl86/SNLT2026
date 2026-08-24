@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B09",
+  "canonical_base": "B08 Project Basic / latest integrated candidate",
+  "classroom_base": "Each student's own B08 working project",
+  "must_carry_forward": [
+    "B05 collectible logic + student's B05 asset where available",
+    "B06 hazard/checkpoint/respawn",
+    "B07 HUD",
+    "B08 goal/win/restart/Web preset"
+  ],
+  "starter_delta": [
+    "Move BetaCrystal05 to deliberately unreachable Position only."
+  ],
+  "master_delta": [
+    "Ensure BetaCrystal05 is reachable and full test matrix passes."
+  ]
+}

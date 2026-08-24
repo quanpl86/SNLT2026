@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B09",
+  "test_count_excluding_gate": 18,
+  "execution_gate": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Preflight B09 — Beta gate + no-new-core rule",
+      "project_path": "SNLT2026-HP01-B09",
+      "action_steps": [
+        "Xác nhận Godot 4.7.1 stable, Compatibility, English UI.",
+        "Xác nhận K_NEW=0 cho cả CIO17/CIO18.",
+        "Xác nhận B09 timebox = 15' + 60' quiz 35Q + 45' product/gate.",
+        "Xác nhận formal TG-WEB-SMOKE được bật ở B09.",
+        "Xác nhận không có asset/Blockbench workflow mới; prior assets được reuse.",
+        "Xác nhận B01–B08 status không đổi khi B09 được thêm."
+      ],
+      "expected_results": [
+        "B09 là checkpoint/integration lesson, không mở kiến thức kỹ thuật lõi mới.",
+        "Technical gate đúng B09.",
+        "Không có Runtime/Web/Human PASS ở preflight."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Platform Adventure Beta canonical",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở project, main scene và các sub-scenes chính.",
+        "Quan sát Scene Tree/Output.",
+        "F5 native."
+      ],
+      "expected_results": [
+        "Project mở không blocker.",
+        "Có continuity từ B05–B08: collectible, hazard, checkpoint, HUD, goal/result.",
+        "Không thêm mechanic B10+."
+      ],
+      "media_ids": [
+        "PB-M01"
+      ]
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "Integration audit — các hệ thống giao tiếp đúng",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Trace một collectible event tới count/HUD.",
+        "Trace checkpoint tới respawn state/HUD.",
+        "Trace enough collectibles + goal tới win overlay.",
+        "Trace restart tới clean run."
+      ],
+      "expected_results": [
+        "Các subsystem giao tiếp đúng, không giữ state trùng mâu thuẫn.",
+        "Không có blocker trong data/event/state flow."
+      ],
+      "media_ids": [
+        "PB-M02"
+      ]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "Native full core loop Beta",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "F5 từ start.",
+        "Movement/jump → thu đủ collectible → checkpoint → hazard/respawn → goal → win → restart.",
+        "Bắt đầu run mới và thử movement/collectible một lần."
+      ],
+      "expected_results": [
+        "Core loop hoàn chỉnh từ đầu đến cuối.",
+        "Restart tạo run sạch.",
+        "Không mắc kẹt logic."
+      ],
+      "media_ids": [
+        "PB-M03",
+        "PB-V01"
+      ]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Beta test matrix canonical — native",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Chạy các case BT-01→BT-06 trong BETA_TEST_CASE_PLAN.json.",
+        "Ghi PASS/FAIL và note."
+      ],
+      "expected_results": [
+        "Tất cả case canonical PASS.",
+        "Không có lỗi chặn.",
+        "Test record đủ để làm mẫu cho học sinh."
+      ],
+      "media_ids": [
+        "PB-M04"
+      ]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "Formal TG-WEB-SMOKE canonical",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Export Web build trên Compatibility.",
+        "Serve bằng HTTP.",
+        "Mở browser target.",
+        "Chạy các check TG-01→TG-06."
+      ],
+      "expected_results": [
+        "Build tải được.",
+        "Input/core loop cơ bản hoạt động.",
+        "Có checklist + browser evidence.",
+        "Chỉ sau actual browser run mới có thể đề xuất TG-WEB-SMOKE PASS."
+      ],
+      "media_ids": [
+        "PB-M05",
+        "PB-V02"
+      ]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "Asset continuity / no-new-asset audit",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Kiểm tra character/platform/collectible/hazard/checkpoint/HUD/goal visual.",
+        "Đối chiếu ASSET_REUSE_MANIFEST.json.",
+        "Xác nhận asset Blockbench của học sinh có thể được giữ nếu project lớp thật tiếp tục từ B08."
+      ],
+      "expected_results": [
+        "Không có external asset mới vô nguồn.",
+        "Canonical template dùng approved fallback khi không có student-specific asset.",
+        "Asset không làm thay đổi mechanic."
+      ],
+      "media_ids": [
+        "PB-M06"
+      ]
+    },
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Student Starter B09 — Beta có 1 blocker",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở project; không sửa.",
+        "Quan sát course và BetaCrystal05.",
+        "F5 baseline."
+      ],
+      "expected_results": [
+        "Starter mở không crash.",
+        "Các hệ thống B05–B08 còn hoạt động.",
+        "Chỉ có một deliberate beta blocker chính được thiết kế."
+      ],
+      "media_ids": [
+        "SS-M01"
+      ]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "Deliberate defect — BetaCrystal05 unreachable",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Chọn BetaCrystal05 trong Scene Tree.",
+        "Đọc Position/Transform.",
+        "Không sửa.",
+        "Đối chiếu với vùng platform có thể đi tới."
+      ],
+      "expected_results": [
+        "Crystal05 nằm ngoài/ dưới vùng có thể tiếp cận hợp lý.",
+        "Defect có thể sửa bằng K02 transform đã học, không cần mechanic mới."
+      ],
+      "media_ids": [
+        "SS-M02"
+      ]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Native baseline phát hiện 4/5 blocker",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Chơi course và thu tất cả collectible có thể tiếp cận.",
+        "Đi tới goal."
+      ],
+      "expected_results": [
+        "HUD dừng ở 4/5.",
+        "Goal không cho thắng do luật B08 đúng.",
+        "Đây là blocker Beta cần test/fix, không phải lỗi win condition."
+      ],
+      "media_ids": [
+        "SS-V01"
+      ]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Beta test report template",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở BETA_TEST_REPORT_TEMPLATE.md.",
+        "Kiểm tra Actual/Expected/Reproduction/Severity/Fix/Retest/Regression.",
+        "Không điền lời giải sẵn."
+      ],
+      "expected_results": [
+        "Template hỗ trợ MC-KT CIO18.",
+        "Có chỗ lưu before/after evidence.",
+        "Không có đáp án quiz."
+      ],
+      "media_ids": [
+        "SS-M03"
+      ]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "Web preset continuity trước fix",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở Project > Export.",
+        "Kiểm tra Web preset inherited từ B08 nếu canonical Starter giữ preset.",
+        "Không export để bypass native blocker."
+      ],
+      "expected_results": [
+        "Web preset tồn tại hoặc được provisioned theo spec.",
+        "Student phải sửa native blocker trước formal TG-WEB-SMOKE."
+      ],
+      "media_ids": [
+        "SS-M04"
+      ]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Asset / ownership continuity",
+      "project_path": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Kiểm tra collectible visual source.",
+        "Mở note về lớp thật vs canonical fallback.",
+        "Xác nhận không yêu cầu tạo asset B09."
+      ],
+      "expected_results": [
+        "Lớp thật giữ asset B05 cá nhân khi tiếp tục project.",
+        "Canonical test project dùng fallback approved asset.",
+        "Không dùng C-owned fallback làm MC-3D cá nhân."
+      ],
+      "media_ids": [
+        "SS-M05"
+      ]
+    },
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Working Copy sạch B09",
+      "project_path": "B09_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Copy Student Starter → B09_HUMAN_TEST_COPY.",
+        "Xác nhận BetaCrystal05 vẫn unreachable.",
+        "Xác nhận Web preset/pipeline state."
+      ],
+      "expected_results": [
+        "Working Copy đúng baseline Starter."
+      ],
+      "media_ids": [
+        "E2E-M01"
+      ]
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "Chạy test matrix và lập defect record",
+      "project_path": "B09_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Chạy BT-01→BT-06 native.",
+        "Ghi PASS/FAIL từng case.",
+        "Với blocker 4/5, ghi Actual/Expected/Reproduction/Severity/Hypothesis.",
+        "Chưa sửa trước khi có defect record."
+      ],
+      "expected_results": [
+        "Có ít nhất một FAIL có bằng chứng trước sửa.",
+        "Defect được khoanh đúng vào khả năng tiếp cận BetaCrystal05.",
+        "Đủ phần đầu của MC-KT."
+      ],
+      "media_ids": [
+        "E2E-M02",
+        "E2E-V01"
+      ]
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa ít nhất một lỗi có bằng chứng — CIO18",
+      "project_path": "B09_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Chọn BetaCrystal05.",
+        "Chỉnh Position sang vị trí reachable trên/ gần platform đã có.",
+        "Không đổi target_count để né defect.",
+        "F5 và kiểm item thứ 5."
+      ],
+      "expected_results": [
+        "Crystal05 reachable.",
+        "HUD lên 5/5.",
+        "Fix dùng transform cũ, không mở mechanic mới."
+      ],
+      "media_ids": [
+        "E2E-M03"
+      ]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "Native regression + complete Beta — CIO17",
+      "project_path": "B09_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Chạy lại test case bị fail.",
+        "Chạy full core loop: start → collect → checkpoint/hazard → 5/5 → goal → win → restart.",
+        "Ghi before/after + regression."
+      ],
+      "expected_results": [
+        "Defect retest PASS.",
+        "Core loop hoàn chỉnh không blocker.",
+        "Có MC-CN CIO17 + MC-KT CIO18."
+      ],
+      "media_ids": [
+        "E2E-M04",
+        "E2E-V02"
+      ]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "Formal TG-WEB-SMOKE sau fix",
+      "project_path": "B09_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Export Web build trên Compatibility.",
+        "Serve HTTP.",
+        "Mở browser target.",
+        "Chạy TG-01→TG-06 và ghi kết quả."
+      ],
+      "expected_results": [
+        "Nếu load/input/core loop cơ bản đúng: TG-WEB-SMOKE có thể đề xuất PASS.",
+        "Nếu bất kỳ blocker Web nào: FAIL/FINDING, không pass gate.",
+        "Technical gate không tự chấm ULO-06."
+      ],
+      "media_ids": [
+        "E2E-M05",
+        "E2E-V03"
+      ]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Lưu Beta dossier + reopen/regression ngắn",
+      "project_path": "B09_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Cmd+S, đóng/mở lại project.",
+        "Xác nhận Crystal05 Position persist.",
+        "F5 test item 5 + goal/restart ngắn.",
+        "Hoàn thiện HO_SO_MINH_CHUNG_B09.md và Beta report."
+      ],
+      "expected_results": [
+        "Fix persist.",
+        "Evidence before/after + native full loop + TG-WEB-SMOKE đầy đủ.",
+        "Không tự động suy ra HUMAN_PASS."
+      ],
+      "media_ids": [
+        "E2E-M06",
+        "E2E-V04"
+      ]
+    }
+  ]
+}

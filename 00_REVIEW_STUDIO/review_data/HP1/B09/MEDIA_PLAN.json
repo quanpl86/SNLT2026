@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B09",
+  "planned_media_count": 24,
+  "capture_gate": "DO_NOT_CAPTURE_REAL_HUMAN_EVIDENCE_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "raw_policy": "RAW immutable. Before/after defect evidence and actual browser evidence are distinct requirements.",
+  "media_items": [
+    {
+      "media_id": "PB-M01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_PB_M01_Hero_Beta_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hero Beta integrated.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "LESSON_COVER"
+      ],
+      "must_show": [
+        "Beta gameplay",
+        "HUD",
+        "collectible",
+        "checkpoint/hazard",
+        "goal"
+      ]
+    },
+    {
+      "media_id": "PB-M02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_PB_M02_Integration_Flow_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Integration trace.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "collectible/HUD",
+        "checkpoint state",
+        "goal/win references hoặc representative code"
+      ]
+    },
+    {
+      "media_id": "PB-M03",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_PB_M03_Beta_Complete_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "CIO17 canonical completion.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Win overlay after full loop",
+        "5/5 HUD"
+      ]
+    },
+    {
+      "media_id": "PB-V01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B09_PB_V01_Native_Full_Beta_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "MC-CN canonical.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "45–75s representative full loop: collect → checkpoint/hazard → 5/5 → goal → win → restart."
+    },
+    {
+      "media_id": "PB-M04",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_PB_M04_Test_Matrix_PASS_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Test discipline model.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "Beta test matrix",
+        "PASS cases",
+        "notes"
+      ]
+    },
+    {
+      "media_id": "PB-M05",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_PB_M05_TG_WEB_SMOKE_BROWSER_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Formal TG-WEB-SMOKE visual.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Actual browser",
+        "game loaded",
+        "HUD/gameplay"
+      ]
+    },
+    {
+      "media_id": "PB-V02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B09_PB_V02_TG_WEB_SMOKE_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "TG-WEB-SMOKE canonical.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Browser 30–60s: page load → input → collect/checkpoint/hazard → goal/restart representative checks."
+    },
+    {
+      "media_id": "PB-M06",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B09_PB_M06_Asset_Continuity_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Asset reuse QA.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Representative reused assets from B05–B08",
+        "no new asset UI"
+      ]
+    },
+    {
+      "media_id": "SS-M01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_SS_M01_Starter_Beta_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Starter overview.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "Starter Beta",
+        "HUD 0/5",
+        "course"
+      ]
+    },
+    {
+      "media_id": "SS-M02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_SS_M02_Crystal05_Unreachable_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Deliberate defect before.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "BetaCrystal05 selected",
+        "Inspector Position",
+        "unreachable location visible"
+      ]
+    },
+    {
+      "media_id": "SS-V01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-03",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B09_SS_V01_4of5_Blocker_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Before-fix defect evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Native baseline: collect reachable items → HUD 4/5 → goal remains locked."
+    },
+    {
+      "media_id": "SS-M03",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_SS_M03_Beta_Report_Template_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "MC-KT template.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "Actual",
+        "Expected",
+        "Reproduction",
+        "Severity",
+        "Fix",
+        "Retest",
+        "Regression"
+      ]
+    },
+    {
+      "media_id": "SS-M04",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-05",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B09_SS_M04_Web_Preset_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Web readiness.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Project Export Web preset"
+      ]
+    },
+    {
+      "media_id": "SS-M05",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-06",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B09_SS_M05_Asset_Reuse_Note_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Ownership clarity.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "Student asset continuity note",
+        "fallback ownership note"
+      ]
+    },
+    {
+      "media_id": "E2E-M01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_E2E_M01_Clean_Copy_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "E2E baseline.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Working copy baseline",
+        "Crystal05 defect"
+      ]
+    },
+    {
+      "media_id": "E2E-M02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_E2E_M02_Defect_Record_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "MC-KT before fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "FAIL test case",
+        "Actual/Expected",
+        "severity/hypothesis"
+      ]
+    },
+    {
+      "media_id": "E2E-V01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-02",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B09_E2E_V01_Defect_Reproduction_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Before evidence.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "Reproduce 4/5 blocker before editing."
+    },
+    {
+      "media_id": "E2E-M03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_E2E_M03_Crystal05_Position_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After fix editor evidence.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "BetaCrystal05",
+        "new Position",
+        "reachable platform context"
+      ]
+    },
+    {
+      "media_id": "E2E-M04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_E2E_M04_Beta_Full_Loop_FIXED_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After-fix Beta completion.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "5/5",
+        "win overlay/goal"
+      ]
+    },
+    {
+      "media_id": "E2E-V02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B09_E2E_V02_Native_Regression_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "MC-CN + regression.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Retest Crystal05 → 5/5 → goal → win → restart."
+    },
+    {
+      "media_id": "E2E-M05",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_E2E_M05_TG_WEB_SMOKE_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "TG-WEB-SMOKE evidence.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Browser target",
+        "Beta loaded",
+        "HUD/game"
+      ]
+    },
+    {
+      "media_id": "E2E-V03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B09_E2E_V03_TG_WEB_SMOKE_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Formal technical gate evidence.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "Actual browser smoke after fix: load/input/core loop basic."
+    },
+    {
+      "media_id": "E2E-M06",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B09_E2E_M06_Reopen_Fix_RAW.png",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Persistence.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "After reopen",
+        "Crystal05 reachable Position persists"
+      ]
+    },
+    {
+      "media_id": "E2E-V04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B09_E2E_V04_Reopen_Short_Regression_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B09/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Persistence regression.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "After reopen: Crystal05 → goal/restart short test."
+    }
+  ],
+  "generated_visuals": [
+    {
+      "visual_id": "B09-GV01",
+      "title": "Beta core loop system map B05→B08",
+      "type": "system_map",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B09-GV02",
+      "title": "Test case → Defect → Fix → Retest → Regression",
+      "type": "debug_process",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B09-GV03",
+      "title": "Cổng bản thử nghiệm: MC-CN + MC-KT + TG-WEB-SMOKE",
+      "type": "gate_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B09-GV04",
+      "title": "Native PASS ≠ Web smoke PASS",
+      "type": "comparison",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B09-GV05",
+      "title": "Asset continuity: B05 student asset + B06–B08 program visuals",
+      "type": "dependency_map",
+      "owner": "CHATGPT"
+    }
+  ]
+}

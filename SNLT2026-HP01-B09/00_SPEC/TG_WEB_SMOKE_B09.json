@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B09",
+  "gate_id": "TG-WEB-SMOKE",
+  "required": true,
+  "renderer": "Compatibility",
+  "checks": [
+    {
+      "id": "TG-01",
+      "check": "Browser page/build loads without blocker"
+    },
+    {
+      "id": "TG-02",
+      "check": "W/A/S/D + jump respond"
+    },
+    {
+      "id": "TG-03",
+      "check": "Collectible + HUD basic path works"
+    },
+    {
+      "id": "TG-04",
+      "check": "Checkpoint + hazard respawn basic path works"
+    },
+    {
+      "id": "TG-05",
+      "check": "Goal/win/restart basic path works"
+    },
+    {
+      "id": "TG-06",
+      "check": "Any Web-specific issue recorded with status/finding"
+    }
+  ],
+  "evidence": [
+    "technical checklist",
+    "browser screenshot",
+    "browser video or build link/path"
+  ],
+  "scoring_note": "Technical gate only at B09; does not itself score ULO-06."
+}

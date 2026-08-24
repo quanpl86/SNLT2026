@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B09",
+  "cases": [
+    {
+      "id": "BT-01",
+      "title": "Start & movement",
+      "steps": [
+        "Start run",
+        "W/A/S/D",
+        "Jump"
+      ],
+      "expected": "Player điều khiển/nhảy/collision bình thường; HUD initial đúng."
+    },
+    {
+      "id": "BT-02",
+      "title": "Collectible + HUD",
+      "steps": [
+        "Collect ≥2 items"
+      ],
+      "expected": "Mỗi item chỉ thu một lần; HUD tăng đúng."
+    },
+    {
+      "id": "BT-03",
+      "title": "Checkpoint + hazard",
+      "steps": [
+        "Activate checkpoint",
+        "Touch hazard"
+      ],
+      "expected": "Player respawn tại checkpoint; HUD/state không lệch."
+    },
+    {
+      "id": "BT-04",
+      "title": "All collectibles reachable",
+      "steps": [
+        "Traverse full course",
+        "Collect all target items"
+      ],
+      "expected": "Đạt target_count; không item nào bị unreachable."
+    },
+    {
+      "id": "BT-05",
+      "title": "Win + restart",
+      "steps": [
+        "Reach goal before enough",
+        "Then reach with enough",
+        "Restart"
+      ],
+      "expected": "Không thắng sớm; thắng đúng; restart clean."
+    },
+    {
+      "id": "BT-06",
+      "title": "Student/approved asset visible",
+      "steps": [
+        "Inspect/play with B05 collectible asset in scene"
+      ],
+      "expected": "Asset hiện đúng scale/orientation và không phá Area3D/collider."
+    }
+  ]
+}

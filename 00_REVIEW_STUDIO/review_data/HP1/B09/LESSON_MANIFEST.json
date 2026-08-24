@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "hp": "HP1",
+  "hp_title": "Phiêu lưu Nền tảng 3D",
+  "lesson": "B09",
+  "lesson_title": "Ôn tập — Bản thử nghiệm Phiêu lưu Nền tảng 3D",
+  "lesson_type": "BETA_CHECKPOINT",
+  "lesson_flow_status": "PARALLEL_AGENT_PREPARATION_WAITING_FOR_ANTIGRAVITY_IMPLEMENTATION",
+  "prior_lesson_status_policy": "DO_NOT_CHANGE_B01_B02_B03_B04_B05_B06_B07_B08_STATUS_AS_SIDE_EFFECT",
+  "engine": "Godot 4.7.1 stable",
+  "renderer": "Compatibility",
+  "editor_ui": "English",
+  "product": "Platform Adventure Beta — core loop hoàn chỉnh + beta test report + formal TG-WEB-SMOKE",
+  "curriculum": {
+    "cio": [
+      {
+        "id": "HP1-CIO17",
+        "text": "Tích hợp toàn bộ hệ thống thành bản thử nghiệm có thể chơi từ đầu đến cuối.",
+        "sio": [
+          "HP1-SIO03",
+          "HP1-SIO05"
+        ],
+        "ulo": [
+          "ULO-04",
+          "ULO-06"
+        ],
+        "k_new": [],
+        "k_prior": [
+          "K10",
+          "K11",
+          "K12",
+          "K13",
+          "K14",
+          "K27"
+        ]
+      },
+      {
+        "id": "HP1-CIO18",
+        "text": "Kiểm thử bản thử nghiệm và sửa ít nhất một lỗi có bằng chứng.",
+        "sio": [
+          "HP1-SIO05"
+        ],
+        "ulo": [
+          "ULO-05"
+        ],
+        "k_new": [],
+        "k_prior": [
+          "Hệ thống HP1"
+        ]
+      }
+    ],
+    "assessment_required": {
+      "HP1-CIO17": [
+        "MC-CN"
+      ],
+      "HP1-CIO18": [
+        "MC-KT"
+      ]
+    },
+    "lo_supporting_evidence": {
+      "HP1-CIO17": [
+        "MC-XB"
+      ],
+      "HP1-CIO18": [
+        "MC-CN"
+      ]
+    },
+    "ownership": {
+      "HP1-CIO17": "SỬ DỤNG/TÍCH HỢP",
+      "HP1-CIO18": "TỰ TẠO"
+    },
+    "gate": "Cổng bản thử nghiệm",
+    "gate_evidence": [
+      "MC-CN",
+      "MC-KT",
+      "TG-WEB-SMOKE"
+    ],
+    "lesson_minutes": 120,
+    "timebox": [
+      {
+        "block": "Ôn tập nhanh B5–B8 + nhắc B1–B3",
+        "minutes": 15
+      },
+      {
+        "block": "Quiz checkpoint",
+        "minutes": 60,
+        "questions": 35
+      },
+      {
+        "block": "Hoàn thiện Beta + sửa lỗi + TG-WEB-SMOKE + nộp minh chứng",
+        "minutes": 45
+      }
+    ],
+    "approved_question_ids": [
+      "HP1-B09-Q01",
+      "HP1-B09-Q02",
+      "HP1-B09-Q03",
+      "HP1-B09-Q04",
+      "HP1-B09-Q05",
+      "HP1-B09-Q06",
+      "HP1-B09-Q07",
+      "HP1-B09-Q08",
+      "HP1-B09-Q09",
+      "HP1-B09-Q10",
+      "HP1-B09-Q11",
+      "HP1-B09-Q12",
+      "HP1-B09-Q13",
+      "HP1-B09-Q14",
+      "HP1-B09-Q15",
+      "HP1-B09-Q16",
+      "HP1-B09-Q17",
+      "HP1-B09-Q18",
+      "HP1-B09-Q19",
+      "HP1-B09-Q20",
+      "HP1-B09-Q21",
+      "HP1-B09-Q22",
+      "HP1-B09-Q23",
+      "HP1-B09-Q24",
+      "HP1-B09-Q25",
+      "HP1-B09-Q26",
+      "HP1-B09-Q27",
+      "HP1-B09-Q28",
+      "HP1-B09-Q29",
+      "HP1-B09-Q30",
+      "HP1-B09-Q31",
+      "HP1-B09-Q32",
+      "HP1-B09-Q33",
+      "HP1-B09-Q34",
+      "HP1-B09-Q35"
+    ],
+    "blockbench_new": false
+  },
+  "technical_sources": [
+    "PJT-004",
+    "PJT-003",
+    "GD-023",
+    "GD-024",
+    "GD-009",
+    "GD-010",
+    "GD-011",
+    "GD-027",
+    "GD-028",
+    "BB-001",
+    "BB-002"
+  ],
+  "technical_gate": {
+    "id": "TG-WEB-SMOKE",
+    "applies": "B09",
+    "required": true,
+    "requirements": [
+      "Xuất Web thử trên Compatibility.",
+      "Mở được trên trình duyệt mục tiêu.",
+      "Input/vòng chơi cốt lõi cơ bản hoạt động.",
+      "Ghi lỗi nếu có."
+    ],
+    "evidence": [
+      "Checklist kỹ thuật",
+      "Ảnh/link/path build thử"
+    ],
+    "ulo06_scoring": "NO — technical gate only at B09"
+  },
+  "asset_package": {
+    "mode": "REUSE_APPROVED_PRIOR_ASSETS",
+    "new_assets_count": 0,
+    "reason": "B09 không mở kiến thức lõi mới; giữ continuity B04–B08 và asset Blockbench B05.",
+    "student_project_policy": "Trong lớp thật, tiếp tục từ project B08 của chính học sinh để giữ asset B05 cá nhân.",
+    "canonical_template_policy": "Canonical Project Basic/Starter dùng approved fallback assets từ B04–B08 để Human/QA tái lập được."
+  },
+  "targets": [
+    {
+      "id": "PROJECT_BASIC",
+      "name": "Project Basic Canonical",
+      "folder": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-PROJECT_BASIC",
+      "mode": "READ_ONLY",
+      "description": "Beta sạch: movement/jump/collectible/student-asset fallback/hazard/checkpoint/HUD/win/restart + Web preset, không blocker."
+    },
+    {
+      "id": "STUDENT_STARTER",
+      "name": "Student Starter Canonical",
+      "folder": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER",
+      "mode": "READ_ONLY",
+      "description": "B08 complete loop + một beta blocker có chủ đích: BetaCrystal05 bị đặt ngoài vùng có thể tiếp cận, khiến lượt chơi dừng ở 4/5 và không thể thắng."
+    },
+    {
+      "id": "E2E_WORKING_COPY",
+      "name": "E2E Working Copy",
+      "folder": "B09_HUMAN_TEST_COPY",
+      "source_folder": "SNLT2026-HP01-B09/SNLT2026-HP01-B09-STUDENT_STARTER",
+      "mode": "MODIFY_AND_SAVE",
+      "description": "Run test matrix → ghi defect → sửa Position của BetaCrystal05 → native regression → formal TG-WEB-SMOKE → beta dossier."
+    }
+  ],
+  "execution_gate": {
+    "human_execution": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+    "native_runtime_pass": "NOT_CLAIMED",
+    "tg_web_smoke_pass": "NOT_CLAIMED",
+    "human_pass": "NOT_CLAIMED"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B09",
+  "mode": "REUSE_ONLY",
+  "new_asset_count": 0,
+  "dependencies": [
+    {
+      "from_lesson": "B04",
+      "assets": [
+        "character.glb/visual selected from approved PJT-004 freeze",
+        "brick/platform visual"
+      ],
+      "policy": "Reuse approved files already ingested; do not redownload unless missing."
+    },
+    {
+      "from_lesson": "B05",
+      "assets": [
+        "student-created collectible .bbmodel/.glb in real learner project",
+        "canonical validated/reference fallback in template"
+      ],
+      "policy": "Prefer each student's own B05 asset in classroom continuity. Canonical QA template uses approved fallback."
+    },
+    {
+      "from_lesson": "B06",
+      "assets": [
+        "B06_HAZARD_SPIKES_PROGRAM.glb",
+        "B06_CHECKPOINT_BEACON_PROGRAM.glb"
+      ],
+      "policy": "Reuse unchanged."
+    },
+    {
+      "from_lesson": "B07",
+      "assets": [
+        "B07 HUD icons/panel PNG"
+      ],
+      "policy": "Reuse unchanged."
+    },
+    {
+      "from_lesson": "B08",
+      "assets": [
+        "B08_GOAL_PORTAL_PROGRAM.glb",
+        "B08 win/restart/goal UI PNG"
+      ],
+      "policy": "Reuse unchanged."
+    }
+  ],
+  "external_discovery_policy": "No new Kenney/Blockbench Gallery/Godot demo asset is needed for B09. If Antigravity proposes one, treat as scope change and finding."
+}

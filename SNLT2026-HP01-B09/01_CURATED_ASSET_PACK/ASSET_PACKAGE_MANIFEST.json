@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B09",
+  "status": "REUSE_ONLY_NO_NEW_BINARY_ASSETS",
+  "records": [
+    {
+      "file": "SNLT2026-HP01-B09/01_CURATED_ASSET_PACK/ASSET_REUSE_MANIFEST.json",
+      "sha256": "9be9fb3db4fea8769fc2677e48d24a76bffb34bf019787cd8472b954c9b8a096",
+      "size_bytes": 1385
+    },
+    {
+      "file": "SNLT2026-HP01-B09/01_CURATED_ASSET_PACK/README_REUSE_ONLY.md",
+      "sha256": "6b3b906f96875bcd64cf7fd6ad3878a4e625322ef40c223262ffdbf296facfa9",
+      "size_bytes": 815
+    }
+  ]
+}
