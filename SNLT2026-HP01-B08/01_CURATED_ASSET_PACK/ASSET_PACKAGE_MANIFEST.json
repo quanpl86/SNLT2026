@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B08",
+  "status": "CHATGPT_PACKAGE_CREATED_PENDING_ANTIGRAVITY_GODOT_AND_BROWSER_VALIDATION",
+  "records": [
+    {
+      "file": "SNLT2026-HP01-B08/01_CURATED_ASSET_PACK/GLB_READY/B08_GOAL_PORTAL_PROGRAM.glb",
+      "sha256": "aeb462a2baddd8935075392e1f5fb1aabb4d42ce946ea700bd2109e65e7842eb",
+      "size_bytes": 5016
+    },
+    {
+      "file": "SNLT2026-HP01-B08/01_CURATED_ASSET_PACK/LICENSES/PROGRAM_AUTHORED_ASSETS_LICENSE.txt",
+      "sha256": "0843c9adb35bcf1f0414233ec4d43131d7dd0e253957da6694d1e4d6ca1f8db7",
+      "size_bytes": 235
+    },
+    {
+      "file": "SNLT2026-HP01-B08/01_CURATED_ASSET_PACK/UI/B08_ICON_GOAL_LOCKED_PROGRAM.png",
+      "sha256": "35443c7ba14646970e2edc0efa1ee761539059222349fece977e89f568c11354",
+      "size_bytes": 601
+    },
+    {
+      "file": "SNLT2026-HP01-B08/01_CURATED_ASSET_PACK/UI/B08_ICON_GOAL_READY_PROGRAM.png",
+      "sha256": "9f326637279d5d30a04f0df202c23dea99a158d038042c45652fb461c0673f5e",
+      "size_bytes": 884
+    },
+    {
+      "file": "SNLT2026-HP01-B08/01_CURATED_ASSET_PACK/UI/B08_ICON_RESTART_PROGRAM.png",
+      "sha256": "67284e83666b3c53b6ea0e8814a97f368b5a0b5e6cbfb4ef3326d322ac284284",
+      "size_bytes": 761
+    },
+    {
+      "file": "SNLT2026-HP01-B08/01_CURATED_ASSET_PACK/UI/B08_WIN_PANEL_PROGRAM.png",
+      "sha256": "863faea0927dd2bb0a7207ed5348ad4c2782caab98d9e1c8ec14ddeb86cca0a1",
+      "size_bytes": 3078
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B08",
+  "planned_media_count": 24,
+  "capture_gate": "DO_NOT_CAPTURE_REAL_HUMAN_EVIDENCE_UNTIL_ANTIGRAVITY_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "raw_policy": "RAW immutable; browser evidence must show actual browser, not only Godot editor/export dialog.",
+  "media_items": [
+    {
+      "media_id": "PB-M01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_PB_M01_Hero_Goal_HUD_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hero gameplay trước win.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "LESSON_COVER"
+      ],
+      "must_show": [
+        "Goal portal",
+        "HUD",
+        "gameplay course",
+        "result overlay hidden"
+      ]
+    },
+    {
+      "media_id": "PB-M02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_PB_M02_Win_Condition_Code_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Win logic canonical.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "crystal_count",
+        "target_count",
+        "goal/reached_goal",
+        "is_finished"
+      ]
+    },
+    {
+      "media_id": "PB-M03",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_PB_M03_Restart_Code_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Restart state reset.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "restart handler",
+        "reload_current_scene hoặc reset canonical"
+      ]
+    },
+    {
+      "media_id": "PB-M04",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_PB_M04_Win_Overlay_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Win feedback.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Hoàn thành overlay",
+        "restart button",
+        "final HUD state"
+      ]
+    },
+    {
+      "media_id": "PB-V01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B08_PB_V01_Native_Win_Restart_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Native win/restart evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "30–45s: goal chưa đủ → collect đủ → goal → overlay → restart → HUD 0/target."
+    },
+    {
+      "media_id": "PB-M05",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_PB_M05_Web_Export_Preset_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "K27 export setup.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Project Export",
+        "Web preset",
+        "output build/web/index.html"
+      ]
+    },
+    {
+      "media_id": "PB-M06",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_PB_M06_Web_Browser_Game_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "First Web browser evidence.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Browser window",
+        "game loaded",
+        "HUD/game visible"
+      ]
+    },
+    {
+      "media_id": "PB-V02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B08_PB_V02_Web_Core_Loop_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "CIO16 Web reference evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Browser 30–60s: movement/jump → collect → checkpoint/hazard → goal/win → restart."
+    },
+    {
+      "media_id": "SS-M01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_SS_M01_Starter_Goal_UI_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Starter overview.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "Starter",
+        "goal portal",
+        "result overlay scene",
+        "HUD"
+      ]
+    },
+    {
+      "media_id": "SS-M02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_SS_M02_Early_Win_Code_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Gap A before.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "goal condition",
+        "missing crystal_count check"
+      ]
+    },
+    {
+      "media_id": "SS-M03",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_SS_M03_Dirty_Restart_Code_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Gap B before.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "restart only moves Player",
+        "state/HUD not reset"
+      ]
+    },
+    {
+      "media_id": "SS-V01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B08_SS_V01_Early_Win_Bug_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Baseline win bug.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Go to goal with insufficient crystals → overlay appears incorrectly."
+    },
+    {
+      "media_id": "SS-V02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B08_SS_V02_Dirty_Restart_Bug_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Baseline restart bug.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Win/debug win → restart → Player returns but HUD/state stay dirty."
+    },
+    {
+      "media_id": "SS-M04",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_SS_M04_Web_Checklist_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "K27 evidence preparation.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "Web export checklist",
+        "MC-KT",
+        "MC-XB",
+        "browser run required"
+      ]
+    },
+    {
+      "media_id": "E2E-M01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_E2E_M01_Clean_Copy_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "E2E baseline.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Working copy baseline",
+        "goal/HUD visible"
+      ]
+    },
+    {
+      "media_id": "E2E-M02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_E2E_M02_Win_Condition_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After win fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "goal + crystal_count >= target_count",
+        "is_finished"
+      ]
+    },
+    {
+      "media_id": "E2E-V01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-02",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B08_E2E_V01_Win_Condition_Fix_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "CIO15 win evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Native: insufficient goal no win → collect enough → goal win."
+    },
+    {
+      "media_id": "E2E-M03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_E2E_M03_Restart_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After restart fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "reload_current_scene or canonical full reset",
+        "restart handler"
+      ]
+    },
+    {
+      "media_id": "E2E-V02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B08_E2E_V02_Restart_Clean_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "CIO15 restart evidence.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Win → Chơi lại → new run HUD/state clean."
+    },
+    {
+      "media_id": "E2E-M04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "image",
+      "required": false,
+      "canonical_filename": "B08_E2E_M04_Native_Core_Loop_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Native regression.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Native game after fixes",
+        "HUD/checkpoint/goal"
+      ]
+    },
+    {
+      "media_id": "E2E-V03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B08_E2E_V03_Native_Core_Loop_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Native regression.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "Representative native core loop."
+    },
+    {
+      "media_id": "E2E-M05",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_E2E_M05_Web_Build_Output_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "MC-KT Web export.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Export dialog/preset or build folder index.html",
+        "output path"
+      ]
+    },
+    {
+      "media_id": "E2E-M06",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B08_E2E_M06_Web_Browser_RAW.png",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "MC-XB browser evidence.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Browser target",
+        "B08 game loaded",
+        "HUD",
+        "goal/course"
+      ]
+    },
+    {
+      "media_id": "E2E-V04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B08_E2E_V04_Web_Core_Loop_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B08/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "MC-XB CIO16.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "Browser: load → input → collect → checkpoint/hazard → win → restart. 45–75s."
+    }
+  ],
+  "generated_visuals": [
+    {
+      "visual_id": "B08-GV01",
+      "title": "Core loop: Chơi → Thu thập → Checkpoint/Hazard → Đủ vật phẩm → Goal → Win → Chơi lại",
+      "type": "loop_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B08-GV02",
+      "title": "Win condition Boolean: reached_goal AND crystal_count >= target_count",
+      "type": "logic_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B08-GV03",
+      "title": "Restart sạch: Player + state + HUD + checkpoint",
+      "type": "state_reset_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B08-GV04",
+      "title": "Godot Project → Web preset → Export → HTTP server → Browser smoke",
+      "type": "web_pipeline",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B08-GV05",
+      "title": "Export thành công ≠ Web PASS",
+      "type": "comparison",
+      "owner": "CHATGPT"
+    }
+  ]
+}

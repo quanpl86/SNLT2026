@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B08",
+  "test_count_excluding_gate": 18,
+  "execution_gate": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Preflight B08: win/restart + Web export",
+      "project_path": "SNLT2026-HP01-B08",
+      "action_steps": [
+        "Xác nhận Godot 4.7.1 stable, Compatibility, English UI.",
+        "Xác nhận export templates phù hợp đã được cài trên máy triển khai/kiểm thử.",
+        "Xác nhận K_NEW chỉ K27; win/restart dùng lại K11/K12/K13.",
+        "Xác nhận B08 không bị gắn nhãn TG-WEB-SMOKE PASS; formal gate đó thuộc B09.",
+        "Xác nhận B01–B07 status không đổi khi B08 được thêm."
+      ],
+      "expected_results": [
+        "Môi trường đủ cho native + Web export attempt.",
+        "Không có Web PASS nếu chưa mở build trên browser target.",
+        "Không side effect bài trước."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Project Basic B08 — vòng chơi hoàn chỉnh",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở main scene, Goal scene, ResultOverlay và scripts.",
+        "F5 native.",
+        "Quan sát HUD B07 + goal portal + result overlay hidden."
+      ],
+      "expected_results": [
+        "Project mở không blocker.",
+        "Goal portal dễ nhận biết.",
+        "Result overlay ẩn khi bắt đầu; HUD khởi tạo đúng."
+      ],
+      "media_ids": [
+        "PB-M01"
+      ]
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "Luật thắng canonical: goal + đủ vật phẩm",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Đọc goal callback / try_finish_game().",
+        "Theo dấu reached_goal/crystal_count/target_count/is_finished.",
+        "Xác nhận chưa đủ vật phẩm thì không finish."
+      ],
+      "expected_results": [
+        "Win condition dùng cả goal event và crystal_count >= target_count.",
+        "is_finished chỉ chuyển true một lần.",
+        "Không hard-code một giá trị UI thay cho game state."
+      ],
+      "media_ids": [
+        "PB-M02"
+      ]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "Result overlay + restart canonical",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Đọc finish_game() và restart handler.",
+        "Xác nhận overlay hiển thị khi is_finished true.",
+        "Xác nhận restart tạo lượt mới sạch, ví dụ reload_current_scene() hoặc reset đầy đủ tương đương."
+      ],
+      "expected_results": [
+        "Win feedback rõ.",
+        "Restart đưa crystal_count về trạng thái đầu, is_finished=false, checkpoint/HUD reset.",
+        "Không chỉ di chuyển Player mà giữ state cũ."
+      ],
+      "media_ids": [
+        "PB-M03"
+      ]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Native core loop từ đầu tới chơi lại",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "F5.",
+        "Thử tới goal khi chưa đủ vật phẩm.",
+        "Thu đủ target_count.",
+        "Tới goal → result overlay.",
+        "Chọn Chơi lại và bắt đầu lượt mới."
+      ],
+      "expected_results": [
+        "Không thắng sớm.",
+        "Đủ điều kiện → win đúng.",
+        "Restart tạo run mới 0/target, checkpoint inactive, overlay hidden."
+      ],
+      "media_ids": [
+        "PB-M04",
+        "PB-V01"
+      ]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "Web export preset + build artifact canonical",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở Project > Export.",
+        "Kiểm tra Web preset, Compatibility renderer và output path.",
+        "Thực hiện Export Project tới build/web.",
+        "Kiểm tra index.html và các file build được tạo."
+      ],
+      "expected_results": [
+        "Export hoàn tất không blocker.",
+        "Build folder có index.html và resource files theo Godot 4.7.1.",
+        "Export success một mình chưa được tính Web browser PASS."
+      ],
+      "media_ids": [
+        "PB-M05"
+      ]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "Browser core-loop smoke — first Web export",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Serve build/web qua local HTTP server.",
+        "Mở trên browser target.",
+        "Test page load, W/A/S/D, jump, collect, checkpoint/hazard, HUD, win condition, restart."
+      ],
+      "expected_results": [
+        "Browser tải được build.",
+        "Input và core loop hoạt động.",
+        "Win/restart hoạt động trên Web.",
+        "Nếu lỗi: ghi finding; không tuyên bố Web PASS."
+      ],
+      "media_ids": [
+        "PB-M06",
+        "PB-V02"
+      ],
+      "notes": "Đây là first-export CIO16 evidence. Không gắn nhãn formal TG-WEB-SMOKE; formal technical gate nằm ở B09."
+    },
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Starter B08",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở project; không sửa.",
+        "Quan sát goal portal, overlay, restart button và HUD."
+      ],
+      "expected_results": [
+        "Starter mở không blocker.",
+        "UI/goal assets đã gắn sẵn.",
+        "Hai win/restart gaps tồn tại; chưa có Web preset."
+      ],
+      "media_ids": [
+        "SS-M01"
+      ]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "Gap A: goal thắng dù chưa đủ vật phẩm",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Đọc goal/finish condition.",
+        "Không sửa.",
+        "Xác nhận crystal_count/target_count có sẵn nhưng chưa được dùng đúng."
+      ],
+      "expected_results": [
+        "Condition chỉ dựa reached_goal hoặc goal event.",
+        "Đây là lỗi logic K08/K12 dùng lại, không phải kiến thức mới."
+      ],
+      "media_ids": [
+        "SS-M02"
+      ]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Gap B: restart chỉ di chuyển Player",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Đọc restart handler.",
+        "Xác nhận Player được đưa về start nhưng crystal_count/is_finished/HUD/checkpoint không reset đầy đủ.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Restart baseline tạo run bẩn.",
+        "Học sinh có thể sửa bằng reload_current_scene() hoặc reset canonical được hướng dẫn."
+      ],
+      "media_ids": [
+        "SS-M03"
+      ]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Runtime baseline: thắng sớm",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Đi thẳng tới goal khi chưa đủ target_count.",
+        "Quan sát overlay/state."
+      ],
+      "expected_results": [
+        "Starter thắng sai khi chưa đủ vật phẩm.",
+        "Bug tái hiện ổn định."
+      ],
+      "media_ids": [
+        "SS-V01"
+      ]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "Runtime baseline: restart state bẩn",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Trong session baseline, đạt win hoặc dùng debug path được cung cấp.",
+        "Nhấn Chơi lại.",
+        "Quan sát Player/HUD/state."
+      ],
+      "expected_results": [
+        "Player có thể về start nhưng HUD/state vẫn giữ dữ liệu lượt trước.",
+        "Bug không crash project."
+      ],
+      "media_ids": [
+        "SS-V02"
+      ]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Web export readiness + evidence template",
+      "project_path": "SNLT2026-HP01-B08/SNLT2026-HP01-B08-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở WEB_EXPORT_CHECKLIST_B08.md và HO_SO_MINH_CHUNG_B08.md.",
+        "Xác nhận export preset chưa có và được tạo trong E2E.",
+        "Kiểm tra không có đáp án quiz."
+      ],
+      "expected_results": [
+        "Checklist phân biệt export success với browser run.",
+        "Evidence có MC-ML/MC-CN cho CIO15 và MC-KT/MC-XB cho CIO16.",
+        "Không có quiz answers."
+      ],
+      "media_ids": [
+        "SS-M04"
+      ]
+    },
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Working Copy sạch B08",
+      "project_path": "B08_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Copy Student Starter → B08_HUMAN_TEST_COPY.",
+        "Xác nhận Gap A, Gap B và chưa có Web preset."
+      ],
+      "expected_results": [
+        "Working Copy đúng Starter."
+      ],
+      "media_ids": [
+        "E2E-M01"
+      ]
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa luật thắng CIO15",
+      "project_path": "B08_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Tái hiện thắng sớm.",
+        "Ghi Actual/Expected + prediction.",
+        "Sửa condition để cần goal + crystal_count >= target_count.",
+        "F5: thử chưa đủ rồi đủ."
+      ],
+      "expected_results": [
+        "Chưa đủ → không finish.",
+        "Đủ + goal → finish.",
+        "Có explanation state/condition."
+      ],
+      "media_ids": [
+        "E2E-M02",
+        "E2E-V01"
+      ]
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa chơi lại CIO15",
+      "project_path": "B08_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Tái hiện restart state bẩn.",
+        "Ghi các state cần reset.",
+        "Sửa restart bằng reload_current_scene() hoặc reset canonical tương đương.",
+        "F5 thắng → Chơi lại."
+      ],
+      "expected_results": [
+        "Run mới sạch: crystal=0, is_finished=false, checkpoint inactive, overlay hidden.",
+        "Player ở start.",
+        "Có MC-ML + MC-CN CIO15."
+      ],
+      "media_ids": [
+        "E2E-M03",
+        "E2E-V02"
+      ]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "Native regression core loop",
+      "project_path": "B08_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "F5 từ run mới.",
+        "Movement/jump → collect → checkpoint → hazard → collect đủ → goal → restart.",
+        "Ghi blocker nếu có."
+      ],
+      "expected_results": [
+        "B01–B07 core loop vẫn hoạt động.",
+        "Win/restart không phá HUD/checkpoint/collectible.",
+        "Native core loop đủ điều kiện trước export."
+      ],
+      "media_ids": [
+        "E2E-M04",
+        "E2E-V03"
+      ]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Web preset và xuất build",
+      "project_path": "B08_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Project > Export → Add Web preset.",
+        "Giữ Compatibility renderer.",
+        "Đặt output build/web/index.html.",
+        "Export Project.",
+        "Ghi kết quả và file build."
+      ],
+      "expected_results": [
+        "Export preset lưu được.",
+        "Build artifacts được tạo.",
+        "Có MC-KT checklist.",
+        "Chưa gắn Web PASS trước browser test."
+      ],
+      "media_ids": [
+        "E2E-M05"
+      ]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Browser smoke + MC-XB CIO16",
+      "project_path": "B08_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Serve build/web qua HTTP.",
+        "Mở browser target.",
+        "Test load/input/movement/jump/collect/checkpoint/hazard/HUD/win/restart.",
+        "Lưu ảnh/video/link/path build và lỗi nếu có."
+      ],
+      "expected_results": [
+        "Nếu tất cả core loop đúng: đủ bằng chứng first Web export CIO16.",
+        "Nếu có lỗi blocker: status FAIL/FINDING và quay lại Antigravity.",
+        "Không đổi tên kết quả thành formal TG-WEB-SMOKE PASS của B09."
+      ],
+      "media_ids": [
+        "E2E-M06",
+        "E2E-V04"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B08",
+  "label": "B08_FIRST_WEB_EXPORT_CHECK",
+  "formal_tg_web_smoke": false,
+  "browser_primary": "Chromium/Chrome-family target if available",
+  "secondary_browser": "Optional at B08; formal broader smoke is deferred to later gates.",
+  "checks": [
+    "index/page loads without blocker",
+    "W/A/S/D input",
+    "jump",
+    "collectible count/HUD",
+    "checkpoint",
+    "hazard respawn",
+    "goal locked before enough collectibles",
+    "win after enough collectibles",
+    "restart new run"
+  ],
+  "evidence": [
+    "browser screenshot",
+    "browser core-loop video",
+    "build path",
+    "MC-KT checklist",
+    "error/finding if any"
+  ]
+}

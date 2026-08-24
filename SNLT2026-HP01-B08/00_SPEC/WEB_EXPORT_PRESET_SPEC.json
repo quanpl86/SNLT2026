@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B08",
+  "preset_name": "Web",
+  "renderer": "Compatibility",
+  "output_path": "build/web/index.html",
+  "preconditions": [
+    "Godot export templates installed for the active Godot 4.7.1 build.",
+    "Project runs native without blocker.",
+    "Main scene configured.",
+    "All required assets resolve locally."
+  ],
+  "student_actions": [
+    "Open Project > Export.",
+    "Add/choose Web preset.",
+    "Export Project to build/web/index.html.",
+    "Serve build/web via HTTP.",
+    "Open browser target and run core-loop smoke."
+  ],
+  "program_infrastructure": [
+    "Export templates installation may be preconfigured by teacher/Antigravity.",
+    "HTTP server command/helper may be program-provided.",
+    "Browser choice and device availability are environment constraints, not competency evidence by themselves."
+  ],
+  "pass_rule": "Export artifacts alone are insufficient. Actual browser load + core-loop run evidence is required."
+}
