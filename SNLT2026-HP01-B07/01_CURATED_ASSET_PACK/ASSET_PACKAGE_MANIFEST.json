@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B07",
+  "status": "CHATGPT_PACKAGE_CREATED_PENDING_ANTIGRAVITY_GODOT_VALIDATION",
+  "records": [
+    {
+      "file": "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/LICENSES/PROGRAM_AUTHORED_UI_ASSETS_LICENSE.txt",
+      "sha256": "ac54764290bd06d24e7b96c100fcd45458849a5ecee6015fbfc5ed85e0dc24ca",
+      "size_bytes": 250
+    },
+    {
+      "file": "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_HUD_PANEL_PROGRAM.png",
+      "sha256": "4ddd662578d85fb55c7bc1098bcf458e40f46bb97ef49dff572b67957e51eaec",
+      "size_bytes": 536
+    },
+    {
+      "file": "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CHECKPOINT_INACTIVE_PROGRAM.png",
+      "sha256": "53d81a9ab0f181fdcb692f31b4e8882db8fd8f7611ffe9c38e73738d67ec18b3",
+      "size_bytes": 396
+    },
+    {
+      "file": "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CHECKPOINT_PROGRAM.png",
+      "sha256": "4032a4858dd36531202df96e78ab975f628bcd3d814daa3a7dc74d92cf3c27cc",
+      "size_bytes": 492
+    },
+    {
+      "file": "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CRYSTAL_PROGRAM.png",
+      "sha256": "064d85cc62d1e1fe909031e990ca97996c824ce032249b67be03e1bf16ab7749",
+      "size_bytes": 449
+    }
+  ]
+}

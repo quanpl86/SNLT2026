@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "hp": "HP1",
+  "hp_title": "Phiêu lưu Nền tảng 3D",
+  "lesson": "B07",
+  "lesson_title": "Giao diện người chơi",
+  "lesson_flow_status": "PARALLEL_AGENT_PREPARATION_WAITING_FOR_ANTIGRAVITY_IMPLEMENTATION",
+  "prior_lesson_status_policy": "DO_NOT_CHANGE_B01_B02_B03_B04_B05_B06_STATUS_AS_SIDE_EFFECT",
+  "engine": "Godot 4.7.1 stable",
+  "renderer": "Compatibility",
+  "editor_ui": "English",
+  "product": "HUD Platform Adventure — hiển thị số vật phẩm và trạng thái checkpoint",
+  "curriculum": {
+    "cio": [
+      {
+        "id": "HP1-CIO13",
+        "text": "Hiển thị dữ liệu gameplay trên giao diện.",
+        "sio": [
+          "HP1-SIO03"
+        ],
+        "ulo": [
+          "ULO-03",
+          "ULO-04"
+        ],
+        "k_new": [
+          "K13"
+        ],
+        "k_prior": [
+          "K03",
+          "K04",
+          "K11",
+          "K12",
+          "K29"
+        ]
+      },
+      {
+        "id": "HP1-CIO14",
+        "text": "Kết nối thay đổi trạng thái với nội dung HUD.",
+        "sio": [
+          "HP1-SIO03"
+        ],
+        "ulo": [
+          "ULO-04"
+        ],
+        "k_new": [],
+        "k_prior": [
+          "K11",
+          "K12",
+          "K13",
+          "K29"
+        ]
+      }
+    ],
+    "evidence_required_by_assessment": {
+      "HP1-CIO13": [
+        "MC-CN"
+      ],
+      "HP1-CIO14": [
+        "MC-ML",
+        "MC-CN"
+      ]
+    },
+    "supporting_evidence_from_lo": {
+      "HP1-CIO13": [
+        "MC-ML"
+      ]
+    },
+    "ownership": {
+      "HP1-CIO13": "CHỈNH SỬA",
+      "HP1-CIO14": "CHỈNH SỬA"
+    },
+    "gate": "Cổng minh chứng CIO",
+    "lesson_minutes": 120,
+    "timebox": [
+      {
+        "block": "Gắn kết",
+        "minutes": 5
+      },
+      {
+        "block": "Khám phá",
+        "minutes": 10
+      },
+      {
+        "block": "Giải thích",
+        "minutes": 15
+      },
+      {
+        "block": "Vận dụng",
+        "minutes": 55
+      },
+      {
+        "block": "Quiz ôn tập",
+        "minutes": 30,
+        "questions": 10
+      },
+      {
+        "block": "Chốt",
+        "minutes": 5
+      }
+    ],
+    "approved_question_ids": [
+      "HP1-B07-Q01",
+      "HP1-B07-Q02",
+      "HP1-B07-Q03",
+      "HP1-B07-Q04",
+      "HP1-B07-Q05",
+      "HP1-B07-Q06",
+      "HP1-B07-Q07",
+      "HP1-B07-Q08",
+      "HP1-B07-Q09",
+      "HP1-B07-Q10"
+    ],
+    "blockbench": false
+  },
+  "technical_sources": [
+    "PJT-004",
+    "PJT-003",
+    "GD-011",
+    "GD-010",
+    "GD-027",
+    "GD-003"
+  ],
+  "asset_package": {
+    "ui_icons": [
+      "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CRYSTAL_PROGRAM.png",
+      "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CHECKPOINT_PROGRAM.png",
+      "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CHECKPOINT_INACTIVE_PROGRAM.png",
+      "SNLT2026-HP01-B07/01_CURATED_ASSET_PACK/UI_ICONS/B07_HUD_PANEL_PROGRAM.png"
+    ],
+    "student_asset_work": false,
+    "status": "GODOT_4_7_1_UI_IMPORT_PENDING_ANTIGRAVITY"
+  },
+  "targets": [
+    {
+      "id": "PROJECT_BASIC",
+      "name": "Project Basic Canonical",
+      "folder": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-PROJECT_BASIC",
+      "mode": "READ_ONLY",
+      "description": "B06 gameplay + HUD Control overlay cập nhật CrystalLabel và CheckpointLabel từ dữ liệu/state thật."
+    },
+    {
+      "id": "STUDENT_STARTER",
+      "name": "Student Starter Canonical",
+      "folder": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER",
+      "mode": "READ_ONLY",
+      "description": "HUD skeleton có icons/labels; Gap A CrystalLabel hard-coded; Gap B checkpoint state chưa gọi HUD update."
+    },
+    {
+      "id": "E2E_WORKING_COPY",
+      "name": "E2E Working Copy",
+      "folder": "B07_HUMAN_TEST_COPY",
+      "source_folder": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER",
+      "mode": "MODIFY_AND_SAVE",
+      "description": "Sửa HUD runtime data → nối checkpoint state tới HUD → regression collect/checkpoint/hazard → save/reopen/evidence."
+    }
+  ],
+  "execution_gate": {
+    "human_execution": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+    "runtime_pass": "NOT_CLAIMED"
+  }
+}

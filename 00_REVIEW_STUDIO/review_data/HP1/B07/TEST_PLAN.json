@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B07",
+  "test_count_excluding_gate": 18,
+  "execution_gate": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Preflight B07: Control/HUD + dữ liệu runtime",
+      "project_path": "SNLT2026-HP01-B07",
+      "action_steps": [
+        "Xác nhận Godot 4.7.1 stable, Compatibility, English UI.",
+        "Xác nhận K_NEW chỉ K13; CIO14 không mở kiến thức lõi mới.",
+        "Xác nhận HUD không chứa win/lose/restart logic B08.",
+        "Xác nhận UI PNG là program-provided C, học sinh không phải thiết kế asset UI ở B07.",
+        "Xác nhận B01–B06 status không đổi khi B07 xuất hiện."
+      ],
+      "expected_results": [
+        "B07 độc lập, không side effect bài trước.",
+        "Không mở B08.",
+        "Không có Runtime/Human PASS ở preflight."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Project Basic B07 với HUD canonical",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở project và main scene.",
+        "Quan sát HUDLayer/HUD/Panel/labels/icons.",
+        "F5 để xem vị trí HUD."
+      ],
+      "expected_results": [
+        "HUD hiển thị cố định trên màn hình khi camera/game 3D di chuyển.",
+        "Có CrystalLabel và CheckpointLabel dễ đọc.",
+        "HUD không che vùng chơi quan trọng."
+      ],
+      "media_ids": [
+        "PB-M01"
+      ]
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "Control hierarchy và UI references canonical",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở HUD scene/script.",
+        "Xác định Control/PanelContainer/MarginContainer/HBox hoặc cấu trúc tương đương.",
+        "Xác định references tới CrystalLabel và CheckpointLabel."
+      ],
+      "expected_results": [
+        "K13 thể hiện bằng Control-based HUD.",
+        "Label references trỏ đúng node.",
+        "CanvasLayer nếu dùng được ghi Ownership C/infrastructure."
+      ],
+      "media_ids": [
+        "PB-M02"
+      ]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "Crystal HUD lấy dữ liệu thật",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Đọc update_crystal_hud(value,total).",
+        "Theo dấu collectible signal → crystal_count → HUD update.",
+        "Xác nhận không có một biến display_count riêng lệch dữ liệu."
+      ],
+      "expected_results": [
+        "CrystalLabel hiển thị từ crystal_count/target_count thật.",
+        "Mỗi collect cập nhật đúng một lần.",
+        "Không hard-code giá trị hiển thị cố định."
+      ],
+      "media_ids": [
+        "PB-M03"
+      ]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Checkpoint state cập nhật HUD",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Đọc callback checkpoint.",
+        "Theo dấu state update respawn_position/checkpoint_active.",
+        "Theo dấu call/update tới CheckpointLabel."
+      ],
+      "expected_results": [
+        "HUD hiển thị Chưa kích hoạt trước checkpoint.",
+        "Sau checkpoint, HUD hiển thị Đã kích hoạt.",
+        "State gameplay và HUD không giữ hai bản dữ liệu độc lập dễ lệch."
+      ],
+      "media_ids": [
+        "PB-M04"
+      ]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "Runtime HUD: collect + checkpoint + hazard",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "F5.",
+        "Thu ít nhất 2 collectible.",
+        "Kích hoạt checkpoint.",
+        "Chạm hazard và respawn.",
+        "Quan sát HUD xuyên suốt."
+      ],
+      "expected_results": [
+        "Crystal count tăng đúng.",
+        "Checkpoint label đổi đúng.",
+        "Hazard/respawn không làm HUD reset sai.",
+        "Không có win/restart UI."
+      ],
+      "media_ids": [
+        "PB-M05",
+        "PB-V01"
+      ]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "UI readability + B06 regression",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Chạy course ở độ phân giải cửa sổ chuẩn.",
+        "Quan sát HUD khi nền sáng/tối và khi camera di chuyển.",
+        "Kiểm movement/jump/collectible/checkpoint/hazard."
+      ],
+      "expected_results": [
+        "HUD đọc được và không che gameplay quan trọng.",
+        "Core B01–B06 không bị phá.",
+        "Readability cuối cùng vẫn cần Human judgement."
+      ],
+      "media_ids": [
+        "PB-V02"
+      ]
+    },
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Starter B07 với HUD skeleton",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở project; không sửa.",
+        "Quan sát labels/icons và scripts."
+      ],
+      "expected_results": [
+        "Starter mở không blocker.",
+        "HUD skeleton có sẵn.",
+        "Hai learning gaps tồn tại và có thể test riêng."
+      ],
+      "media_ids": [
+        "SS-M01"
+      ]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "Gap A: CrystalLabel hard-coded",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở hud.gd.",
+        "Đọc update_crystal_hud(value,total).",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Function nhận value/total nhưng label.text đang giữ chuỗi cố định 0/5 hoặc tương đương.",
+        "Đây là gap K13: giao diện chưa phản ánh runtime data."
+      ],
+      "media_ids": [
+        "SS-M02"
+      ]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Gap B: checkpoint state chưa truyền tới HUD",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở Level/Main checkpoint callback.",
+        "Xác nhận gameplay state được cập nhật đúng.",
+        "Xác nhận hud.update_checkpoint_hud(true) chưa được gọi."
+      ],
+      "expected_results": [
+        "Respawn state B06 vẫn đúng.",
+        "HUD checkpoint vẫn không đổi vì thiếu mắt xích truyền state.",
+        "Gap dùng lại K11/K12/K29 + K13."
+      ],
+      "media_ids": [
+        "SS-M03"
+      ]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Runtime baseline: collect count HUD không đổi đúng",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Thu 2 collectible.",
+        "Quan sát CrystalLabel."
+      ],
+      "expected_results": [
+        "Gameplay count tăng nội bộ nhưng HUD vẫn hiển thị giá trị cố định.",
+        "Không crash."
+      ],
+      "media_ids": [
+        "SS-V01"
+      ]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "Runtime baseline: checkpoint HUD không đổi",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5 hoặc tiếp tục session sạch.",
+        "Kích hoạt checkpoint.",
+        "Chạm hazard để xác nhận gameplay state B06 vẫn đúng.",
+        "Quan sát CheckpointLabel."
+      ],
+      "expected_results": [
+        "Player respawn đúng checkpoint.",
+        "CheckpointLabel vẫn Chưa kích hoạt do missing HUD update.",
+        "Bug UI không phá state gameplay."
+      ],
+      "media_ids": [
+        "SS-V02"
+      ]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Evidence template B07",
+      "project_path": "SNLT2026-HP01-B07/SNLT2026-HP01-B07-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở HO_SO_MINH_CHUNG_B07.md.",
+        "Kiểm tra phần runtime data→Label và state→HUD.",
+        "Kiểm tra không có đáp án quiz."
+      ],
+      "expected_results": [
+        "CIO13 có MC-CN runtime evidence.",
+        "CIO14 có MC-ML + MC-CN.",
+        "Có prediction/change/result/explanation."
+      ],
+      "media_ids": [
+        "SS-M04"
+      ]
+    },
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Working Copy sạch B07",
+      "project_path": "B07_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Copy Student Starter → B07_HUMAN_TEST_COPY.",
+        "Xác nhận CrystalLabel hard-coded và checkpoint HUD call thiếu."
+      ],
+      "expected_results": [
+        "Working Copy đúng Starter."
+      ],
+      "media_ids": [
+        "E2E-M01"
+      ]
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "ĐỌC–DỰ ĐOÁN dữ liệu CrystalLabel",
+      "project_path": "B07_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Thu collectible để tái hiện gap.",
+        "Trace crystal_count → update_crystal_hud(value,total).",
+        "Ghi prediction trước khi sửa."
+      ],
+      "expected_results": [
+        "Xác định label hard-coded là nguyên nhân.",
+        "Có dự đoán trước thay đổi."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa CIO13: HUD phản ánh runtime data",
+      "project_path": "B07_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Sửa update_crystal_hud để dùng value/total.",
+        "F5 và thu 2–3 collectible.",
+        "Giải thích vì sao HUD phải lấy dữ liệu thật."
+      ],
+      "expected_results": [
+        "CrystalLabel thay đổi 0/5 → 1/5 → 2/5 ... theo runtime.",
+        "Không tạo display counter riêng lệch gameplay.",
+        "Có MC-CN CIO13."
+      ],
+      "media_ids": [
+        "E2E-M02",
+        "E2E-V01"
+      ]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "ĐỌC–DỰ ĐOÁN checkpoint state→HUD",
+      "project_path": "B07_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Kích hoạt checkpoint baseline.",
+        "Trace checkpoint signal/callback → state → HUD reference.",
+        "Ghi mắt xích thiếu và prediction."
+      ],
+      "expected_results": [
+        "Xác định gameplay state đúng nhưng HUD chưa được gọi.",
+        "Xác định đúng HUD/checkpoint label target."
+      ],
+      "media_ids": [
+        "E2E-M03"
+      ]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "Sửa CIO14: truyền checkpoint state tới HUD",
+      "project_path": "B07_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Thêm call/update đúng tới HUD sau checkpoint activation.",
+        "F5: collect → checkpoint → hazard → respawn.",
+        "Quan sát cả hai labels.",
+        "Giải thích data/event/state flow."
+      ],
+      "expected_results": [
+        "CheckpointLabel đổi sang Đã kích hoạt.",
+        "CrystalLabel vẫn đúng.",
+        "Hazard respawn không làm HUD state sai.",
+        "Có MC-ML + MC-CN CIO14."
+      ],
+      "media_ids": [
+        "E2E-M04",
+        "E2E-V02"
+      ]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Lưu/mở lại + regression HUD",
+      "project_path": "B07_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Cmd+S, đóng Godot, mở lại.",
+        "F5: collect 1 item → checkpoint → hazard.",
+        "Hoàn thiện HO_SO_MINH_CHUNG_B07.md."
+      ],
+      "expected_results": [
+        "Code fix persist.",
+        "HUD bắt đầu session mới ở giá trị khởi tạo đúng.",
+        "Runtime updates đúng sau reopen.",
+        "Không tự động suy ra HUMAN_PASS."
+      ],
+      "media_ids": [
+        "E2E-M05",
+        "E2E-V03"
+      ]
+    }
+  ]
+}

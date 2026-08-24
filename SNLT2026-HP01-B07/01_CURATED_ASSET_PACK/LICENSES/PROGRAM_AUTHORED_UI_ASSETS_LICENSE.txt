@@ -1,0 +1,1 @@
+Các PNG trong 01_CURATED_ASSET_PACK/UI_ICONS được tạo trong dự án SNLT để chương trình cung cấp sẵn cho B07. Ownership C. Không có font file đi kèm. Không dùng bản thân icon/panel làm minh chứng năng lực cá nhân.

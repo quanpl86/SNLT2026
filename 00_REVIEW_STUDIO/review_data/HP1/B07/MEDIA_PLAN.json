@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B07",
+  "planned_media_count": 21,
+  "capture_gate": "DO_NOT_CAPTURE_REAL_HUMAN_EVIDENCE_UNTIL_ANTIGRAVITY_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "raw_policy": "RAW immutable; QA evidence and learning-media approval separated.",
+  "media_items": [
+    {
+      "media_id": "PB-M01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_PB_M01_Hero_HUD_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Hero B07.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "LESSON_COVER"
+      ],
+      "must_show": [
+        "Game window",
+        "HUD panel",
+        "CrystalLabel",
+        "CheckpointLabel",
+        "3D gameplay visible"
+      ]
+    },
+    {
+      "media_id": "PB-M02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_PB_M02_Control_Hierarchy_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "K13 Control/HUD structure.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "HUD Control hierarchy",
+        "CrystalLabel",
+        "CheckpointLabel",
+        "icons"
+      ]
+    },
+    {
+      "media_id": "PB-M03",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_PB_M03_Crystal_Data_Flow_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Runtime data→HUD.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES",
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "crystal_count",
+        "update_crystal_hud",
+        "CrystalLabel.text"
+      ]
+    },
+    {
+      "media_id": "PB-M04",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_PB_M04_Checkpoint_HUD_Flow_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "State→HUD flow.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "checkpoint callback",
+        "state update",
+        "hud.update_checkpoint_hud"
+      ]
+    },
+    {
+      "media_id": "PB-M05",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_PB_M05_HUD_Runtime_Updated_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Canonical runtime HUD.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "Crystal count >0",
+        "Checkpoint Đã kích hoạt",
+        "game visible"
+      ]
+    },
+    {
+      "media_id": "PB-V01",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B07_PB_V01_HUD_Runtime_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "MC-CN canonical.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "20–30s: collect 2 items → checkpoint → hazard/respawn; keep HUD visible."
+    },
+    {
+      "media_id": "PB-V02",
+      "target": "PROJECT_BASIC",
+      "test_id": "PB-06",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B07_PB_V02_Readability_Regression_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Readability/regression.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "15–20s course movement with HUD visible across different background areas."
+    },
+    {
+      "media_id": "SS-M01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_SS_M01_Starter_HUD_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Starter overview.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP"
+      ],
+      "must_show": [
+        "HUD skeleton",
+        "program icons",
+        "labels"
+      ]
+    },
+    {
+      "media_id": "SS-M02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-02",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_SS_M02_Crystal_Hardcoded_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Gap A before.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "update_crystal_hud(value,total)",
+        "hard-coded 0/5"
+      ]
+    },
+    {
+      "media_id": "SS-M03",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_SS_M03_Checkpoint_HUD_Call_Missing_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Gap B before.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "checkpoint callback",
+        "gameplay state update",
+        "missing HUD call/TODO"
+      ]
+    },
+    {
+      "media_id": "SS-V01",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-04",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B07_SS_V01_Crystal_HUD_Bug_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Baseline CIO13 gap.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "collect 2 items while CrystalLabel stays static."
+    },
+    {
+      "media_id": "SS-V02",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B07_SS_V02_Checkpoint_HUD_Bug_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Baseline CIO14 gap.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "checkpoint → hazard/respawn correct while CheckpointLabel stays inactive."
+    },
+    {
+      "media_id": "SS-M04",
+      "target": "STUDENT_STARTER",
+      "test_id": "SS-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_SS_M04_Evidence_Template_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Evidence template.",
+      "reuse_targets": [
+        "HS_STEP_BY_STEP",
+        "GV_LESSON_PLAN"
+      ],
+      "must_show": [
+        "CIO13 MC-CN section",
+        "CIO14 MC-ML+MC-CN section",
+        "prediction/change/result/explanation"
+      ]
+    },
+    {
+      "media_id": "E2E-M01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-01",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_E2E_M01_Clean_Copy_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "E2E baseline.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "Working copy",
+        "HUD baseline"
+      ]
+    },
+    {
+      "media_id": "E2E-M02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_E2E_M02_Crystal_HUD_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After CIO13 fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "value/total used in CrystalLabel.text"
+      ]
+    },
+    {
+      "media_id": "E2E-V01",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-03",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B07_E2E_V01_Crystal_Update_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "CIO13 MC-CN.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "F5 → collect 2–3 items → label increments visibly."
+    },
+    {
+      "media_id": "E2E-M03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-04",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_E2E_M03_Checkpoint_Flow_Before_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "CIO14 trace evidence.",
+      "reuse_targets": [
+        "HS_SUMMARY"
+      ],
+      "must_show": [
+        "state update",
+        "HUD call missing"
+      ]
+    },
+    {
+      "media_id": "E2E-M04",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_E2E_M04_Checkpoint_HUD_Fixed_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "After CIO14 fix.",
+      "reuse_targets": [
+        "HS_SUMMARY",
+        "GV_SLIDES"
+      ],
+      "must_show": [
+        "hud.update_checkpoint_hud(true) hoặc equivalent"
+      ]
+    },
+    {
+      "media_id": "E2E-V02",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-05",
+      "type": "video",
+      "required": true,
+      "canonical_filename": "B07_E2E_V02_Full_HUD_Flow_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "CIO14 MC-CN.",
+      "reuse_targets": [
+        "QA_ONLY",
+        "TEACHER_DEMO"
+      ],
+      "capture_instructions": "collect → checkpoint label changes → hazard/respawn → both HUD values remain correct."
+    },
+    {
+      "media_id": "E2E-M05",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "image",
+      "required": true,
+      "canonical_filename": "B07_E2E_M05_Reopen_HUD_RAW.png",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES",
+      "pedagogical_purpose": "Persistence.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "must_show": [
+        "After reopen",
+        "HUD initial values",
+        "project scene"
+      ]
+    },
+    {
+      "media_id": "E2E-V03",
+      "target": "E2E_WORKING_COPY",
+      "test_id": "E2E-06",
+      "type": "video",
+      "required": false,
+      "canonical_filename": "B07_E2E_V03_Reopen_Runtime_RAW.mov",
+      "save_dir": "SNLT2026-HP01-B07/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS",
+      "pedagogical_purpose": "Persistence runtime.",
+      "reuse_targets": [
+        "QA_ONLY"
+      ],
+      "capture_instructions": "After reopen: collect 1 item → checkpoint → hazard; verify HUD."
+    }
+  ],
+  "generated_visuals": [
+    {
+      "visual_id": "B07-GV01",
+      "title": "Gameplay data → HUD: một nguồn dữ liệu thật",
+      "type": "data_flow",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B07-GV02",
+      "title": "Control hierarchy: HUD panel, icons, labels",
+      "type": "ui_tree_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B07-GV03",
+      "title": "Signal/state → Main → HUD update",
+      "type": "process_diagram",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B07-GV04",
+      "title": "HUD đúng vs HUD hard-coded lệch dữ liệu",
+      "type": "comparison",
+      "owner": "CHATGPT"
+    },
+    {
+      "visual_id": "B07-GV05",
+      "title": "Ownership A/B/C của HUD B07",
+      "type": "ownership_diagram",
+      "owner": "CHATGPT"
+    }
+  ]
+}

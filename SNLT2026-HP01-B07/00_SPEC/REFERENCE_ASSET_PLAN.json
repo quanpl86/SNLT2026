@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B07",
+  "asset_strategy": "PROGRAM_AUTHORED_UI_ICONS_NO_STUDENT_ASSET_WORK",
+  "program_assets": [
+    {
+      "asset_id": "B07-UI-CRYSTAL",
+      "path": "01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CRYSTAL_PROGRAM.png",
+      "owner": "PROGRAM",
+      "role": "HUD crystal icon",
+      "student_editable": false
+    },
+    {
+      "asset_id": "B07-UI-CHECKPOINT-ON",
+      "path": "01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CHECKPOINT_PROGRAM.png",
+      "owner": "PROGRAM",
+      "role": "HUD checkpoint active icon",
+      "student_editable": false
+    },
+    {
+      "asset_id": "B07-UI-CHECKPOINT-OFF",
+      "path": "01_CURATED_ASSET_PACK/UI_ICONS/B07_ICON_CHECKPOINT_INACTIVE_PROGRAM.png",
+      "owner": "PROGRAM",
+      "role": "HUD checkpoint inactive icon",
+      "student_editable": false
+    },
+    {
+      "asset_id": "B07-UI-PANEL",
+      "path": "01_CURATED_ASSET_PACK/UI_ICONS/B07_HUD_PANEL_PROGRAM.png",
+      "owner": "PROGRAM",
+      "role": "HUD panel background",
+      "student_editable": false
+    }
+  ],
+  "font_policy": "Use Godot/system/default font in project. No external font file is included in this package.",
+  "kenney_assets": {
+    "status": "NOT_REQUIRED",
+    "reason": "Program UI assets are sufficient; avoid unnecessary external UI dependencies."
+  },
+  "blockbench_gallery": {
+    "status": "NOT_USED_IN_B07",
+    "reason": "B07 focuses K13 HUD, not asset creation."
+  }
+}
