@@ -14,9 +14,18 @@ Before implementing any lesson, read and obey:
 - `.agents/rules/HP1_BUILD_ORDER.md`
 - `.agents/rules/HP1_HANDOFF_CONTRACT.md`
 - `.agents/rules/HP1_HUMAN_VALIDATION.md`
+- `.agents/rules/HP1_AGENT_COLLABORATION_PROTOCOL.md`
 
 These rules override implementation convenience.
 Lesson-specific input remains authoritative for lesson details.
+
+## MANDATORY SHARED CONTEXT PROTOCOL
+Before starting any work:
+- Read `00_COORDINATION/TEAM_PROTOCOL.md`, `CURRENT_STATE.md`, `DECISION_LOG.md`, `HANDOFF_LOG.md`, `TASK_BOARD.md` and `LESSON_CONTEXT/Bxx_CONTEXT.md`.
+
+After completing any work:
+- Update status in `00_COORDINATION/TASK_BOARD.md`, `HANDOFF_LOG.md`, and `CURRENT_STATE.md`.
+- GitHub Repository is the official canonical shared memory.
 
 ## Mục tiêu
 Từ input duy nhất trong `SNLT2026-HP01-Bxx/00_INPUT_FROM_CHATGPT/`, tạo hai project:

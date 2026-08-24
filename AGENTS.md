@@ -20,6 +20,16 @@ Nếu hai tệp input mâu thuẫn và ảnh hưởng nội dung lõi, tạo `02
 - Đề xuất xử lý
 Sau đó DỪNG phần bị ảnh hưởng và chờ ChatGPT/người phụ trách quyết định.
 
+## 2.1. Mandatory Shared Context (Thủ tục bắt buộc với Coordination Layer)
+Trước khi bắt đầu bất kỳ việc gì:
+- Bắt buộc đọc bộ 7 quy tắc tại `.agents/rules/`.
+- Bắt buộc đọc tệp `00_COORDINATION/TEAM_PROTOCOL.md`, `CURRENT_STATE.md`, `DECISION_LOG.md`, `HANDOFF_LOG.md` và `TASK_BOARD.md`.
+
+Sau khi hoàn thành bất kỳ việc gì:
+- Cập nhật nhật ký bàn giao vào `00_COORDINATION/HANDOFF_LOG.md`, `TASK_BOARD.md` và `CURRENT_STATE.md`.
+- Repository GitHub là bộ nhớ dùng chung chính thức giữa ChatGPT và Antigravity.
+
+
 ## 3. Nguyên tắc sản xuất project
 Mỗi bài phải có đúng hai project chính:
 1. `SNLT2026-HP01-Bxx-PROJECT_BASIC` — sản phẩm hoàn chỉnh chuẩn cho giáo viên/đối chiếu.
