@@ -1,0 +1,1 @@
+Các tài sản B05_COLLECTIBLE_BLANK.bbmodel, B05_COLLECTIBLE_REFERENCE.bbmodel, B05_COLLECTIBLE_REFERENCE_PREVIEW.glb và B05_COLLECTIBLE_PLACEHOLDER_PROGRAM.glb được tạo trong dự án SNLT cho mục đích học tập nội bộ/chương trình. Ownership: chương trình cung cấp (C), trừ sản phẩm học sinh tạo từ blank template.

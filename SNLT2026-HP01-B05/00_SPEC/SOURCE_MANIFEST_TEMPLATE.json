@@ -1,0 +1,23 @@
+{
+  "lesson": "B05",
+  "records": [
+    {
+      "asset_id": "",
+      "source_type": "",
+      "source_id": "",
+      "source_owner": "",
+      "source_url": "",
+      "frozen_commit_or_version": "",
+      "source_path": "",
+      "local_path": "",
+      "license": "",
+      "license_evidence": "",
+      "sha256": "",
+      "program_modified": false,
+      "modification_notes": "",
+      "owner_class": "C",
+      "godot_4_7_1_import_test": "PENDING",
+      "blockbench_open_export_test": "PENDING"
+    }
+  ]
+}

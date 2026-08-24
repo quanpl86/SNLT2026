@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "hp": "HP1",
+  "hp_title": "Phiêu lưu Nền tảng 3D",
+  "lesson": "B05",
+  "lesson_title": "Vật phẩm trong thế giới",
+  "lesson_flow_status": "PARALLEL_AGENT_PREPARATION_WAITING_FOR_ANTIGRAVITY_IMPLEMENTATION",
+  "prior_lesson_status_policy": "DO_NOT_CHANGE_B01_B02_B03_B04_STATUS_AS_SIDE_EFFECT",
+  "engine": "Godot 4.7.1 stable",
+  "renderer": "Compatibility",
+  "editor_ui": "English",
+  "product": "Màn chơi có collectible + tài sản Blockbench do học sinh tạo",
+  "curriculum": {
+    "cio": [
+      {
+        "id": "HP1-CIO09",
+        "text": "Tạo vùng phát hiện và sự kiện thu thập vật phẩm.",
+        "sio": [
+          "HP1-SIO03"
+        ],
+        "ulo": [
+          "ULO-03",
+          "ULO-04"
+        ],
+        "k_new": [
+          "K10",
+          "K11"
+        ],
+        "k_prior": [
+          "K01",
+          "K02",
+          "K04",
+          "K07"
+        ]
+      },
+      {
+        "id": "HP1-CIO10",
+        "text": "Tạo và tích hợp một tài sản Blockbench vào cơ chế thu thập.",
+        "sio": [
+          "HP1-SIO04"
+        ],
+        "ulo": [
+          "ULO-02"
+        ],
+        "k_new": [
+          "K14"
+        ],
+        "k_prior": [
+          "K01",
+          "K02"
+        ]
+      }
+    ],
+    "evidence_required_by_assessment": {
+      "HP1-CIO09": [
+        "MC-CN"
+      ],
+      "HP1-CIO10": [
+        "MC-3D",
+        "MC-CN"
+      ]
+    },
+    "supporting_evidence_from_lo": {
+      "HP1-CIO09": [
+        "MC-ML"
+      ]
+    },
+    "ownership": {
+      "HP1-CIO09": "CHỈNH SỬA",
+      "HP1-CIO10": "TỰ TẠO"
+    },
+    "gate": "Cổng minh chứng CIO",
+    "lesson_minutes": 120,
+    "timebox": [
+      {
+        "block": "Gắn kết",
+        "minutes": 5
+      },
+      {
+        "block": "Khám phá",
+        "minutes": 10
+      },
+      {
+        "block": "Giải thích",
+        "minutes": 15
+      },
+      {
+        "block": "Vận dụng Godot + Blockbench",
+        "minutes": 55
+      },
+      {
+        "block": "Quiz ôn tập",
+        "minutes": 30,
+        "questions": 10
+      },
+      {
+        "block": "Chốt",
+        "minutes": 5
+      }
+    ],
+    "approved_question_ids": [
+      "HP1-B05-Q01",
+      "HP1-B05-Q02",
+      "HP1-B05-Q03",
+      "HP1-B05-Q04",
+      "HP1-B05-Q05",
+      "HP1-B05-Q06",
+      "HP1-B05-Q07",
+      "HP1-B05-Q08",
+      "HP1-B05-Q09",
+      "HP1-B05-Q10"
+    ],
+    "blockbench": true
+  },
+  "technical_sources": [
+    "PJT-004",
+    "PJT-003",
+    "GD-009",
+    "GD-010",
+    "BB-001",
+    "BB-002",
+    "GD-019",
+    "GD-020"
+  ],
+  "asset_package": {
+    "student_blank": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/BLOCKBENCH_TEMPLATES/B05_COLLECTIBLE_BLANK.bbmodel",
+    "teacher_reference": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/BLOCKBENCH_TEMPLATES/B05_COLLECTIBLE_REFERENCE.bbmodel",
+    "starter_placeholder": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/GLB_READY/B05_COLLECTIBLE_PLACEHOLDER_PROGRAM.glb",
+    "reference_preview": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/GLB_READY/B05_COLLECTIBLE_REFERENCE_PREVIEW.glb",
+    "validation_status": "BLOCKBENCH_OPEN_EXPORT_PENDING_ANTIGRAVITY"
+  },
+  "targets": [
+    {
+      "id": "PROJECT_BASIC",
+      "name": "Project Basic Canonical",
+      "folder": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-PROJECT_BASIC",
+      "mode": "READ_ONLY",
+      "description": "B4 prototype + collectible Area3D/Signal hoàn chỉnh + reference Blockbench asset đã được Antigravity export/validate."
+    },
+    {
+      "id": "STUDENT_STARTER",
+      "name": "Student Starter Canonical",
+      "folder": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER",
+      "mode": "READ_ONLY",
+      "description": "Collectible scene skeleton có Area3D/collider/placeholder visual; body_entered chưa kết nối. Học sinh tạo asset từ blank Blockbench template và thay visual."
+    },
+    {
+      "id": "E2E_WORKING_COPY",
+      "name": "E2E Working Copy",
+      "folder": "B05_HUMAN_TEST_COPY",
+      "source_folder": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER",
+      "mode": "MODIFY_AND_SAVE",
+      "description": "Connect signal → verify collectible → create Blockbench asset → export GLB → import/swap visual → collect → save/reopen/evidence."
+    }
+  ],
+  "execution_gate": {
+    "human_execution": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+    "runtime_pass": "NOT_CLAIMED",
+    "blockbench_pipeline_pass": "NOT_CLAIMED"
+  }
+}

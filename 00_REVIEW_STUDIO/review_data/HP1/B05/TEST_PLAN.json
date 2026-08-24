@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0",
+  "plan_version": "1.0",
+  "status": "OFFICIAL_CHATGPT_ISSUED",
+  "lesson": "B05",
+  "test_count_excluding_gate": 18,
+  "execution_gate": "BLOCKED_UNTIL_ANTIGRAVITY_IMPLEMENTATION_LOCAL_TEST_AND_CHATGPT_REVIEW",
+  "tests": [
+    {
+      "test_id": "HDC-00",
+      "target": "GLOBAL_PREFLIGHT",
+      "title": "Preflight B05: Godot + Blockbench + asset package",
+      "project_path": "SNLT2026-HP01-B05",
+      "action_steps": [
+        "Xác nhận Godot 4.7.1 stable, Compatibility, English UI.",
+        "Xác nhận Blockbench mở được trên máy kiểm thử và Generic Model khả dụng.",
+        "Xác nhận B05 có K_NEW K10,K11,K14; không mở K12/K13/K29.",
+        "Xác nhận asset pack B05 có blank/reference .bbmodel và program placeholder/reference-preview .glb.",
+        "Xác nhận B01–B04 không bị đổi trạng thái chỉ vì thêm B05."
+      ],
+      "expected_results": [
+        "Môi trường đủ cho Godot + Blockbench.",
+        "Asset files tồn tại nhưng Blockbench open/export chỉ PASS sau test thực tế.",
+        "Không có side effect trạng thái bài trước."
+      ],
+      "media_ids": []
+    },
+    {
+      "test_id": "PB-01",
+      "target": "PROJECT_BASIC",
+      "title": "Mở Project Basic B05 với collectible hoàn chỉnh",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở project, main scene và collectible scene.",
+        "Quan sát Scene Tree và Output; không sửa."
+      ],
+      "expected_results": [
+        "Project mở không blocker.",
+        "Course B4 vẫn nhận diện được.",
+        "Collectible scene có Area3D root, CollisionShape3D và VisualAnchor."
+      ],
+      "media_ids": [
+        "PB-M01"
+      ]
+    },
+    {
+      "test_id": "PB-02",
+      "target": "PROJECT_BASIC",
+      "title": "Area3D detection zone canonical",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở collectible.tscn.",
+        "Chọn Area3D và CollisionShape3D.",
+        "Kiểm tra shape/size/layers/masks đủ để phát hiện Player."
+      ],
+      "expected_results": [
+        "Area3D là vùng phát hiện, không phải vật cản gameplay.",
+        "CollisionShape3D bao quanh collectible hợp lý.",
+        "Player có collision layer/mask tương thích."
+      ],
+      "media_ids": [
+        "PB-M02"
+      ]
+    },
+    {
+      "test_id": "PB-03",
+      "target": "PROJECT_BASIC",
+      "title": "Signal chain canonical",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở collectible.gd và main/controller nhận signal.",
+        "Theo dấu body_entered → _on_body_entered → collected.emit(value) → receiver.",
+        "Xác nhận queue_free chỉ xảy ra sau collect hợp lệ."
+      ],
+      "expected_results": [
+        "Signal chain rõ, không polling liên tục để kiểm tra khoảng cách.",
+        "Collectible chỉ thu một lần.",
+        "Receiver tăng collected_count hoặc trạng thái tương đương không cần HUD."
+      ],
+      "media_ids": [
+        "PB-M03"
+      ]
+    },
+    {
+      "test_id": "PB-04",
+      "target": "PROJECT_BASIC",
+      "title": "Runtime thu thập vật phẩm",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "F5.",
+        "Đi Player vào ít nhất 2 collectible.",
+        "Quan sát collectible biến mất và Output/debug count thay đổi."
+      ],
+      "expected_results": [
+        "Area3D phát hiện Player.",
+        "Mỗi collectible chỉ cộng đúng một lần.",
+        "Không yêu cầu HUD vì B7 mới học UI."
+      ],
+      "media_ids": [
+        "PB-M04",
+        "PB-V01"
+      ]
+    },
+    {
+      "test_id": "PB-05",
+      "target": "PROJECT_BASIC",
+      "title": "Blockbench reference → GLB → Godot",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Mở B05_COLLECTIBLE_REFERENCE.bbmodel trong Blockbench.",
+        "Xuất GLB theo pipeline BB-001.",
+        "Import GLB vừa xuất vào bản thử Project Basic hoặc validation workspace.",
+        "So sánh kích thước/hướng với collectible canonical."
+      ],
+      "expected_results": [
+        "Reference .bbmodel mở được.",
+        "GLB export được và Godot 4.7.1 import được.",
+        "Model hiển thị đúng orientation/scale sau điều chỉnh hợp lý.",
+        "Không dùng preview GLB làm bằng chứng rằng Blockbench export đã PASS."
+      ],
+      "media_ids": [
+        "PB-M05",
+        "PB-M06"
+      ]
+    },
+    {
+      "test_id": "PB-06",
+      "target": "PROJECT_BASIC",
+      "title": "Regression B04 sau thêm collectible",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-PROJECT_BASIC/project.godot",
+      "action_steps": [
+        "Chạy course từ đầu qua phần đại diện B4.",
+        "Kiểm tra movement/jump/collision/camera.",
+        "Thu một collectible trên đường."
+      ],
+      "expected_results": [
+        "B1–B4 core không bị phá.",
+        "Collectible bổ sung hành vi mới nhưng không chặn movement.",
+        "Không có hazard/checkpoint/HUD mới."
+      ],
+      "media_ids": [
+        "PB-V02"
+      ]
+    },
+    {
+      "test_id": "SS-01",
+      "target": "STUDENT_STARTER",
+      "title": "Mở Starter B05 với placeholder visual",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở project và collectible.tscn.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Starter mở không blocker.",
+        "Placeholder program GLB hiển thị.",
+        "Area3D/collider/script skeleton tồn tại."
+      ],
+      "media_ids": [
+        "SS-M01"
+      ]
+    },
+    {
+      "test_id": "SS-02",
+      "target": "STUDENT_STARTER",
+      "title": "Learning gap: body_entered chưa kết nối",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở collectible.gd hoặc Node signal connection view.",
+        "Xác nhận callback đã có nhưng body_entered chưa nối.",
+        "Không sửa."
+      ],
+      "expected_results": [
+        "Khoảng trống K11 rõ và có thể sửa bằng một thao tác/kết nối có hướng dẫn.",
+        "Không có kết nối ẩn ở nơi khác làm mất gap."
+      ],
+      "media_ids": [
+        "SS-M02"
+      ]
+    },
+    {
+      "test_id": "SS-03",
+      "target": "STUDENT_STARTER",
+      "title": "Baseline runtime: đi qua collectible chưa thu",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "F5.",
+        "Đi qua placeholder collectible.",
+        "Quan sát Output và scene."
+      ],
+      "expected_results": [
+        "Collectible không được thu vì signal chưa kết nối.",
+        "Không crash; movement/collision B4 vẫn chạy."
+      ],
+      "media_ids": [
+        "SS-V01"
+      ]
+    },
+    {
+      "test_id": "SS-04",
+      "target": "STUDENT_STARTER",
+      "title": "Blank Blockbench template và nhiệm vụ tự tạo",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở B05_COLLECTIBLE_BLANK.bbmodel trong Blockbench.",
+        "Đối chiếu tiêu chí Student Asset Spec.",
+        "Không thêm geometry ở test baseline."
+      ],
+      "expected_results": [
+        "File mở được dưới Generic Model hoặc format tương đương phù hợp.",
+        "Template không chứa geometry làm sẵn.",
+        "Học sinh phải tự tạo silhouette/geometry."
+      ],
+      "media_ids": [
+        "SS-M03"
+      ]
+    },
+    {
+      "test_id": "SS-05",
+      "target": "STUDENT_STARTER",
+      "title": "Ranh giới integration visual vs Area3D",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Chọn Collectible/VisualAnchor và CollisionShape3D.",
+        "Đọc hướng dẫn swap asset."
+      ],
+      "expected_results": [
+        "Học sinh thay visual dưới VisualAnchor, không thay Area3D root.",
+        "Collider được kiểm tra/điều chỉnh có chủ đích nếu asset kích thước thay đổi.",
+        "Không dùng imported GLB scene làm detection root."
+      ],
+      "media_ids": [
+        "SS-M04"
+      ]
+    },
+    {
+      "test_id": "SS-06",
+      "target": "STUDENT_STARTER",
+      "title": "Evidence template CIO09/CIO10",
+      "project_path": "SNLT2026-HP01-B05/SNLT2026-HP01-B05-STUDENT_STARTER/project.godot",
+      "action_steps": [
+        "Mở evidence/HO_SO_MINH_CHUNG_B05.md.",
+        "Kiểm tra các mục signal chain, runtime collect, .bbmodel, .glb, before/after, explanation."
+      ],
+      "expected_results": [
+        "MC-CN và MC-3D có chỗ ghi rõ.",
+        "Tài sản cuối phải là sản phẩm học sinh, không phải chỉ giữ placeholder.",
+        "Không có đáp án quiz."
+      ],
+      "media_ids": [
+        "SS-M05"
+      ]
+    },
+    {
+      "test_id": "E2E-01",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo Working Copy sạch B05",
+      "project_path": "B05_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Copy Starter → B05_HUMAN_TEST_COPY.",
+        "Xác nhận placeholder còn đó và body_entered chưa kết nối."
+      ],
+      "expected_results": [
+        "Working Copy đúng baseline Starter."
+      ],
+      "media_ids": [
+        "E2E-M01"
+      ]
+    },
+    {
+      "test_id": "E2E-02",
+      "target": "E2E_WORKING_COPY",
+      "title": "ĐỌC–DỰ ĐOÁN–KẾT NỐI body_entered",
+      "project_path": "B05_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Đọc Area3D/callback và ghi dự đoán.",
+        "Kết nối body_entered → _on_body_entered theo hướng dẫn.",
+        "Không sửa asset."
+      ],
+      "expected_results": [
+        "Có dự đoán trước khi run.",
+        "Signal connection tồn tại đúng target callback.",
+        "Không có lỗi cú pháp."
+      ],
+      "media_ids": [
+        "E2E-M02"
+      ]
+    },
+    {
+      "test_id": "E2E-03",
+      "target": "E2E_WORKING_COPY",
+      "title": "CHẠY–GIẢI THÍCH collectible logic bằng placeholder",
+      "project_path": "B05_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "F5.",
+        "Thu placeholder collectible.",
+        "Quan sát count/debug output và queue_free.",
+        "Giải thích chuỗi Area3D → signal → callback → collected event."
+      ],
+      "expected_results": [
+        "Collectible được thu đúng một lần.",
+        "Người kiểm thử giải thích được signal chain, không chỉ nói chạy được."
+      ],
+      "media_ids": [
+        "E2E-V01"
+      ]
+    },
+    {
+      "test_id": "E2E-04",
+      "target": "E2E_WORKING_COPY",
+      "title": "Tạo asset Blockbench của học sinh và export GLB",
+      "project_path": "B05_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Mở B05_COLLECTIBLE_BLANK.bbmodel.",
+        "Tạo collectible theo Student Asset Spec.",
+        "Lưu thành file .bbmodel có tên học sinh/phiên bản.",
+        "Export binary glTF/GLB.",
+        "Lưu .bbmodel và .glb vào student_assets."
+      ],
+      "expected_results": [
+        "Asset có ít nhất 3 phần/element hoặc cấu trúc hình học tương đương có ý nghĩa.",
+        "Silhouette khác placeholder/reference, không chỉ đổi màu.",
+        ".bbmodel và .glb đều tồn tại.",
+        "Export thành công không lỗi blocker."
+      ],
+      "media_ids": [
+        "E2E-M03",
+        "E2E-M04"
+      ]
+    },
+    {
+      "test_id": "E2E-05",
+      "target": "E2E_WORKING_COPY",
+      "title": "Import/swap asset vào Collectible và runtime collect",
+      "project_path": "B05_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Import GLB học sinh vào Godot.",
+        "Instance dưới VisualAnchor và gỡ/ẩn placeholder.",
+        "Điều chỉnh scale/orientation visual trước; kiểm tra collider.",
+        "F5 và thu collectible."
+      ],
+      "expected_results": [
+        "GLB hiển thị đúng kích thước/hướng.",
+        "Area3D/collider/signal logic vẫn hoạt động.",
+        "Asset học sinh thực sự tham gia gameplay collectible."
+      ],
+      "media_ids": [
+        "E2E-M05",
+        "E2E-V02"
+      ]
+    },
+    {
+      "test_id": "E2E-06",
+      "target": "E2E_WORKING_COPY",
+      "title": "Lưu/mở lại và hoàn tất minh chứng B05",
+      "project_path": "B05_HUMAN_TEST_COPY/project.godot",
+      "action_steps": [
+        "Cmd+S, đóng Godot và Blockbench.",
+        "Mở lại project.",
+        "Xác nhận GLB vẫn import/instance đúng.",
+        "F5 và thu collectible lại ở phiên mới.",
+        "Hoàn thiện HO_SO_MINH_CHUNG_B05.md."
+      ],
+      "expected_results": [
+        "Persistence đúng.",
+        "MC-CN có runtime evidence.",
+        "MC-3D có .bbmodel + .glb + ảnh quy trình/asset + giải thích.",
+        "Không tự động suy ra HUMAN_PASS."
+      ],
+      "media_ids": [
+        "E2E-M06",
+        "E2E-V03"
+      ]
+    }
+  ]
+}

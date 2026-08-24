@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B05",
+  "format": "Generic Model / free",
+  "student_work": {
+    "start_file": "B05_COLLECTIBLE_BLANK.bbmodel",
+    "required_output": [
+      "student_collectible.bbmodel",
+      "student_collectible.glb"
+    ],
+    "minimum_design_requirements": [
+      "Ít nhất 3 phần/element có ý nghĩa hoặc cấu trúc hình học tương đương.",
+      "Silhouette khác placeholder/reference; không chỉ đổi màu.",
+      "Kích thước hợp lý để tích hợp với Player/course.",
+      "Origin/hướng đủ hợp lý để đặt dưới VisualAnchor.",
+      "Texture/material không bắt buộc; hình học và pipeline là trọng tâm."
+    ],
+    "export": "binary glTF / GLB",
+    "evidence": [
+      ".bbmodel",
+      ".glb",
+      "Blockbench screenshot",
+      "Godot import screenshot",
+      "runtime collect video",
+      "short explanation"
+    ]
+  },
+  "teacher_reference": {
+    "file": "B05_COLLECTIBLE_REFERENCE.bbmodel",
+    "purpose": "Minh họa cấu trúc 3-part collectible; không được phát cho học sinh như sản phẩm để nộp nguyên trạng."
+  }
+}

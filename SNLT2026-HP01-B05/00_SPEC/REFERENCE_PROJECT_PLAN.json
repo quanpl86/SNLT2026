@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B05",
+  "projects": [
+    {
+      "source_id": "PJT-004",
+      "name": "Starter Kit 3D Platformer",
+      "owner": "KenneyNL",
+      "role": "PRIMARY_REFERENCE_FOR_COLLECTIBLE_ARCHITECTURE",
+      "repo": "https://github.com/KenneyNL/Starter-Kit-3D-Platformer",
+      "frozen_commit": "3fa8a04b1c01ab23db43123d4ce814a34c3fc7f0",
+      "inspected_files": [
+        "objects/coin.gd",
+        "objects/coin.tscn",
+        "scenes/main.tscn",
+        "models/block-coin.glb"
+      ],
+      "use_policy": "REFERENCE_CONSTRUCT_ONLY; do not copy advanced/audio/particles behavior into student core unless explicitly justified.",
+      "license_code": "MIT",
+      "license_assets": "CC0"
+    },
+    {
+      "source_id": "PJT-003",
+      "name": "Your First 3D Game",
+      "owner": "Godot Engine",
+      "role": "OFFICIAL_3D_GAME_REFERENCE",
+      "copy_policy": "REFERENCE_ONLY_UNLESS_EXACT_FILE_LICENSE_AUDITED"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "lesson": "B05",
+  "status": "CHATGPT_PACKAGE_CREATED_PENDING_ANTIGRAVITY_RUNTIME_VALIDATION",
+  "records": [
+    {
+      "file": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/BLOCKBENCH_TEMPLATES/B05_COLLECTIBLE_BLANK.bbmodel",
+      "sha256": "84dd392d291c883de46079cf3b60cf353951d9d14964026ea88ee64e0059977d",
+      "size_bytes": 451
+    },
+    {
+      "file": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/BLOCKBENCH_TEMPLATES/B05_COLLECTIBLE_REFERENCE.bbmodel",
+      "sha256": "c70a8c4e18f6c7544a878900f493c0141c772cedb44fbdfdb35587ccf5083526",
+      "size_bytes": 4898
+    },
+    {
+      "file": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/GLB_READY/B05_COLLECTIBLE_PLACEHOLDER_PROGRAM.glb",
+      "sha256": "fb61f412e4c29632581f1675cdca1d1a7d36c3f279b6878f58d0e677f43f3e7f",
+      "size_bytes": 1284
+    },
+    {
+      "file": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/GLB_READY/B05_COLLECTIBLE_REFERENCE_PREVIEW.glb",
+      "sha256": "86a2d105452166b3db56c15525d274156f46e773263faa5c892ff8aa806b7b37",
+      "size_bytes": 2788
+    },
+    {
+      "file": "SNLT2026-HP01-B05/01_CURATED_ASSET_PACK/LICENSES/PROGRAM_AUTHORED_ASSETS_LICENSE.txt",
+      "sha256": "7c7f59638457aa16127d126e79539bc5ed4f196cdfb5fe62cc441f5cb48bafb7",
+      "size_bytes": 356
+    }
+  ]
+}
