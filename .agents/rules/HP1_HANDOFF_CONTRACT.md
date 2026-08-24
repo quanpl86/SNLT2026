@@ -19,7 +19,34 @@ Không chứa:
 - cache/
 - temporary build files/
 
-Trong 02_QA/HANDOFF_REPORT.md phải chứa 10 câu báo cáo chuẩn:
+---
+
+## GIT WORKFLOW RULES
+
+- `main` = locked/released lesson state.
+- Mỗi bài đang phát triển dùng branch riêng: `b01`, `b02`, ..., `b12`.
+- Không push trực tiếp thay đổi triển khai bài mới vào `main`.
+- Mỗi gate quan trọng phải có commit riêng:
+  - `Bxx: project basic build`
+  - `Bxx: static qa pass`
+  - `Bxx: runtime qa pass`
+  - `Bxx: derive student starter`
+  - `Bxx: generate verified docs`
+  - `Bxx: human test fixes`
+  - `Bxx: ready for lock`
+- Trước khi merge vào `main` phải có:
+  - Project Basic QA PASS
+  - Student Starter QA PASS
+  - Human validation PASS
+  - ChatGPT review APPROVED
+  - READY_FOR_LOCK
+- Merge vào `main` chỉ sau khi người dùng phê duyệt.
+
+---
+
+## MẪU CẤU TRÚC HANDOFF_REPORT.md (BAO GỒM GIT METADATA)
+
+Trong `02_QA/HANDOFF_REPORT.md` phải chứa các câu báo cáo chuẩn:
 
 LESSON:
 VERSION:
@@ -43,5 +70,11 @@ STUDENT_WORK_BOUNDARY_CONFIRMED:
 OPEN_FINDINGS:
 
 FILES_CHANGED_AFTER_HUMAN_TEST:
+
+GIT_BRANCH:
+HEAD_COMMIT:
+BASE_COMMIT:
+PR_NUMBER:
+REVIEW_STATUS:
 
 RECOMMENDED_STATUS:

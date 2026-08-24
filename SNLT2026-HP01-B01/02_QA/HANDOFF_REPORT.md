@@ -17,15 +17,11 @@ WEB_QA: NOT_TESTED
 OPEN_FINDINGS: NONE (Finding 1: NON_PROJECT_EDITOR_ERROR; Finding 2: PROJECT_ERROR_FIXED)
 FILES_CHANGED_AFTER_HUMAN_TEST: PROJECT_BASIC/scenes/main.tscn (Player transform rotation cleaned to 0°)
 
-PROJECT_BASIC_CANONICAL_VALUES:
-Player.Position = (1.5, 0.05, 0)
-View.Rotation = (0, 25, 0)
-
-STUDENT_STARTER_BASELINE_VALUES:
-Player.Position = (0, 0.05, 0)
-View.Rotation = (0, 0, 0)
-
-STUDENT_WORK_BOUNDARY_CONFIRMED: YES
+GIT_BRANCH: b01
+HEAD_COMMIT: f61ff7b5851bba16cf3d25ee6fe1ca92b0277244
+BASE_COMMIT: c1e70cea45b52a4d713e9134806c9b54127e61f5
+PR_NUMBER: N/A (Initial Branch setup)
+REVIEW_STATUS: READY_FOR_CHATGPT_REVIEW
 
 RECOMMENDED_STATUS: READY_FOR_HUMAN_TEST
 ```
@@ -71,6 +67,6 @@ RECOMMENDED_STATUS: READY_FOR_HUMAN_TEST
 | `02_QA/QA_DIFF_STARTER_VS_MASTER.md` | ✅ | Báo cáo so sánh khác biệt Basic ↔ Starter |
 | `02_QA/HUMAN_VALIDATION.md` | ✅ | Báo cáo kiểm thử thực tế bởi Con người |
 | `02_QA/QA_GODOT_4_7_1_PILOT.md` | ✅ | Báo cáo thử nghiệm Pilot Godot 4.7.1 |
-| `02_QA/HANDOFF_REPORT.md` | ✅ | Tóm tắt bàn giao 10 câu tiêu chuẩn |
+| `02_QA/HANDOFF_REPORT.md` | ✅ | Tóm tắt bàn giao 10 câu tiêu chuẩn + Git Metadata |
 | `99_RELEASE/RELEASE_MANIFEST_B01.md` | ✅ | Manifest phiên bản bàn giao v1.0 |
 | `03_EVIDENCE_SCREENSHOTS/` | ✅ | Thư mục hình ảnh minh chứng |
