@@ -1,34 +1,9 @@
-# QA STATIC — B03 (Kiểm thử Tĩnh)
+# STATIC QA REPORT - BÀI 03
 
-**BÀI HỌC**: B03 — Nhảy qua thử thách  
-**NGÀY THỰC HIỆN**: 2026-08-24  
-**THỰC HIỆN BỞI**: Antigravity  
-**KẾT QUẢ TỔNG THỂ**: `PASS`
-
----
-
-## 1. CẤU TRÚC THƯ MỤC VÀ RESOURCE `res://`
-
-- [x] Thư mục `SNLT2026-HP01-B03-PROJECT_BASIC` tồn tại và khởi tạo thành công trên Godot 4.7.1 stable.
-- [x] Thư mục `SNLT2026-HP01-B03-STUDENT_STARTER` tồn tại và khởi tạo thành công trên Godot 4.7.1 stable.
-- [x] Không có tệp tin hoặc đường dẫn `res://` bị rác hoặc mất liên kết.
-
----
-
-## 2. KIỂM TRA MÃ NGUỒN GDSCRIPT (GDSCRIPT PARSE)
-
-### `SNLT2026-HP01-B03-PROJECT_BASIC/scripts/player.gd`
-- [x] Chứa cơ chế nhảy hợp lệ chuẩn: `if Input.is_action_just_pressed("jump") and is_on_floor(): velocity.y = jump_speed`.
-- [x] Gán vector di chuyển Z hoàn chỉnh: `velocity.z = direction.z * move_speed`.
-- [x] Không mở kiến thức B04+ (Area3D/Signal/Collectible/Checkpoint).
-
-### `SNLT2026-HP01-B03-STUDENT_STARTER/scripts/player.gd`
-- [x] Gap A: `velocity.z = 0.0` (W/S chưa tạo chuyển động Z).
-- [x] Gap B: `if Input.is_action_just_pressed("jump"):` (thiếu `and is_on_floor()`, tạo ra lỗi air-jump có thể chẩn đoán).
-- [x] Mẫu mã sạch, cho phép học sinh đọc, dự đoán, tái hiện và sửa lỗi.
-
----
-
-## 3. KẾT LUẬN
-
-Cả Project Basic và Student Starter của B03 đạt 100% tiêu chuẩn QA Tĩnh.
+- **ST-01 (Cấu trúc thư mục):** PASS. Đầy đủ các file `project.godot`, `main.tscn`, `player.gd`, `player.tscn` và các assets trong thư mục `PROJECT_BASIC` và `STUDENT_STARTER`.
+- **ST-02 (Tài nguyên hợp lệ):** PASS. Tất cả các tài nguyên (nhân vật Oobi, khối sci-fi, food) đều tải đúng chuẩn Kenney (.glb và .png), texture colormap đầy đủ.
+- **ST-03 (Script Parse/Syntax):** PASS. Mã nguồn `player.gd` parse thành công, không có lỗi cú pháp.
+- **ST-04 (Tham chiếu Scene):** PASS. Không phát hiện liên kết hỏng (`missing dependency`).
+- **ST-05 (Ownership):** PASS. Khối mã dành cho học sinh (B03) được đặt trong vùng comment `# === B03 — VÙNG PHẢI HIỂU / CHỈNH SỬA ===` rõ ràng.
+- **ST-06 (Starter Gaps):** PASS. Lỗ hổng `velocity.z = 0.0` và thiếu `and is_on_floor()` được thiết lập chính xác trong file `player.gd` của Starter.
+- **ST-07 (Tên dự án):** PASS. Tên dự án trong cả 2 bản đều là `HP01 B03 - Nhay qua thu thach`.
