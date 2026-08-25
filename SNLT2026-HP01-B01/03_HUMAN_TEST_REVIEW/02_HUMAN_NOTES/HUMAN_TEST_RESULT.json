@@ -1,0 +1,429 @@
+{
+  "lesson": "B01",
+  "hp": "HP1",
+  "is_smoke": false,
+  "results": {
+    "HDC-00": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T10:46:06.496Z"
+    },
+    "PB-01": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T10:47:34.527Z"
+    },
+    "PB-02": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T10:59:07.626Z"
+    },
+    "PB-03": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:06:31.173Z"
+    },
+    "PB-04": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:10:58.422Z"
+    },
+    "PB-05": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:11:46.488Z"
+    },
+    "PB-06": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:12:23.295Z"
+    },
+    "SS-01": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:13:24.464Z"
+    },
+    "SS-02": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:14:23.295Z"
+    },
+    "SS-03": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:15:04.246Z"
+    },
+    "SS-04": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:16:03.936Z"
+    },
+    "SS-05": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:16:44.395Z"
+    },
+    "SS-06": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:18:06.646Z"
+    },
+    "E2E-01": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:18:16.846Z"
+    },
+    "E2E-02": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:19:42.878Z"
+    },
+    "E2E-03": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:22:45.318Z"
+    },
+    "E2E-04": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:26:44.234Z"
+    },
+    "E2E-05": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:28:36.513Z"
+    },
+    "E2E-06": {
+      "status": "PASS",
+      "note": "",
+      "technical_status": "NOT_REVIEWED",
+      "learning_media_status": "NOT_REVIEWED",
+      "updated_at": "2026-08-24T11:31:39.713Z"
+    }
+  },
+  "findings": [],
+  "media_uploads": {
+    "PB-M01": {
+      "canonical_filename": "B01_PB_M01_Player_Canonical_RAW.png",
+      "original_canonical": "B01_PB_M01_Player_Canonical_RAW.png",
+      "test_id": "PB-02",
+      "media_id": "PB-M01",
+      "sha256": "f3e1c0eb20b2862e1fe652c5e304354adfacee207655ef768a723430ae925366",
+      "size_bytes": 728421,
+      "captured_at": "2026-08-24T10:48:52.226Z",
+      "relative_path": "03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_PB_M01_Player_Canonical_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "PB-M02": {
+      "canonical_filename": "B01_PB_M02_View_Canonical_RAW.png",
+      "original_canonical": "B01_PB_M02_View_Canonical_RAW.png",
+      "test_id": "PB-03",
+      "media_id": "PB-M02",
+      "sha256": "2db6180134f8745e3d4488c846892a9b3d3c7266563a834199a0e999a404ebb2",
+      "size_bytes": 831766,
+      "captured_at": "2026-08-24T11:06:27.475Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_PB_M02_View_Canonical_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "PB-M03": {
+      "canonical_filename": "B01_PB_M03_Hero_Gameplay_RAW_RETAKE_01.png",
+      "original_canonical": "B01_PB_M03_Hero_Gameplay_RAW.png",
+      "test_id": "PB-04",
+      "media_id": "PB-M03",
+      "sha256": "318d9c07186cdb3f4ae93ea6ff6eb4fe4a4c002d965edad9311e95c7a8655d94",
+      "size_bytes": 901466,
+      "captured_at": "2026-08-24T11:10:06.535Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_PB_M03_Hero_Gameplay_RAW_RETAKE_01.png",
+      "is_smoke": false,
+      "is_retake": true,
+      "status": "RAW_EVIDENCE"
+    },
+    "PB-V01": {
+      "canonical_filename": "B01_PB_V01_Canonical_Gameplay_RAW.mov",
+      "original_canonical": "B01_PB_V01_Canonical_Gameplay_RAW.mov",
+      "test_id": "PB-04",
+      "media_id": "PB-V01",
+      "sha256": "ae60522d9c664ccd91cf18bb335d2220941c4a416886baa1a1f26530a71cdd94",
+      "size_bytes": 4258665,
+      "captured_at": "2026-08-24T11:10:53.433Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS/B01_PB_V01_Canonical_Gameplay_RAW.mov",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "PB-V02": {
+      "canonical_filename": "B01_PB_V02_Fall_Reset_RAW.mov",
+      "original_canonical": "B01_PB_V02_Fall_Reset_RAW.mov",
+      "test_id": "PB-05",
+      "media_id": "PB-V02",
+      "sha256": "c4918e5835299fb4927e142f34b3d557728a1b86cb9f156891611ddc2a634367",
+      "size_bytes": 7884287,
+      "captured_at": "2026-08-24T11:11:40.604Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS/B01_PB_V02_Fall_Reset_RAW.mov",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "PB-M04": {
+      "canonical_filename": "B01_PB_M04_Goal_Gameplay_RAW.png",
+      "original_canonical": "B01_PB_M04_Goal_Gameplay_RAW.png",
+      "test_id": "PB-06",
+      "media_id": "PB-M04",
+      "sha256": "be4664839834d0e57b8150ed2ed2228182022bf7f2c5c23df85af573ebe20f19",
+      "size_bytes": 923900,
+      "captured_at": "2026-08-24T11:12:20.080Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_PB_M04_Goal_Gameplay_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "SS-M01": {
+      "canonical_filename": "B01_SS_M01_Project_Open_RAW.png",
+      "original_canonical": "B01_SS_M01_Project_Open_RAW.png",
+      "test_id": "SS-01",
+      "media_id": "SS-M01",
+      "sha256": "98893e53fbbcac341ba6aba22bef5a3d6a1d9104625f3d1466b3a8d2eefab7a7",
+      "size_bytes": 370454,
+      "captured_at": "2026-08-24T11:13:22.129Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_SS_M01_Project_Open_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "SS-M02": {
+      "canonical_filename": "B01_SS_M02_Scene_Tree_RAW.png",
+      "original_canonical": "B01_SS_M02_Scene_Tree_RAW.png",
+      "test_id": "SS-02",
+      "media_id": "SS-M02",
+      "sha256": "f4b3790fbbc4b8cdc7aaffd637651257da1a5e76a51d7094b890b5e22c390910",
+      "size_bytes": 790786,
+      "captured_at": "2026-08-24T11:14:19.279Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_SS_M02_Scene_Tree_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "SS-M03": {
+      "canonical_filename": "B01_SS_M03_Player_Subscene_RAW.png",
+      "original_canonical": "B01_SS_M03_Player_Subscene_RAW.png",
+      "test_id": "SS-03",
+      "media_id": "SS-M03",
+      "sha256": "38eb84bc3235ca6e4b3065c46252547ec0e9e828aa230e2fe1da1755adb510a0",
+      "size_bytes": 1035062,
+      "captured_at": "2026-08-24T11:14:52.629Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_SS_M03_Player_Subscene_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "SS-M04": {
+      "canonical_filename": "B01_SS_M04_Player_Baseline_RAW.png",
+      "original_canonical": "B01_SS_M04_Player_Baseline_RAW.png",
+      "test_id": "SS-04",
+      "media_id": "SS-M04",
+      "sha256": "8f2cda03d579f5166d6d0b286144c1516fce3a068e249a56b8029e3f450c1cde",
+      "size_bytes": 764762,
+      "captured_at": "2026-08-24T11:15:58.079Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_SS_M04_Player_Baseline_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "SS-M05": {
+      "canonical_filename": "B01_SS_M05_View_Baseline_RAW.png",
+      "original_canonical": "B01_SS_M05_View_Baseline_RAW.png",
+      "test_id": "SS-05",
+      "media_id": "SS-M05",
+      "sha256": "7f53f6103528f1d4cf0723d07f1e954d1fe09964709aaf4935f8a8e712118fa4",
+      "size_bytes": 737952,
+      "captured_at": "2026-08-24T11:16:41.779Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_SS_M05_View_Baseline_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "SS-M06": {
+      "canonical_filename": "B01_SS_M06_Baseline_Game_RAW.png",
+      "original_canonical": "B01_SS_M06_Baseline_Game_RAW.png",
+      "test_id": "SS-06",
+      "media_id": "SS-M06",
+      "sha256": "878d7c76b0c8414c5bcb9724ddc1962632ca765de6b9780c518817476f6a8438",
+      "size_bytes": 936360,
+      "captured_at": "2026-08-24T11:17:23.628Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_SS_M06_Baseline_Game_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "SS-V01": {
+      "canonical_filename": "B01_SS_V01_Baseline_Movement_RAW.mov",
+      "original_canonical": "B01_SS_V01_Baseline_Movement_RAW.mov",
+      "test_id": "SS-06",
+      "media_id": "SS-V01",
+      "sha256": "bdf5387591d0698cb783514f4a665da52aea14128fe33e942f33048696bb08c4",
+      "size_bytes": 5731428,
+      "captured_at": "2026-08-24T11:18:03.917Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS/B01_SS_V01_Baseline_Movement_RAW.mov",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-M02": {
+      "canonical_filename": "B01_E2E_M02_Player_X_1_5_Run_RAW.png",
+      "original_canonical": "B01_E2E_M02_Player_X_1_5_Run_RAW.png",
+      "test_id": "E2E-03",
+      "media_id": "E2E-M02",
+      "sha256": "2244afa95a2cec8095deb79aad72dfccea9be574dc2b08e497ca3dd13dbfdcce",
+      "size_bytes": 976630,
+      "captured_at": "2026-08-24T11:22:06.552Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_E2E_M02_Player_X_1_5_Run_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-M01": {
+      "canonical_filename": "B01_E2E_M01_Player_X_1_5_Editor_RAW.png",
+      "original_canonical": "B01_E2E_M01_Player_X_1_5_Editor_RAW.png",
+      "test_id": "E2E-03",
+      "media_id": "E2E-M01",
+      "sha256": "8da0c4e5092cc8cb8e20396648c00d51a57ea4b96438d538cfa27349f1937567",
+      "size_bytes": 1012594,
+      "captured_at": "2026-08-24T11:22:18.756Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_E2E_M01_Player_X_1_5_Editor_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-V01": {
+      "canonical_filename": "B01_E2E_V01_Player_Position_Change_RAW.mov",
+      "original_canonical": "B01_E2E_V01_Player_Position_Change_RAW.mov",
+      "test_id": "E2E-03",
+      "media_id": "E2E-V01",
+      "sha256": "31242cea973ba122503054b5da337ae5dc78f1b044203a754455989afd13d339",
+      "size_bytes": 3673702,
+      "captured_at": "2026-08-24T11:22:41.525Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS/B01_E2E_V01_Player_Position_Change_RAW.mov",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-M03": {
+      "canonical_filename": "B01_E2E_M03_View_Y_25_Editor_RAW.png",
+      "original_canonical": "B01_E2E_M03_View_Y_25_Editor_RAW.png",
+      "test_id": "E2E-04",
+      "media_id": "E2E-M03",
+      "sha256": "e17ad774baa9c1f5886129923611e55fd0d274dea43ada46c790e222d899f0b4",
+      "size_bytes": 957000,
+      "captured_at": "2026-08-24T11:24:18.269Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_E2E_M03_View_Y_25_Editor_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-M04": {
+      "canonical_filename": "B01_E2E_M04_View_Y_25_Game_RAW.png",
+      "original_canonical": "B01_E2E_M04_View_Y_25_Game_RAW.png",
+      "test_id": "E2E-04",
+      "media_id": "E2E-M04",
+      "sha256": "1ab5ea5d1db7e47400082efab0a8d3221ed0207fffe2702a2f51f3a1f535fda8",
+      "size_bytes": 949998,
+      "captured_at": "2026-08-24T11:26:18.416Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_E2E_M04_View_Y_25_Game_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-V02": {
+      "canonical_filename": "B01_E2E_V02_View_Rotation_Camera_Follow_RAW.mov",
+      "original_canonical": "B01_E2E_V02_View_Rotation_Camera_Follow_RAW.mov",
+      "test_id": "E2E-04",
+      "media_id": "E2E-V02",
+      "sha256": "1576fabf39fe6d0f8a8e1ee1d908dce243b02b132b12ba12f7e786c5903228b6",
+      "size_bytes": 5742614,
+      "captured_at": "2026-08-24T11:26:38.211Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/VIDEOS/B01_E2E_V02_View_Rotation_Camera_Follow_RAW.mov",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-M05": {
+      "canonical_filename": "B01_E2E_M05_Reopen_Player_RAW.png",
+      "original_canonical": "B01_E2E_M05_Reopen_Player_RAW.png",
+      "test_id": "E2E-05",
+      "media_id": "E2E-M05",
+      "sha256": "8b9ec81aaf9e2040757f347f90992e0239596c4e80505ad48a75f9af3484d963",
+      "size_bytes": 947303,
+      "captured_at": "2026-08-24T11:28:17.383Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_E2E_M05_Reopen_Player_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-M06": {
+      "canonical_filename": "B01_E2E_M06_Reopen_View_RAW.png",
+      "original_canonical": "B01_E2E_M06_Reopen_View_RAW.png",
+      "test_id": "E2E-05",
+      "media_id": "E2E-M06",
+      "sha256": "32052fc4c7c8136ecdc450aad7029fe92e70a3c181a2155819f16c115d1716bf",
+      "size_bytes": 951587,
+      "captured_at": "2026-08-24T11:28:32.832Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_E2E_M06_Reopen_View_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    },
+    "E2E-M07": {
+      "canonical_filename": "B01_E2E_M07_Goal_RAW.png",
+      "original_canonical": "B01_E2E_M07_Goal_RAW.png",
+      "test_id": "E2E-06",
+      "media_id": "E2E-M07",
+      "sha256": "1e07b3e246a2636c213f172f33358226b484ecd3150b1889f2cf47d756719545",
+      "size_bytes": 1082676,
+      "captured_at": "2026-08-24T11:29:05.070Z",
+      "relative_path": "SNLT2026-HP01-B01/03_HUMAN_TEST_REVIEW/03_EVIDENCE_RAW/IMAGES/B01_E2E_M07_Goal_RAW.png",
+      "is_smoke": false,
+      "is_retake": false,
+      "status": "RAW_EVIDENCE"
+    }
+  }
+}
