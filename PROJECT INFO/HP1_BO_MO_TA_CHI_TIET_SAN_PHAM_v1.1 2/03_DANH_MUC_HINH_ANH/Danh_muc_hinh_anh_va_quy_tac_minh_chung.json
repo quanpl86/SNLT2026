@@ -1,0 +1,92 @@
+{
+  "nguon_tham_chieu": "Kenney Starter Kit 3D Platformer — https://github.com/KenneyNL/Starter-Kit-3D-Platformer",
+  "giay_phep_nguon": "Theo README của dự án: mã MIT; tài sản 2D/3D và âm thanh CC0.",
+  "quy_tac_minh_chung": "Ảnh tham chiếu và sơ đồ chỉ dùng để minh họa. Minh chứng học sinh phải chụp từ dự án thật sau khi chạy thử.",
+  "danh_muc": [
+    {
+      "tệp": "Anh_tham_chieu_Kenney_Starter_Kit_3D_Platformer.png",
+      "loại": "Ảnh tham chiếu nguồn Kenney",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_01_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_02_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_03_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_04_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_05_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_06_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_07_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_08_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_09_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_10_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_11_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "Bai_12_Anh_chu_giai_dinh_huong.png",
+      "loại": "Ảnh chú giải định hướng",
+      "cách_dùng": "Minh họa sản phẩm; không thay thế minh chứng chạy thật"
+    },
+    {
+      "tệp": "So_do_cac_he_thong_trò chơi.png",
+      "loại": "Sơ đồ do chương trình biên soạn",
+      "cách_dùng": "Giải thích cấu trúc/tổ chức sản phẩm"
+    },
+    {
+      "tệp": "So_do_phan_chia_phan_viec.png",
+      "loại": "Sơ đồ do chương trình biên soạn",
+      "cách_dùng": "Giải thích cấu trúc/tổ chức sản phẩm"
+    },
+    {
+      "tệp": "So_do_tien_trinh_12_bai.png",
+      "loại": "Sơ đồ do chương trình biên soạn",
+      "cách_dùng": "Giải thích cấu trúc/tổ chức sản phẩm"
+    },
+    {
+      "tệp": "So_do_vong_trai_nghiem.png",
+      "loại": "Sơ đồ do chương trình biên soạn",
+      "cách_dùng": "Giải thích cấu trúc/tổ chức sản phẩm"
+    }
+  ]
+}
